@@ -20,11 +20,11 @@ class TFromDivider extends StatelessWidget {
             color: dark ? TColors.darkerGrey : TColors.grey,
             thickness: 0.5,
             indent: 60,
-            endIndent: 5,
+            endIndent: 3,
           ),
         ),
         Text(dividerText,
-          style: Theme.of(context).textTheme.labelMedium,
+          style: Theme.of(context).textTheme.labelSmall,
         ),
         Flexible(
           child: Divider(

@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screens/signup/widgets/terms_condotions_checkbox.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:t_store/features/authentication/screens/signup/widgets/verify_email.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_string.dart';
+
 class TSignupFrom extends StatelessWidget {
-  const TSignupFrom({
-    super.key
-  });
+  const TSignupFrom({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -76,15 +77,21 @@ class TSignupFrom extends StatelessWidget {
             ),
           ),
           const SizedBox(height: TSizes.spaceBtwSections),
+
           ///Term&Conditions Checkbox
           const TTermAndConditionCheckbox(),
           const SizedBox(height: TSizes.spaceBtwSections),
+
           ///Signup Button
-          SizedBox(width: double.infinity,
-              child: ElevatedButton(onPressed: () {}, child: const Text(TTexts.createAccount))),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              onPressed: () => Get.to(() => const VerifyEmailScreen()),
+              child: const Text(TTexts.createAccount),
+            ),
+          ),
         ],
       ),
     );
   }
 }
-
