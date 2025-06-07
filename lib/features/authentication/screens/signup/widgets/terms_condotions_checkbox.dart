@@ -23,21 +23,21 @@ class TTermAndConditionCheckbox extends StatelessWidget {
             children: [
               TextSpan(
                 text: '${TTexts.iAgreeTo} ',
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.labelSmall,
               ),
               TextSpan(
                   text: '${TTexts.privacyPolicy} ',
-                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                  style: Theme.of(context).textTheme.labelSmall!.apply(
                       color: dark ? TColors.white: TColors.primary,
                       decoration: TextDecoration.underline,
                       decorationColor: dark ? TColors.white : TColors.primary)),
               TextSpan(
                 text: '${TTexts.and} ',
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.labelSmall,
               ),
               TextSpan(
                   text: '${TTexts.termsOfUse} ',
-                  style: Theme.of(context).textTheme.bodySmall!.apply(
+                  style: Theme.of(context).textTheme.labelSmall!.apply(
                       color: dark ? TColors.white: TColors.primary,
                       decoration: TextDecoration.underline,
                       decorationColor: dark ? TColors.white : TColors.primary)),
