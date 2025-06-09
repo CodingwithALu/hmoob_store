@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadows.dart';
 import 'package:t_store/common/widgets/images/t_rounded_image.dart';
 import 'package:t_store/common/widgets/texts/product_price_text.dart';
+import 'package:t_store/features/shop/screens/product_details/product_details.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 import '../../../utils/constants/image_strings.dart';
@@ -21,7 +23,7 @@ class TProductCardVertical extends StatelessWidget {
 
     ///Container with side paddings, color, edges, radius and shadow
     return GestureDetector(
-      onTap: () {},
+      onTap: () => Get.to (() => ProductDetailScreen()),
       child: Container(
         width: 180,
         padding: const EdgeInsets.all(1),
@@ -51,7 +53,7 @@ class TProductCardVertical extends StatelessWidget {
                     top: 12,
                     child: TRoundedContainer(
                       radius: TSizes.sm,
-                      backgroundColor: TColors.secondary.withOpacity(0.8),
+                      backgroundColor: TColors.secondary.withAlpha((0.8 * 255).round()),
                       padding: const EdgeInsets.symmetric(
                         horizontal: TSizes.sm,
                         vertical: TSizes.xs,

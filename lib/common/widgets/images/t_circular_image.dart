@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../utils/constants/colors.dart';
-import '../../../utils/constants/image_strings.dart';
 import '../../../utils/constants/sizes.dart';
 
 class TCircularImage extends StatelessWidget {
   const TCircularImage({
     super.key,
-    required this.dark,
     this.width = 56,
     this.height = 56,
     this.padding = TSizes.sm,
@@ -17,8 +16,6 @@ class TCircularImage extends StatelessWidget {
     this.backgroundColor,
     this.isNetworkImage = false,
   });
-
-  final bool dark;
   final double width, height, padding;
   final BoxFit? fit;
   final String image;
@@ -28,6 +25,7 @@ class TCircularImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = THelperFunctions.isDarkMode(context);
     return Container(
       width: width,
       height: height,

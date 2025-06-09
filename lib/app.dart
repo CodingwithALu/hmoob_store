@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/navigation_menu.dart';
 import 'package:t_store/utils/constants/text_string.dart';
 import 'package:t_store/utils/theme/theme.dart';
@@ -19,6 +20,7 @@ class App extends StatelessWidget {
       home: const OnBoardingScreen(),
       getPages: [
         GetPage(name: '/NavigationMenu', page: () => NavigationMenu()),
+        GetPage(name: '/ProfileScreen', page: () => ProfileScreen())
       ],
     );
   }
