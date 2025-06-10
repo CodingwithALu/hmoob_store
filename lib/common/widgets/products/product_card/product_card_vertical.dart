@@ -7,12 +7,12 @@ import 'package:t_store/common/widgets/texts/product_price_text.dart';
 import 'package:t_store/features/shop/screens/product_details/product_details.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
-import '../../../utils/constants/image_strings.dart';
-import '../../../utils/constants/sizes.dart';
-import '../custom_shapes/container/rounded_container.dart';
-import '../icons/t_circular_icon.dart';
-import '../texts/product_title_text.dart';
-import '../texts/t_brand_title_with_verified_icon.dart';
+import '../../../../utils/constants/image_strings.dart';
+import '../../../../utils/constants/sizes.dart';
+import '../../custom_shapes/container/rounded_container.dart';
+import '../../icons/t_circular_icon.dart';
+import '../../texts/product_title_text.dart';
+import '../../texts/t_brand_title_with_verified_icon.dart';
 
 class TProductCardVertical extends StatelessWidget {
   const TProductCardVertical({super.key});

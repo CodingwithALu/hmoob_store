@@ -10,6 +10,7 @@ import 'package:t_store/features/personalization/screens/address/address.dart';
 import '../../../../common/widgets/list_titles/user_profile_title.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
+import '../../../shop/screens/order/order.dart';
 import '../profile/profile.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -43,15 +44,13 @@ class SettingsScreen extends StatelessWidget {
                   /// Account Settings
                   const TSectionHeading(title: 'Account Setting', showActionButton: false,),
                   const SizedBox(height: TSizes.spaceBtwItems,),
-
                   TSettingsMenuTitle(icon: Iconsax.safe_home, title: 'My Address', subTitle: 'Set shopping delivery address', onTap: () => Get.to(() => const UserAddressScreen()),),
                   TSettingsMenuTitle(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout', onTap: (){},),
-                  TSettingsMenuTitle(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders', onTap: (){},),
+                  TSettingsMenuTitle(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders', onTap: () => Get.to(() => const OrderScreen()),),
                   TSettingsMenuTitle(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account', onTap: (){},),
                   TSettingsMenuTitle(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List off all the discounted coupons', onTap: (){},),
                   TSettingsMenuTitle(icon: Iconsax.notification, title: 'Notifications', subTitle: 'Set any kind of notifications message', onTap: (){},),
                   TSettingsMenuTitle(icon: Iconsax.security_card, title: 'Account Privacy', subTitle: 'Manage data usage and connected accounts', onTap: (){},),
-
                   /// App Settings
                   const SizedBox(height: TSizes.spaceBtwSections,),
                   const TSectionHeading(title: 'App Settings', showActionButton: false,),
@@ -83,7 +82,7 @@ class SettingsScreen extends StatelessWidget {
                 ],
               ),
             )
-          ],
+          ]
         ),
       ),
     );
