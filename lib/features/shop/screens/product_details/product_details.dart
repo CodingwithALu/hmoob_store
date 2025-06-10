@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
@@ -7,6 +8,7 @@ import 'package:t_store/features/shop/screens/product_details/widgets/product_at
 import 'package:t_store/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/rating_share_widgets.dart';
+import 'package:t_store/features/shop/screens/product_review/prooduct_review.dart';
 
 import '../../../../utils/constants/sizes.dart';
 class ProductDetailScreen extends StatelessWidget {
@@ -55,7 +57,7 @@ class ProductDetailScreen extends StatelessWidget {
                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                        children:[
                          const TSectionHeading(title: 'Review(199)', showActionButton: false,),
-                         IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_3, size: 18,))
+                         IconButton(icon: const Icon(Iconsax.arrow_right_3, size: 18,), onPressed: () => Get.to(() => const ProductReviewScreen()),)
                        ]
                    ),
                    const SizedBox(height: TSizes.spaceBtwSections,)
