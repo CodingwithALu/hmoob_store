@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:t_store/bindings/general_binding.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
 import 'package:t_store/navigation_menu.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/text_string.dart';
 import 'package:t_store/utils/theme/theme.dart';
-import 'features/authentication/screens/onboarding/onboarding.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -16,8 +17,10 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
+      initialBinding: GeneralBindings(),
       debugShowCheckedModeBanner: false,
-      home: const OnBoardingScreen(),
+      /// Show Loader or Circular
+      home: const Scaffold(backgroundColor: TColors.primary, body: Center(child: CircularProgressIndicator(color: Colors.white,),),),
       getPages: [
         GetPage(name: '/NavigationMenu', page: () => NavigationMenu()),
         GetPage(name: '/ProfileScreen', page: () => ProfileScreen())
