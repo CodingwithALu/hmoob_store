@@ -5,6 +5,7 @@ import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:t_store/common/widgets/list_titles/setting_menu_title.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
+import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/features/personalization/screens/address/address.dart';
 
 import '../../../../common/widgets/list_titles/user_profile_title.dart';
@@ -76,7 +77,7 @@ class SettingsScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections,),
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: () {}, child: const Text('Logout')),
+                    child: OutlinedButton(onPressed: () => Get.to(() => const LoginScreen()), child: const Text('Logout')),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5,)
                 ],
