@@ -12,43 +12,46 @@ class ChangeName extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(UpdateNameController.instance);
+    final controller = Get.put(UpdateNameController());
     // TODO: implement build
     return Scaffold(
       appBar: TAppBar(title: Text('Change Name', style: Theme.of(context).textTheme.headlineSmall,), showBackArrow: true,),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          /// Headings
-          Text('user real name for easy verifications. This name will appear on several pages',
-            style: Theme.of(context).textTheme.labelMedium,),
-          const SizedBox(height: TSizes.spaceBtwSections,),
-          /// Texts field and button
-          Form(
-            key: controller.updateUserNameFormKey,
-            child: Column(
-              children: [
-                TextFormField(
-                    controller: controller.firstname,
-                    validator: (value) => TValidator.validateEmptyText(TTexts.firstName, value),
+      body: Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            /// Headings
+            Text('user real name for easy verifications. This name will appear on several pages',
+              style: Theme.of(context).textTheme.labelMedium,),
+            const SizedBox(height: TSizes.spaceBtwSections,),
+            /// Texts field and button
+            Form(
+              key: controller.updateUserNameFormKey,
+              child: Column(
+                children: [
+                  TextFormField(
+                      controller: controller.firstname,
+                      validator: (value) => TValidator.validateEmptyText(TTexts.firstName, value),
+                      expands: false,
+                      decoration: const InputDecoration(labelText: TTexts.firstName, prefixIcon: Icon(Iconsax.user))),
+                  const SizedBox(height: TSizes.spaceBtwInputFields,),
+                  TextFormField(
+                    controller: controller.lastname,
+                    validator: (value) => TValidator.validateEmptyText(TTexts.lastName, value),
                     expands: false,
-                    decoration: const InputDecoration(labelText: TTexts.firstName, prefixIcon: Icon(Iconsax.user))),
-                const SizedBox(height: TSizes.spaceBtwInputFields,),
-                TextFormField(
-                  controller: controller.lastname,
-                  validator: (value) => TValidator.validateEmptyText(TTexts.lastName, value),
-                  expands: false,
-                  decoration: const InputDecoration(labelText: TTexts.lastName, prefixIcon: Icon(Iconsax.user)),
-                )
-              ],
+                    decoration: const InputDecoration(labelText: TTexts.lastName, prefixIcon: Icon(Iconsax.user)),
+                  )
+                ],
+              ),
             ),
-          ),
-          const SizedBox(height: TSizes.spaceBtwSections,),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(onPressed: () => controller.updateUserName(), child: Text('Save', style: Theme.of(context).textTheme.bodyMedium)),
-          )
-        ],
+            const SizedBox(height: TSizes.spaceBtwSections,),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(onPressed: () => controller.updateUserName(), child: Text('Save')),
+            )
+          ],
+        ),
       ),
     );
   }

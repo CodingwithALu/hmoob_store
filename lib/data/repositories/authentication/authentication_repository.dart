@@ -7,6 +7,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:t_store/data/repositories/user/UserRepository.dart';
 // ignore: unused_import
 import 'package:t_store/features/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
@@ -22,7 +23,6 @@ class AuthenticationRepository extends GetxController {
   /// Variables
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
-
   /// Get Authenticated User Dât
   User? get authUser => _auth.currentUser;
   /// Called from main.dart on app launch
@@ -162,7 +162,23 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  /// Todo --
+  /// Todo -- deleteAccount Auth and FireStore Account
+  Future<void> deleteAccount() async {
+    try {
+      await UserRepository.instance.removeUserRecord(_auth.currentUser!.uid);
+      await _auth.currentUser?.delete();
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } on FormatException catch (_) {
+      throw FormatException();
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
   /// Todo -- sendEmailVerification - LogoutUser
   Future<void> logout() async {
     try {
@@ -182,5 +198,23 @@ class AuthenticationRepository extends GetxController {
     }
   }
 
-  /// Todo --
+  /// Todo -- Re Authentication User
+  Future<void> reAuthenticationWithEmailAndPassword(String email, String password) async {
+    try {
+      // Create a credential
+      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password);
+      // Re Authentication
+      await _auth.currentUser!.reauthenticateWithCredential(credential);
+    } on FirebaseAuthException catch (e) {
+      throw TFirebaseAuthException(e.code).message;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on FormatException catch (_) {
+      throw const TFormatException();
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again. ';
+    }
+  }
 }

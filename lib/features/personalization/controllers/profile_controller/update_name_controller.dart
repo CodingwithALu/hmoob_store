@@ -35,7 +35,7 @@ class UpdateNameController extends GetxController {
 
     try {
       /// Start loading
-      TFullScreenLoader.openLoadingDialog('We are updateing your information...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog('We are updating your information...', TImages.docerAnimation);
 
       /// Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();

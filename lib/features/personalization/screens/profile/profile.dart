@@ -51,8 +51,8 @@ class ProfileScreen extends StatelessWidget {
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
               const TSectionHeading(title: 'Profile Information', showActionButton: false,),
-              TProfileMenu(title: 'Name', value: controller.user.value.firstName, onPressed: () => Get.to(() => const ChangeName())),
-              TProfileMenu(title: 'Username', value: controller.user.value.lastName, onPressed: () => Get.to(() => const ChangeName()),),
+              TProfileMenu(title: 'Name', value: controller.user.value.fullName, onPressed: () => Get.to(() => const ChangeName())),
+              TProfileMenu(title: 'Username', value: controller.user.value.lastName, onPressed: () {},),
 
               const SizedBox(height: TSizes.spaceBtwItems,),
               const Divider(),
@@ -62,16 +62,16 @@ class ProfileScreen extends StatelessWidget {
               const TSectionHeading(title: 'Personal Information', showActionButton: false,),
               const SizedBox(height: TSizes.spaceBtwItems,),
 
-              TProfileMenu(onPressed: () {}, title: 'User ID', value: '45678', icon: Iconsax.copy,),
-              TProfileMenu(onPressed: () {}, title: 'E-mail', value: 'coding_with_T'),
-              TProfileMenu(onPressed: () {}, title: 'Phone Number', value: '+92-317-6058528'),
+              TProfileMenu(onPressed: () {}, title: 'User ID', value: controller.user.value.id, icon: Iconsax.copy,),
+              TProfileMenu(onPressed: () {}, title: 'E-mail', value: controller.user.value.email),
+              TProfileMenu(onPressed: () {}, title: 'Phone Number', value: controller.user.value.phoneNumber),
               TProfileMenu(onPressed: () {}, title: 'Gender', value: 'Male'),
               TProfileMenu(onPressed: () {}, title: 'Date of Brith', value: '10 Oct 2003'),
               /// Footer
               const SizedBox(height: TSizes.spaceBtwItems,),
               const Divider(),
               Center(
-                child: TextButton(onPressed: () {}, 
+                child: TextButton(onPressed: () => controller.deleteAccountWarningPopup(),
                     child: Text('Close Account', style: TextStyle(color: Colors.red),)),
               )
             ],

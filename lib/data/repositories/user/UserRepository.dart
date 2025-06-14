@@ -27,7 +27,7 @@ class UserRepository extends GetxController {
     }
   }
   /// Function to fetch userModels on Firebase
-  Future<UserModel> fetchUserRecord() async {
+  Future<UserModel> fetchUserDetails() async {
     try {
       final documentSnapshot = await _db.collection('Users').doc(AuthenticationRepository.instance.authUser?.uid).get();
           if(documentSnapshot.exists){
