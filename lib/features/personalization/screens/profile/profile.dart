@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/images/t_circular_image.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
+import 'package:t_store/features/personalization/controllers/user_controller.dart';
+import 'package:t_store/features/personalization/screens/profile/widgets/change_name_users.dart';
 import 'package:t_store/features/personalization/screens/profile/widgets/t_profile_menu.dart';
 
 import '../../../../utils/constants/image_strings.dart';
@@ -14,6 +17,7 @@ class ProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
+    final controller = UserController.instance;
     return Scaffold(
       /// AppBar
       appBar: const TAppBar(title: Text('Profile'), showBackArrow: true),
@@ -47,8 +51,8 @@ class ProfileScreen extends StatelessWidget {
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
               const TSectionHeading(title: 'Profile Information', showActionButton: false,),
-              TProfileMenu(title: 'Name', value: 'Coding With T', onPressed: () {},),
-              TProfileMenu(title: 'Username', value: 'coding_with_T', onPressed: () {},),
+              TProfileMenu(title: 'Name', value: controller.user.value.firstName, onPressed: () => Get.to(() => const ChangeName())),
+              TProfileMenu(title: 'Username', value: controller.user.value.lastName, onPressed: () => Get.to(() => const ChangeName()),),
 
               const SizedBox(height: TSizes.spaceBtwItems,),
               const Divider(),
@@ -77,5 +81,7 @@ class ProfileScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 

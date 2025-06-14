@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
-
 // ignore: unused_import
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,7 +7,6 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-
 // ignore: unused_import
 import 'package:t_store/features/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
@@ -19,14 +17,14 @@ import 'package:t_store/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:t_store/utils/exceptions/firebase_exceptions.dart';
 import 'package:t_store/utils/exceptions/format_exceptions.dart';
 import 'package:t_store/utils/exceptions/platform_exceptions.dart';
-
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
-
   /// Variables
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
 
+  /// Get Authenticated User Dât
+  User? get authUser => _auth.currentUser;
   /// Called from main.dart on app launch
   @override
   void onReady() {

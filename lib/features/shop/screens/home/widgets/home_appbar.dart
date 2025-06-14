@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:t_store/features/personalization/controllers/user_controller.dart';
 import 'package:t_store/features/shop/screens/cart/cart.dart';
 
 import '../../../../../common/widgets/appbar/appbar.dart';
@@ -13,6 +14,7 @@ class THomeAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(UserController());
     return TAppBar(
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,11 +25,19 @@ class THomeAppBar extends StatelessWidget {
               context,
             ).textTheme.labelMedium!.apply(color: TColors.grey),
           ),
-          Text(
-            TTexts.homeAppbarSubTitle,
-            style: Theme.of(context).textTheme.headlineMedium!
-                .apply(color: TColors.white),
-          ),
+          Obx(() {
+            if (controller.profileLoading.value){
+              // Display a shimmer loader while user profile is being loaded
+              return Text('');
+            }else {
+              return Text(
+                controller.user.value.fullName,
+                style: Theme.of(
+                  context,
+                ).textTheme.headlineMedium!.apply(color: TColors.white),
+              );
+            }
+          }),
         ],
       ),
       actions: [TCartCounterIcon(onPressed: () => Get.to(() => CartScreen()), iconColor: TColors.white,),
