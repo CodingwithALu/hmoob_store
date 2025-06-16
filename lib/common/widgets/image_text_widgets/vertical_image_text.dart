@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 import '../../../utils/helpers/helper_functions.dart';
+import '../images/t_circular_image.dart';
+
 class TVerticaImageText extends StatelessWidget {
   const TVerticaImageText({
     super.key,
@@ -11,11 +13,13 @@ class TVerticaImageText extends StatelessWidget {
     this.textColor = TColors.white,
     this.backgroundColor = TColors.white,
     this.onTap,
+    this.isNetworkImage = true,
   });
 
   final String image, title;
   final Color textColor;
   final Color? backgroundColor;
+  final bool isNetworkImage;
   final void Function()? onTap;
 
   @override
@@ -27,21 +31,13 @@ class TVerticaImageText extends StatelessWidget {
         padding: const EdgeInsets.only(right: TSizes.spaceBtwItems),
         child: Column(
           children: [
-            Container(
-              width: 56,
-              height: 56,
-              padding: const EdgeInsets.all(TSizes.sm),
-              decoration: BoxDecoration(
-                color: backgroundColor ?? (dark? TColors.black : TColors.white),
-                borderRadius: BorderRadius.circular(100),
-              ),
-              child: Center(
-                child: Image(
-                  image: AssetImage(image),
-                  fit: BoxFit.cover,
-                  color: dark ? TColors.light : TColors.dark,
-                ),
-              ),
+            TCircularImage(
+              isNetworkImage: isNetworkImage,
+              padding: TSizes.sm * 1.4,
+              overlayColor: dark ? TColors.light : TColors.dark,
+              backgroundColor: backgroundColor,
+              fit: BoxFit.fitWidth,
+              image: image,
             ),
             const SizedBox(height: TSizes.spaceBtwItems / 2),
             SizedBox(

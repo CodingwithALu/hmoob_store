@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:t_store/features/shop/models/category_model.dart';
 
 import '../../../../../common/widgets/brands/brand_show_case.dart';
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -6,10 +7,10 @@ import '../../../../../common/widgets/products/product_card/product_card_vertica
 import '../../../../../common/widgets/texts/section_heading.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
-
 class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
-
+  const TCategoryTab({super.key,
+    required this.categoryModel});
+  final CategoryModel categoryModel;
   @override
   Widget build(BuildContext context) {
     return ListView(

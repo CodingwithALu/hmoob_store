@@ -1,8 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:t_store/data/repositories/user/UserRepository.dart';
+import 'package:t_store/data/repositories/user/user_repository.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/features/personalization/screens/profile/widgets/reAuth_login.dart';
 import 'package:t_store/utils/popups/full_screen_loader.dart';
@@ -18,6 +19,7 @@ class UserController extends GetxController {
   final userRepository = Get.put(UserRepository());
   final profileLoading = false.obs;
   final hidePassword = false.obs;
+  final imageUploading = false.obs;
   final verifyEmail = TextEditingController();
   final verifyPassword = TextEditingController();
    GlobalKey<FormState> reAuthFormKey = GlobalKey<FormState>();
@@ -43,24 +45,27 @@ class UserController extends GetxController {
   /// Save user Record from any Registration provider
   Future<void> saveUserRecord(UserCredential? userCredentials) async {
     try {
-      if (userCredentials != null) {
-        // Convert Name to First and Last Name
-        final nameParts = UserModel.nameParts(
-            userCredentials.user!.displayName ?? '');
-        final username = UserModel.generateUsername(
-            userCredentials.user!.displayName ?? '');
-
-        //Map Data
-        final user = UserModel(id: userCredentials.user!.uid,
-            username: username,
-            email: userCredentials.user!.email ?? '',
-            firstName: nameParts[0],
-            lastName: nameParts.length > 1 ? nameParts.sublist(1).join(' '): ' ',
-            phoneNumber: userCredentials.user!.phoneNumber ?? '',
-            profilePicture: userCredentials.user!.photoURL?? '');
-
-        // Save user data
-        await userRepository.saveUserRecord(user);
+      await fetchUserRecord();
+      if (user.value.id.isEmpty) {
+        if (userCredentials != null) {
+          // Convert Name to First and Last Name
+          final nameParts = UserModel.nameParts(
+              userCredentials.user!.displayName ?? '');
+          final username = UserModel.generateUsername(
+              userCredentials.user!.displayName ?? '');
+        
+          //Map Data
+          final user = UserModel(id: userCredentials.user!.uid,
+              username: username,
+              email: userCredentials.user!.email ?? '',
+              firstName: nameParts[0],
+              lastName: nameParts.length > 1 ? nameParts.sublist(1).join(' '): ' ',
+              phoneNumber: userCredentials.user!.phoneNumber ?? '',
+              profilePicture: userCredentials.user!.photoURL?? '');
+        
+          // Save user data
+          await userRepository.saveUserRecord(user);
+        }
       }
     } catch (e) {
       TLoaders.warningSnackBar(title: 'Data not saved',
@@ -134,5 +139,27 @@ class UserController extends GetxController {
       TLoaders.warningSnackBar(title: 'Oh Snap', message: e.toString());
     }
   }
+  // Upload Profile Image
+  void uploadUseProfilePicture() async {
+    try {
+      final image = await ImagePicker().pickImage(source: ImageSource.gallery, imageQuality: 70, maxHeight: 512, maxWidth: 512);
+      if (image != null){
+        imageUploading.value = true;
+        // Upload Images
+        final imageUrl = await userRepository.uploadImage('Users/Images/Profile', image);
+        // Update User Image
+        Map<String, dynamic> json = {'ProfilePicture': imageUrl};
 
+        await userRepository.updateSingleField(json);
+
+        user.value.profilePicture = imageUrl;
+        user.refresh();
+        TLoaders.successSnackBar(title: 'Congratulations', message: 'Your Profile Image has been update!');
+      }
+    } on Exception catch (e) {
+      TLoaders.errorSnackBar(title: 'On Snap', message: 'Something went wrong!: $e');
+    } finally {
+      imageUploading.value = false;
+    }
+  }
 }

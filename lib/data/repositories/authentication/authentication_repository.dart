@@ -7,7 +7,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:t_store/data/repositories/user/UserRepository.dart';
+import 'package:t_store/data/repositories/user/user_repository.dart';
 // ignore: unused_import
 import 'package:t_store/features/authentication/controllers/signup/verify_email_controller.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
