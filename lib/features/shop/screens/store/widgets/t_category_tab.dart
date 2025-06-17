@@ -7,6 +7,7 @@ import '../../../../../common/widgets/products/product_card/product_card_vertica
 import '../../../../../common/widgets/texts/section_heading.dart';
 import '../../../../../utils/constants/image_strings.dart';
 import '../../../../../utils/constants/sizes.dart';
+import '../../../models/product_model.dart';
 class TCategoryTab extends StatelessWidget {
   const TCategoryTab({super.key,
     required this.categoryModel});
@@ -44,7 +45,7 @@ class TCategoryTab extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems),
               TGridLayout(
                 itemCount: 4,
-                itemBuilder: (_, index) => const TProductCardVertical(),
+                itemBuilder: (_, index) => TProductCardVertical(productModel: ProductModel.empty()),
               ),
             ],
           ),

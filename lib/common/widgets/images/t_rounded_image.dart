@@ -1,4 +1,6 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:t_store/common/widgets/shimmer/shimmer.dart';
 // ignore: unused_import
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -45,12 +47,19 @@ class TRoundedImage extends StatelessWidget {
           borderRadius: BorderRadius.circular(borderRadius),
         ),
         child: ClipRRect(
-          borderRadius: applyImageRadius ? BorderRadius.circular(borderRadius) : BorderRadius.zero,
-          child: Image(
-            image: isNetworkImage
-                ? NetworkImage(imageUrl)
-                : AssetImage(imageUrl) as ImageProvider,
-            fit: fit,
+          borderRadius: applyImageRadius
+              ? BorderRadius.circular(borderRadius)
+              : BorderRadius.zero,
+          child: isNetworkImage
+              ? CachedNetworkImage(
+                fit: fit,
+                imageUrl: imageUrl,
+                progressIndicatorBuilder: (context, url, downloadProgress) =>
+                    TShimmerEffect(width: width ?? double.infinity, height: height ?? 158),
+                errorWidget: (context, url, error) => const Icon(Icons.error),)
+              : Image(
+                fit: fit,
+                image: AssetImage(imageUrl),
           ),
         ),
       ),
