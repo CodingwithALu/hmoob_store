@@ -17,10 +17,21 @@ class ProductController extends GetxController {
 
     //
   }
-
-
   void fetchFeaturedProducts() async {
     try {
+      // Show loader while loading Products
+      final products = await _productRepository.getFeaturedProducts();
+      //Fetch Product;
+      featureProducts.assignAll(products);
+    } catch (e) {
+      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+    } finally {
+      isLoading.value = false;
+    }
+  }
+  void fetchAllFeaturedProducts() async {
+    try {
+      isLoading.value = true;
       // Show loader while loading Products
       final products = await _productRepository.getFeaturedProducts();
       //Fetch Product;
