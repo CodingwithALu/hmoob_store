@@ -21,7 +21,7 @@ class SuccessScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -29,7 +29,10 @@ class SuccessScreen extends StatelessWidget {
           child: Column(
             children: [
               ///Image
-              Lottie.asset(image, width: MediaQuery.of(context).size.width * 0.6),
+              Lottie.asset(
+                image,
+                width: MediaQuery.of(context).size.width * 0.6,
+              ),
               // Display Lottie animation
               const SizedBox(height: TSizes.spaceBtwSections),
 
@@ -61,7 +64,7 @@ class SuccessScreen extends StatelessWidget {
                   width: double.infinity,
                   child: TextButton(
                     onPressed: () {},
-                    child: Text( TTexts.resendEmail),
+                    child: Text(TTexts.resendEmail),
                   ),
                 ),
             ],

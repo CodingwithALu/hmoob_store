@@ -7,7 +7,7 @@ class TBillingAmountSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     return Column(
       children: [
         Row(
@@ -17,7 +17,8 @@ class TBillingAmountSection extends StatelessWidget {
             Text('\$256.0', style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems /2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2),
+
         /// Shipping Free
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,7 +27,8 @@ class TBillingAmountSection extends StatelessWidget {
             Text('\$6.0', style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems /2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2),
+
         /// Tax fee
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -35,7 +37,8 @@ class TBillingAmountSection extends StatelessWidget {
             Text('\$6.0', style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
-        const SizedBox(height: TSizes.spaceBtwItems /2,),
+        const SizedBox(height: TSizes.spaceBtwItems / 2),
+
         /// Order total
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

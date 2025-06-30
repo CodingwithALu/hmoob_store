@@ -12,13 +12,12 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../../utils/constants/image_strings.dart';
 
-
 class TProductCardHorizontal extends StatelessWidget {
   const TProductCardHorizontal({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     final dark = THelperFunctions.isDarkMode(context);
     return Container(
       width: 310,
@@ -76,6 +75,7 @@ class TProductCardHorizontal extends StatelessWidget {
               ],
             ),
           ),
+
           /// Details
           SizedBox(
             width: 172,
@@ -95,30 +95,34 @@ class TProductCardHorizontal extends StatelessWidget {
                     ],
                   ),
                   const Spacer(),
-                  Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        /// Prices
-                        const Flexible(child: TProductPriceText(price: '256.0 - 256800.0')),
-                        /// Add to Cart
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(TSizes.cardRadiusMd),
-                              bottomRight: Radius.circular(
-                                TSizes.productImageRadius,
-                              ),
-                            ),
-                          ),
-                          child: const SizedBox(
-                            width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(
-                              child: Icon(Iconsax.add, color: TColors.white),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      /// Prices
+                      const Flexible(
+                        child: TProductPriceText(price: '256.0 - 256800.0'),
+                      ),
+
+                      /// Add to Cart
+                      Container(
+                        decoration: const BoxDecoration(
+                          color: TColors.dark,
+                          borderRadius: BorderRadius.only(
+                            topLeft: Radius.circular(TSizes.cardRadiusMd),
+                            bottomRight: Radius.circular(
+                              TSizes.productImageRadius,
                             ),
                           ),
                         ),
-                      ]
+                        child: const SizedBox(
+                          width: TSizes.iconLg * 1.2,
+                          height: TSizes.iconLg * 1.2,
+                          child: Center(
+                            child: Icon(Iconsax.add, color: TColors.white),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),

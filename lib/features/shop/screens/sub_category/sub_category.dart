@@ -12,8 +12,7 @@ class SubCategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
-    // TODO: implement build
+    // implement build
     return Scaffold(
       appBar: TAppBar(title: Text('Sport'), showBackArrow: true),
       body: SingleChildScrollView(
@@ -37,10 +36,14 @@ class SubCategoriesScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwItems / 2),
                   SizedBox(
                     height: 120,
-                    child: ListView.separated(itemCount: 10,
-                        scrollDirection: Axis.horizontal,
-                        separatorBuilder: (context, index) => const SizedBox(width: TSizes.spaceBtwItems,),
-                        itemBuilder: (context, index) => const TProductCardHorizontal()),
+                    child: ListView.separated(
+                      itemCount: 10,
+                      scrollDirection: Axis.horizontal,
+                      separatorBuilder: (context, index) =>
+                          const SizedBox(width: TSizes.spaceBtwItems),
+                      itemBuilder: (context, index) =>
+                          const TProductCardHorizontal(),
+                    ),
                   ),
                 ],
               ),

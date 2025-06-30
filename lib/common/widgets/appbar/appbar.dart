@@ -23,7 +23,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: TSizes.md),
       child: AppBar(
@@ -33,13 +33,16 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
                 onPressed: () => Get.back(),
                 icon: const Icon(Iconsax.arrow_left),
               )
-            : leadingIcon != null ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon)) : null,
+            : leadingIcon != null
+            ? IconButton(onPressed: leadingOnPressed, icon: Icon(leadingIcon))
+            : null,
         title: title,
         actions: actions,
       ),
     );
   }
+
   @override
-  // TODO: implement preferredSize
+  // implement preferredSize
   Size get preferredSize => Size.fromHeight(TDeviceUtils.getAppBarHeight());
 }

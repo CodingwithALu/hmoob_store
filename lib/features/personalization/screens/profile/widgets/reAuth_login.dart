@@ -10,15 +10,19 @@ import 'package:t_store/features/personalization/controllers/user_controller.dar
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/validators/validation.dart';
 import '../../../../../utils/constants/text_string.dart';
+
 class ReAuthLoginScreen extends StatelessWidget {
   const ReAuthLoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     final controller = UserController.instance;
-    // TODO: implement build
+    // implement build
     return Scaffold(
-      appBar: TAppBar(title: Text('Re_Authentication User'), showBackArrow: true,),
+      appBar: TAppBar(
+        title: Text('Re_Authentication User'),
+        showBackArrow: true,
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
@@ -28,33 +32,42 @@ class ReAuthLoginScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 TextFormField(
-                    controller: controller.verifyEmail,
-                    validator: TValidator.validateEmail,
-                    decoration: const InputDecoration(prefixIcon: Icon(Iconsax.direct_right), labelText: TTexts.email),
+                  controller: controller.verifyEmail,
+                  validator: TValidator.validateEmail,
+                  decoration: const InputDecoration(
+                    prefixIcon: Icon(Iconsax.direct_right),
+                    labelText: TTexts.email,
+                  ),
                 ),
-                const SizedBox(height: TSizes.spaceBtwInputFields,),
-                Obx(() =>
-                    TextFormField(
-                      obscureText: controller.hidePassword.value,
-                      controller: controller.verifyPassword,
-                      validator: (value) =>
-                          TValidator.validateEmptyText('Password', value),
-                          decoration: InputDecoration(
-                          prefixIcon: Icon(Iconsax.password_check),
-                          labelText: TTexts.password,
-                          suffixIcon: IconButton(onPressed: () =>
-                          controller.hidePassword.value
-                          = !controller.hidePassword.value,
-                              icon: const Icon(Iconsax.eye_slash))),
+                const SizedBox(height: TSizes.spaceBtwInputFields),
+                Obx(
+                  () => TextFormField(
+                    obscureText: controller.hidePassword.value,
+                    controller: controller.verifyPassword,
+                    validator: (value) =>
+                        TValidator.validateEmptyText('Password', value),
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(Iconsax.password_check),
+                      labelText: TTexts.password,
+                      suffixIcon: IconButton(
+                        onPressed: () => controller.hidePassword.value =
+                            !controller.hidePassword.value,
+                        icon: const Icon(Iconsax.eye_slash),
+                      ),
                     ),
+                  ),
                 ),
-                const SizedBox(height: TSizes.spaceBtwSections,),
+                const SizedBox(height: TSizes.spaceBtwSections),
 
                 // Login Button
                 SizedBox(
                   width: double.infinity,
-                  child: ElevatedButton(onPressed: () => controller.reAuthenticateEmailAndPasswordUser(), child: const Text('Verify')),
-                )
+                  child: ElevatedButton(
+                    onPressed: () =>
+                        controller.reAuthenticateEmailAndPasswordUser(),
+                    child: const Text('Verify'),
+                  ),
+                ),
               ],
             ),
           ),

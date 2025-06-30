@@ -8,12 +8,13 @@ import 'package:t_store/features/authentication/screens/login/widgets/login_head
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_string.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
+
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
   @override
   Widget build(BuildContext context) {
     THelperFunctions.isDarkMode(context);
-    // TODO: implement build
+    // implement build
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -22,11 +23,14 @@ class LoginScreen extends StatelessWidget {
             children: [
               /// Header
               const TLoginHeader(),
+
               /// From
               const TLoginFrom(),
+
               /// Divider
               TFromDivider(dividerText: TTexts.orSignInWith.capitalize!),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               ///Footer
               const TSocialButtons(),
             ],
@@ -36,4 +40,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-

@@ -11,10 +11,10 @@ class ProductReviewScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     return Scaffold(
       /// AppBar
-      appBar: TAppBar(title: Text('Review & Rating'), showBackArrow: true,),
+      appBar: TAppBar(title: Text('Review & Rating'), showBackArrow: true),
 
       /// Body
       body: SingleChildScrollView(
@@ -30,16 +30,15 @@ class ProductReviewScreen extends StatelessWidget {
 
               /// Overall Product Ratings
               const TOverallProductRating(),
-              const TRatingBarIndicator(rating: 4.8,),
-              Text('12, 611', style: Theme.of(context).textTheme.bodySmall,),
-              const SizedBox(height: TSizes.spaceBtwSections,),
+              const TRatingBarIndicator(rating: 4.8),
+              Text('12, 611', style: Theme.of(context).textTheme.bodySmall),
+              const SizedBox(height: TSizes.spaceBtwSections),
 
               /// User Review List
               const UserReviewCard(),
               const UserReviewCard(),
               const UserReviewCard(),
-              const UserReviewCard()
-
+              const UserReviewCard(),
             ],
           ),
         ),
@@ -47,10 +46,3 @@ class ProductReviewScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
-

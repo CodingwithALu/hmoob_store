@@ -13,38 +13,66 @@ class ResetPassword extends StatelessWidget {
   final String email;
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
         actions: [
-          IconButton(onPressed: () => Get.back(), icon: const Icon(CupertinoIcons.clear))
+          IconButton(
+            onPressed: () => Get.back(),
+            icon: const Icon(CupertinoIcons.clear),
+          ),
         ],
       ),
       body: SingleChildScrollView(
-        child: Padding(padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: Padding(
+          padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               /// Image with 600% of screen width
-              Image(image: const AssetImage(TImages.deliveredEmailIllustration), width: THelperFunctions.screenWidth() * 0.6),
+              Image(
+                image: const AssetImage(TImages.deliveredEmailIllustration),
+                width: THelperFunctions.screenWidth() * 0.6,
+              ),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               /// Title & Subtitle
-              Text(email, style: Theme.of(context).textTheme.bodyMedium, textAlign: TextAlign.center,),
-              const SizedBox(height: TSizes.spaceBtwItems,),
-              Text(TTexts.changeYourPasswordTitle, style: Theme.of(context).textTheme.headlineMedium, textAlign: TextAlign.center,),
-              const SizedBox(height: TSizes.spaceBtwItems,),
-              Text(TTexts.changeYourPasswordSubTitle, style: Theme.of(context).textTheme.labelMedium, textAlign: TextAlign.center,),
-              const SizedBox(height: TSizes.spaceBtwItems,),
+              Text(
+                email,
+                style: Theme.of(context).textTheme.bodyMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              Text(
+                TTexts.changeYourPasswordTitle,
+                style: Theme.of(context).textTheme.headlineMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TSizes.spaceBtwItems),
+              Text(
+                TTexts.changeYourPasswordSubTitle,
+                style: Theme.of(context).textTheme.labelMedium,
+                textAlign: TextAlign.center,
+              ),
+              const SizedBox(height: TSizes.spaceBtwItems),
+
               /// Buttons
               SizedBox(
                 width: double.infinity,
-                child: ElevatedButton(onPressed: () => Get.offAll(() => const LoginScreen()), child: Text(TTexts.done)),
+                child: ElevatedButton(
+                  onPressed: () => Get.offAll(() => const LoginScreen()),
+                  child: Text(TTexts.done),
+                ),
               ),
-              const SizedBox(height: TSizes.spaceBtwSections,),
+              const SizedBox(height: TSizes.spaceBtwSections),
               SizedBox(
                 width: double.infinity,
-                child: TextButton(onPressed: () => ForgetPasswordController.instance.resendPassWordResetEmail(email), child: Text(TTexts.resendEmail)),
-              )
+                child: TextButton(
+                  onPressed: () => ForgetPasswordController.instance
+                      .resendPassWordResetEmail(email),
+                  child: Text(TTexts.resendEmail),
+                ),
+              ),
             ],
           ),
         ),

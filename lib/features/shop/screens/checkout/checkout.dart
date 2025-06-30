@@ -14,25 +14,34 @@ import 'package:t_store/utils/helpers/helper_functions.dart';
 import '../../../../common/widgets/products/cart/coupon_widget.dart';
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
+
 class CheckoutScreen extends StatelessWidget {
-  const CheckoutScreen ({super.key});
+  const CheckoutScreen({super.key});
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
-    // TODO: implement build
+    // implement build
     return Scaffold(
-      appBar: TAppBar(showBackArrow: true, title: Text('Order Review', style: Theme.of(context).textTheme.headlineSmall,),),
+      appBar: TAppBar(
+        showBackArrow: true,
+        title: Text(
+          'Order Review',
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
           child: Column(
             children: [
               /// Items in cart
-              TCartItemList(showAddRemoveButtons: false,),
-              SizedBox(height: TSizes.spaceBtwSections,),
+              TCartItemList(showAddRemoveButtons: false),
+              SizedBox(height: TSizes.spaceBtwSections),
+
               /// Coupon TextField
               TCouponCode(),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               /// Billing Section
               TRoundedContainer(
                 showBorder: true,
@@ -42,19 +51,22 @@ class CheckoutScreen extends StatelessWidget {
                   children: [
                     /// Pricing
                     TBillingAmountSection(),
-                    const SizedBox(height: TSizes.spaceBtwItems,),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+
                     /// Divider
                     const Divider(),
-                    const SizedBox(height:TSizes.spaceBtwItems,),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+
                     /// Payment Methods
                     TBillingPaymentSection(),
-                    const SizedBox(height:TSizes.spaceBtwItems,),
+                    const SizedBox(height: TSizes.spaceBtwItems),
+
                     /// Address
                     TBillingAddressSection(),
-                    const SizedBox(height:TSizes.spaceBtwItems,),
+                    const SizedBox(height: TSizes.spaceBtwItems),
                   ],
                 ),
-              )
+              ),
             ],
           ),
         ),
@@ -78,5 +90,4 @@ class CheckoutScreen extends StatelessWidget {
       ),
     );
   }
-
 }

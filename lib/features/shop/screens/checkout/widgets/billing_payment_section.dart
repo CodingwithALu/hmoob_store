@@ -6,17 +6,22 @@ import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 import '../../../../../utils/constants/sizes.dart';
+
 class TBillingPaymentSection extends StatelessWidget {
   const TBillingPaymentSection({super.key});
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     final dark = THelperFunctions.isDarkMode(context);
     return Column(
       children: [
-        TSectionHeading(title: 'Payment Method', buttonTitle: "Change", onPressed: () {},),
-        const SizedBox(height: TSizes.spaceBtwItems,),
+        TSectionHeading(
+          title: 'Payment Method',
+          buttonTitle: "Change",
+          onPressed: () {},
+        ),
+        const SizedBox(height: TSizes.spaceBtwItems),
         Row(
           children: [
             TRoundedContainer(
@@ -24,14 +29,16 @@ class TBillingPaymentSection extends StatelessWidget {
               height: 35,
               backgroundColor: dark ? TColors.light : TColors.white,
               padding: EdgeInsets.all(TSizes.sm),
-              child: const Image(image: AssetImage(TImages.paypal), fit: BoxFit.contain,),
+              child: const Image(
+                image: AssetImage(TImages.paypal),
+                fit: BoxFit.contain,
+              ),
             ),
-            const SizedBox(height: TSizes.spaceBtwItems /2,),
-            Text('Paypal', style: Theme.of(context).textTheme.bodyLarge,)
+            const SizedBox(height: TSizes.spaceBtwItems / 2),
+            Text('Paypal', style: Theme.of(context).textTheme.bodyLarge),
           ],
-        )
+        ),
       ],
     );
   }
-
 }

@@ -13,7 +13,7 @@ class BrandScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    // implement build
     return Scaffold(
       appBar: TAppBar(title: Text('Brand'), showBackArrow: true),
       body: SingleChildScrollView(

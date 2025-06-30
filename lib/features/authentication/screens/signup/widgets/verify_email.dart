@@ -14,7 +14,7 @@ class VerifyEmailScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(VerifyEmailController());
-    // TODO: implement build
+    // implement build
     return Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -36,6 +36,7 @@ class VerifyEmailScreen extends StatelessWidget {
                 width: THelperFunctions.screenWidth() * 0.6,
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
+
               ///Title & SubTitle
               Text(
                 TTexts.confirmEmail,

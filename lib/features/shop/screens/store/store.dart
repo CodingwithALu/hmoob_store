@@ -22,16 +22,18 @@ class StoreScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final categories = CategoryController.instance.featureCategories;
     final dark = THelperFunctions.isDarkMode(context);
-    // TODO: implement build
+    // implement build
     return DefaultTabController(
-      length:categories.length,
+      length: categories.length,
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
             'Store',
             style: Theme.of(context).textTheme.headlineMedium,
           ),
-          actions: [TCartCounterIcon(onPressed: () => Get.to(() => CartScreen()))],
+          actions: [
+            TCartCounterIcon(onPressed: () => Get.to(() => CartScreen())),
+          ],
         ),
         body: NestedScrollView(
           headerSliverBuilder: (_, innerBoxIsScrolled) {
@@ -76,13 +78,17 @@ class StoreScreen extends StatelessWidget {
                   ),
                 ),
                 bottom: TTabBar(
-                  tabs: categories.map((category) => Tab(child: Text(category.name),)).toList(),
+                  tabs: categories
+                      .map((category) => Tab(child: Text(category.name)))
+                      .toList(),
                 ),
               ),
             ];
           },
           body: TabBarView(
-            children: categories.map((category) => TCategoryTab(categoryModel: category)).toList(),
+            children: categories
+                .map((category) => TCategoryTab(categoryModel: category))
+                .toList(),
           ),
         ),
       ),
