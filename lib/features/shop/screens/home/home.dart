@@ -2,12 +2,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/common/widgets/shimmer/vertical_product_shimmer.dart';
-import 'package:t_store/features/shop/screens/all_products/all_products.dart';
+import 'package:t_store/features/shop/screens/product/all_products/all_products.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shapes/container/primary_header_container.dart';
 import '../../../../common/widgets/custom_shapes/container/search_container.dart';
@@ -64,16 +63,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// Promo Slider
-                  TPromoSlider(
-                    banners: [
-                      TImages.banner1,
-                      TImages.banner2,
-                      TImages.banner3,
-                      TImages.banner4,
-                      TImages.banner5,
-                      TImages.banner6,
-                    ],
-                  ),
+                  TPromoSlider(),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   ///Heading

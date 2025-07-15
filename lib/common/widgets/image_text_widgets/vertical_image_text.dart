@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
-import '../../../utils/helpers/helper_functions.dart';
 import '../images/t_circular_image.dart';
 
 class TVerticaImageText extends StatelessWidget {
@@ -24,7 +23,6 @@ class TVerticaImageText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Padding(
@@ -33,8 +31,7 @@ class TVerticaImageText extends StatelessWidget {
           children: [
             TCircularImage(
               isNetworkImage: isNetworkImage,
-              padding: TSizes.sm * 1.4,
-              overlayColor: dark ? TColors.light : TColors.dark,
+              padding: TSizes.sm,
               backgroundColor: backgroundColor,
               fit: BoxFit.fitWidth,
               image: image,

@@ -6,27 +6,32 @@ import 'package:t_store/utils/exceptions/firebase_exceptions.dart';
 import 'package:t_store/utils/exceptions/format_exceptions.dart';
 import 'package:t_store/utils/exceptions/platform_exceptions.dart';
 import '../../services/firebase_storage_services.dart';
+
 class CategoryRepository extends GetxController {
   static CategoryRepository get instance => Get.find();
 
   /// Variables
   final _db = FirebaseFirestore.instance;
+
   /// Get all categories
   Future<List<CategoryModel>> getAllCategories() async {
     try {
       final snapshot = await _db.collection('Categories').get();
-      final list = snapshot.docs.map((document) => CategoryModel.fromSnapshot(document)).toList();
+      final list = snapshot.docs
+          .map((document) => CategoryModel.fromSnapshot(document))
+          .toList();
       return list;
     } on FirebaseException catch (e) {
       throw TFirebaseException(e.code).message;
     } on FormatException catch (_) {
       throw TFormatException();
-    } on PlatformException catch (e){
+    } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
       throw 'Something went wrong. Please try again.';
     }
   }
+
   /// Get sub Categories
   /// Upload Categories to the Cloud Firebase\
   Future<void> uploadDummyData(List<CategoryModel> categories) async {
@@ -38,13 +43,19 @@ class CategoryRepository extends GetxController {
         // Upload image and Get its URL
         final file = await storage.getImageFormAssets(category.image);
         // Assign URL to Category. image attribute
-        final url = await storage.uploadImageData('Categories', file, category.name);
+        final url = await storage.uploadImageData(
+          'Categories',
+          file,
+          category.name,
+        );
         // Store Category in Firebase
         category.image = url;
         // Store Category in Firebase
-        await _db.collection("Categories").doc(category.id).set(category.toJson());
+        await _db
+            .collection("Categories")
+            .doc(category.id)
+            .set(category.toJson());
       }
-
     } on FirebaseException catch (e) {
       throw TFirebaseException(e.code).message;
     } on PlatformException catch (e) {

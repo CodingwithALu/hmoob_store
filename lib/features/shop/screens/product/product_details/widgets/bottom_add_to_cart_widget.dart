@@ -4,7 +4,7 @@ import 'package:t_store/common/widgets/icons/t_circular_icon.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-import '../../../../../utils/constants/sizes.dart';
+import '../../../../../../utils/constants/sizes.dart';
 
 class TButtonAddToCart extends StatelessWidget {
   const TButtonAddToCart({super.key});
@@ -48,13 +48,15 @@ class TButtonAddToCart extends StatelessWidget {
               ),
             ],
           ),
-          ElevatedButton(onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                padding: const EdgeInsets.all(TSizes.md),
-                backgroundColor: TColors.black,
-                side: const BorderSide(color: TColors.black)
-              ),
-              child: const Text('Add to cart')),
+          ElevatedButton(
+            onPressed: () {},
+            style: ElevatedButton.styleFrom(
+              padding: const EdgeInsets.all(TSizes.md),
+              backgroundColor: TColors.black,
+              side: const BorderSide(color: TColors.black),
+            ),
+            child: const Text('Add to cart'),
+          ),
         ],
       ),
     );

@@ -4,15 +4,15 @@ import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/features/shop/screens/product_details/widgets/bottom_add_to_cart_widget.dart';
-import 'package:t_store/features/shop/screens/product_details/widgets/product_attributes.dart';
-import 'package:t_store/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
-import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
-import 'package:t_store/features/shop/screens/product_details/widgets/rating_share_widgets.dart';
-import 'package:t_store/features/shop/screens/product_review/prooduct_review.dart';
+import 'package:t_store/features/shop/screens/product/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:t_store/features/shop/screens/product/product_details/widgets/product_attributes.dart';
+import 'package:t_store/features/shop/screens/product/product_details/widgets/product_detail_image_slider.dart';
+import 'package:t_store/features/shop/screens/product/product_details/widgets/product_meta_data.dart';
+import 'package:t_store/features/shop/screens/product/product_details/widgets/rating_share_widgets.dart';
+import 'package:t_store/features/shop/screens/product/product_review/prooduct_review.dart';
 import 'package:t_store/utils/constants/enums.dart';
 
-import '../../../../utils/constants/sizes.dart';
+import '../../../../../utils/constants/sizes.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key, required this.products});
@@ -66,6 +66,7 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   ReadMoreText(
+                    textAlign: TextAlign.start,
                     products.description ?? '',
                     trimLines: 2,
                     trimMode: TrimMode.Line,

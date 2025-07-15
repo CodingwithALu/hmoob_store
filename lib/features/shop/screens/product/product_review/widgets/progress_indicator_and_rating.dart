@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../utils/constants/colors.dart';
-import '../../../../../utils/devices/device_utility.dart';
+import '../../../../../../utils/constants/colors.dart';
+import '../../../../../../utils/devices/device_utility.dart';
+
 class TRatingProgressIndicator extends StatelessWidget {
   const TRatingProgressIndicator({
-    super.key, required this.text,
+    super.key,
+    required this.text,
     required this.value,
   });
   final String text;
@@ -13,7 +15,10 @@ class TRatingProgressIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(flex: 1, child: Text(text, style: Theme.of(context).textTheme.bodyMedium,)),
+        Expanded(
+          flex: 1,
+          child: Text(text, style: Theme.of(context).textTheme.bodyMedium),
+        ),
         Expanded(
           flex: 11,
           child: SizedBox(
@@ -23,9 +28,7 @@ class TRatingProgressIndicator extends StatelessWidget {
               minHeight: 11,
               backgroundColor: TColors.grey,
               borderRadius: BorderRadius.circular(7),
-              valueColor: const AlwaysStoppedAnimation(
-                TColors.primary,
-              ),
+              valueColor: const AlwaysStoppedAnimation(TColors.primary),
             ),
           ),
         ),

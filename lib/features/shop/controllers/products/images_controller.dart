@@ -7,6 +7,7 @@ import '../../../../utils/constants/sizes.dart';
 
 class ImagesController extends GetxController {
   static ImagesController get instance => Get.find();
+
   /// Variable
   RxString selectedProductImage = ''.obs;
 
@@ -17,13 +18,17 @@ class ImagesController extends GetxController {
 
     // Load thumbnail image
     images.add(product.thumbnail);
+    selectedProductImage.value = product.thumbnail;
     // Assign Thumbnail as Selected Image
     if (product.images != null) {
       images.addAll(product.images!);
     }
     // Get all images from the Product Model if not null
-    if (product.productVariations != null || product.productVariations!.isNotEmpty){
-      images.addAll(product.productVariations!.map((variation) => variation.image));
+    if (product.productVariations != null ||
+        product.productVariations!.isNotEmpty) {
+      images.addAll(
+        product.productVariations!.map((variation) => variation.image),
+      );
     }
 
     return images.toList();
@@ -33,28 +38,33 @@ class ImagesController extends GetxController {
   void showEnlargedImage(String image) {
     Get.to(
       fullscreenDialog: true,
-        () => Dialog.fullscreen(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: TSizes.defaultSpace * 2, horizontal: TSizes.defaultSpace),
-                child: CachedNetworkImage(imageUrl: image),
+      () => Dialog.fullscreen(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: TSizes.defaultSpace * 2,
+                horizontal: TSizes.defaultSpace,
               ),
-              const SizedBox(height:  TSizes.spaceBtwSections,),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: SizedBox(
-                  width: 150,
-                  child: OutlinedButton(onPressed: () => Get.back(), child: const Text('Close')),
+              child: CachedNetworkImage(imageUrl: image),
+            ),
+            const SizedBox(height: TSizes.spaceBtwSections),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: SizedBox(
+                width: 150,
+                child: OutlinedButton(
+                  onPressed: () => Get.back(),
+                  child: const Text('Close'),
                 ),
-              )
-            ],
-          ),
-        )
+              ),
+            ),
+          ],
+        ),
+      ),
     );
-
   }
 }

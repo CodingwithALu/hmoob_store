@@ -4,9 +4,9 @@ import 'package:t_store/common/widgets/custom_shapes/container/rounded_container
 import 'package:t_store/common/widgets/products/ratings/rating_indicator.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-import '../../../../../utils/constants/colors.dart';
-import '../../../../../utils/constants/image_strings.dart';
-import '../../../../../utils/constants/sizes.dart';
+import '../../../../../../utils/constants/colors.dart';
+import '../../../../../../utils/constants/image_strings.dart';
+import '../../../../../../utils/constants/sizes.dart';
 
 class UserReviewCard extends StatelessWidget {
   const UserReviewCard({super.key});
@@ -26,10 +26,7 @@ class UserReviewCard extends StatelessWidget {
                   backgroundImage: AssetImage(TImages.userProfileImage1),
                 ),
                 const SizedBox(width: TSizes.spaceBtwItems),
-                Text('John Doe', style: Theme
-                    .of(context)
-                    .textTheme
-                    .titleLarge),
+                Text('John Doe', style: Theme.of(context).textTheme.titleLarge),
               ],
             ),
             IconButton(onPressed: () {}, icon: const Icon(Icons.more_vert)),
@@ -42,10 +39,7 @@ class UserReviewCard extends StatelessWidget {
           children: [
             TRatingBarIndicator(rating: 4),
             const SizedBox(width: TSizes.spaceBtwItems),
-            Text('01 Nov, 2023', style: Theme
-                .of(context)
-                .textTheme
-                .bodyMedium),
+            Text('01 Nov, 2023', style: Theme.of(context).textTheme.bodyMedium),
           ],
         ),
         const SizedBox(height: TSizes.spaceBtwItems),
@@ -76,11 +70,17 @@ class UserReviewCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("T's Store", style: Theme.of(context).textTheme.titleMedium,),
-                    Text('02 Nov, 2023', style: Theme.of(context).textTheme.bodyMedium,)
+                    Text(
+                      "T's Store",
+                      style: Theme.of(context).textTheme.titleMedium,
+                    ),
+                    Text(
+                      '02 Nov, 2023',
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ),
                   ],
                 ),
-                const SizedBox(height: TSizes.spaceBtwItems,),
+                const SizedBox(height: TSizes.spaceBtwItems),
                 const ReadMoreText(
                   'The user interface of the opp is quite intuitive. I was able to navigate and make purchases purchases seamlessly. Great jod!',
                   trimLines: 2,
@@ -102,7 +102,7 @@ class UserReviewCard extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: TSizes.spaceBtwItems,)
+        const SizedBox(height: TSizes.spaceBtwItems),
       ],
     );
   }

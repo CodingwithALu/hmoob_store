@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/features/shop/controllers/products/all_products_contorller.dart';
 
-import '../../../../common/widgets/products/sortable/sortable_product.dart';
-import '../../../../utils/constants/sizes.dart';
-import '../../models/product_model.dart';
+import '../../../../../common/widgets/products/sortable/sortable_product.dart';
+import '../../../../../utils/constants/sizes.dart';
+import '../../../models/product_model.dart';
 
 class AllProducts extends StatelessWidget {
   const AllProducts({
@@ -31,7 +31,7 @@ class AllProducts extends StatelessWidget {
             future: futureMethod ?? controller.fetchProductsByQuery(query),
             builder: (context, asyncSnapshot) {
               return TSortableProducts();
-            }
+            },
           ),
         ),
       ),
