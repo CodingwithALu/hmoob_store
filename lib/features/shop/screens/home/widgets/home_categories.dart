@@ -33,7 +33,8 @@ class THomeCategories extends StatelessWidget {
             return TVerticaImageText(
               image: category.image,
               title: category.name,
-              onTap: () => Get.to(() => const SubCategoriesScreen()),
+              onTap: () =>
+                  Get.to(() => SubCategoriesScreen(category: category)),
             );
           },
         ),
