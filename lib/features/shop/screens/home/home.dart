@@ -76,6 +76,7 @@ class HomeScreen extends StatelessWidget {
                             .collection('Products')
                             .where('IsFeatured', isEqualTo: true)
                             .limit(6),
+                        futureMethod: controller.fetchAllFeaturedProducts(),
                       ),
                     ),
                   ),
