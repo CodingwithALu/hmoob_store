@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:t_store/features/shop/models/brand_model.dart';
@@ -55,14 +54,6 @@ class BrandsRepository extends GetxController {
       List<BrandModel> brands = brandsQuery.docs
           .map((doc) => BrandModel.fromSnapshot(doc))
           .toList();
-      if (kDebugMode) {
-        print(
-          '🔍 Debug: Final brands list: ${brands.map((b) => b.name).toList()}',
-        );
-      }
-      if (kDebugMode) {
-        print('🔍 Debug: Returning ${brands.length} brands');
-      }
 
       return brands;
     } on FirebaseException catch (e) {

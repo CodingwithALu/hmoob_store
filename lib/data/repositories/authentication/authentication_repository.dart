@@ -18,13 +18,18 @@ import 'package:t_store/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:t_store/utils/exceptions/firebase_exceptions.dart';
 import 'package:t_store/utils/exceptions/format_exceptions.dart';
 import 'package:t_store/utils/exceptions/platform_exceptions.dart';
+import 'package:t_store/utils/local_storage/storage_utility.dart';
+
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
+
   /// Variables
   final deviceStorage = GetStorage();
   final _auth = FirebaseAuth.instance;
+
   /// Get Authenticated User Dât
   User? get authUser => _auth.currentUser;
+
   /// Called from main.dart on app launch
   @override
   void onReady() {
@@ -38,6 +43,7 @@ class AuthenticationRepository extends GetxController {
     final user = _auth.currentUser;
     if (user != null) {
       if (user.emailVerified) {
+        await TLocalStorage.init(user.uid);
         Get.offAll(() => const NavigationMenu());
       } else {
         Get.offAll(() => VerifyEmailScreen(email: user.email));
@@ -131,6 +137,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
+
   /// Todo -- GoogleAuthentication - GOOGLE
   Future<UserCredential?> signInWithGoogle() async {
     try {
@@ -157,7 +164,7 @@ class AuthenticationRepository extends GetxController {
     } on PlatformException catch (e) {
       throw TPlatformException(e.code).message;
     } catch (e) {
-      if(kDebugMode) print('Something went wrong: $e');
+      if (kDebugMode) print('Something went wrong: $e');
       return null;
     }
   }
@@ -179,6 +186,7 @@ class AuthenticationRepository extends GetxController {
       throw 'Something went wrong. Please try again';
     }
   }
+
   /// Todo -- sendEmailVerification - LogoutUser
   Future<void> logout() async {
     try {
@@ -199,10 +207,16 @@ class AuthenticationRepository extends GetxController {
   }
 
   /// Todo -- Re Authentication User
-  Future<void> reAuthenticationWithEmailAndPassword(String email, String password) async {
+  Future<void> reAuthenticationWithEmailAndPassword(
+    String email,
+    String password,
+  ) async {
     try {
       // Create a credential
-      AuthCredential credential = EmailAuthProvider.credential(email: email, password: password);
+      AuthCredential credential = EmailAuthProvider.credential(
+        email: email,
+        password: password,
+      );
       // Re Authentication
       await _auth.currentUser!.reauthenticateWithCredential(credential);
     } on FirebaseAuthException catch (e) {

@@ -4,11 +4,16 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/icons/t_circular_icon.dart';
 import 'package:t_store/common/widgets/layouts/grid_layout.dart';
+import 'package:t_store/common/widgets/shimmer/vertical_product_shimmer.dart';
+import 'package:t_store/features/shop/controllers/favourite_controller.dart';
 import 'package:t_store/features/shop/screens/home/home.dart';
+import 'package:t_store/navigation_menu.dart';
+import 'package:t_store/utils/constants/image_strings.dart';
+import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:t_store/utils/loaders/animation_loader.dart';
 
 import '../../../../common/widgets/products/product_card/product_card_vertical.dart';
 import '../../../../utils/constants/sizes.dart';
-import '../../models/product_model.dart';
 
 class FavouriteScreen extends StatelessWidget {
   const FavouriteScreen({super.key});
@@ -16,6 +21,7 @@ class FavouriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // implement build
+    final controller = FavouritesController.instance;
     return Scaffold(
       /// AppBar
       appBar: TAppBar(
@@ -33,14 +39,37 @@ class FavouriteScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: Column(
-            children: [
-              TGridLayout(
-                itemCount: 4,
-                itemBuilder: (_, index) =>
-                    TProductCardVertical(productModel: ProductModel.empty()),
-              ),
-            ],
+
+          /// Products Grid
+          child: Obx(
+            () => FutureBuilder(
+              future: controller.favoriteProducts(),
+              builder: (context, snapshot) {
+                /// Nothing Found Widget
+                final emptyWidget = TAnimationLoaderWidget(
+                  text: 'Whoops! Wishlist is Empty...',
+                  animation: TImages.pencilAnimation,
+                  showAction: true,
+                  actionText: 'Let\'s add some',
+                  onActionPressed: () => Get.off(() => const NavigationMenu()),
+                );
+
+                const loader = TVerticalProductShimmer(itemCount: 6);
+                final widget = TCloudHelperFunctions.checkMultiRecordState(
+                  snapshot: snapshot,
+                  loader: loader,
+                  nothingFound: emptyWidget,
+                );
+                if (widget != null) return widget;
+
+                final products = snapshot.data!;
+                return TGridLayout(
+                  itemCount: products.length,
+                  itemBuilder: (_, index) =>
+                      TProductCardVertical(productModel: products[index]),
+                );
+              },
+            ),
           ),
         ),
       ),

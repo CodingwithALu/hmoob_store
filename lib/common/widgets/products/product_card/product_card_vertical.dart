@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadows.dart';
 import 'package:t_store/common/widgets/images/t_rounded_image.dart';
+import 'package:t_store/common/widgets/products/favourite_icon.dart';
 import 'package:t_store/common/widgets/texts/product_price_text.dart';
 import 'package:t_store/features/shop/controllers/products/product_controller.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
@@ -12,7 +13,6 @@ import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 import '../../../../utils/constants/sizes.dart';
 import '../../custom_shapes/container/rounded_container.dart';
-import '../../icons/t_circular_icon.dart';
 import '../../texts/product_title_text.dart';
 import '../../texts/t_brand_title_with_verified_icon.dart';
 
@@ -85,10 +85,7 @@ class TProductCardVertical extends StatelessWidget {
                   Positioned(
                     top: 0,
                     right: 0,
-                    child: const TCircularIcon(
-                      icon: Iconsax.heart5,
-                      color: Colors.red,
-                    ),
+                    child: TFavouriteIcon(productId: productModel.id),
                   ),
                 ],
               ),
