@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
+
 class TFromDivider extends StatelessWidget {
-  const TFromDivider({
-    super.key,
-    required this.dividerText
-  });
+  const TFromDivider({super.key, required this.dividerText});
   final String dividerText;
   @override
   Widget build(BuildContext context) {
@@ -21,9 +19,7 @@ class TFromDivider extends StatelessWidget {
             endIndent: 3,
           ),
         ),
-        Text(dividerText,
-          style: Theme.of(context).textTheme.labelSmall,
-        ),
+        Text(dividerText, style: Theme.of(context).textTheme.labelSmall),
         Flexible(
           child: Divider(
             color: dark ? TColors.darkerGrey : TColors.grey,

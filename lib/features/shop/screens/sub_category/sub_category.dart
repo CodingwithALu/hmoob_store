@@ -10,7 +10,6 @@ import 'package:t_store/features/shop/screens/product/all_products/all_products.
 import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
 
 import '../../../../common/widgets/products/product_card/product_card_horizontal.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class SubCategoriesScreen extends StatelessWidget {

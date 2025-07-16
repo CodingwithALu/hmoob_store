@@ -1,0 +1,215 @@
+{
+    "@@locale": "en",
+    "adminEmail": "support@codingwitht.com",
+    "@adminEmail": {
+        "description": "Default admin email"
+    },
+    "adminPassword": "Admin@123",
+    "@adminPassword": {
+        "description": "Default admin password"
+    },
+    "bannersStoragePath": "/Banners",
+    "@bannersStoragePath": {
+        "description": "Storage path for banners"
+    },
+    "brandsStoragePath": "/Brands",
+    "@brandsStoragePath": {
+        "description": "Storage path for brands"
+    },
+    "categoriesStoragePath": "/Categories",
+    "@categoriesStoragePath": {
+        "description": "Storage path for categories"
+    },
+    "productsStoragePath": "/Products",
+    "@productsStoragePath": {
+        "description": "Storage path for products"
+    },
+    "usersStoragePath": "/Users",
+    "@usersStoragePath": {
+        "description": "Storage path for users"
+    },
+    "and": "and",
+    "@and": {
+        "description": "The word 'and'"
+    },
+    "skip": "Skip",
+    "@skip": {
+        "description": "Skip button"
+    },
+    "done": "Done",
+    "@done": {
+        "description": "Done button"
+    },
+    "submit": "Submit",
+    "@submit": {
+        "description": "Submit button"
+    },
+    "appName": "T Store",
+    "@appName": {
+        "description": "Application name"
+    },
+    "tContinue": "Continue",
+    "@tContinue": {
+        "description": "Continue button"
+    },
+    "onBoardingTitle1": "Choose your product",
+    "@onBoardingTitle1": {
+        "description": "Onboarding step 1 title"
+    },
+    "onBoardingTitle2": "Select Payment Method",
+    "@onBoardingTitle2": {
+        "description": "Onboarding step 2 title"
+    },
+    "onBoardingTitle3": "Deliver at your door step",
+    "@onBoardingTitle3": {
+        "description": "Onboarding step 3 title"
+    },
+    "onBoardingSubTitle1": "Welcome to a World of Limitless Choices - Your Perfect Product Awaits!",
+    "@onBoardingSubTitle1": {
+        "description": "Onboarding step 1 subtitle"
+    },
+    "onBoardingSubTitle2": "For Seamless Transactions, Choose Your Payment Path - Your Convenience, Our Priority!",
+    "@onBoardingSubTitle2": {
+        "description": "Onboarding step 2 subtitle"
+    },
+    "onBoardingSubTitle3": "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery!",
+    "@onBoardingSubTitle3": {
+        "description": "Onboarding step 3 subtitle"
+    },
+    "firstName": "First Name",
+    "@firstName": {
+        "description": "First name field"
+    },
+    "lastName": "Last Name",
+    "@lastName": {
+        "description": "Last name field"
+    },
+    "email": "E-Mail",
+    "@email": {
+        "description": "Email field"
+    },
+    "password": "Password",
+    "@password": {
+        "description": "Password field"
+    },
+    "newPassword": "New Password",
+    "@newPassword": {
+        "description": "New password field"
+    },
+    "username": "Username",
+    "@username": {
+        "description": "Username field"
+    },
+    "phoneNo": "Phone Number",
+    "@phoneNo": {
+        "description": "Phone number field"
+    },
+    "rememberMe": "Remember Me",
+    "@rememberMe": {
+        "description": "Remember me checkbox"
+    },
+    "forgetPassword": "Forget Password?",
+    "@forgetPassword": {
+        "description": "Forgot password link"
+    },
+    "signIn": "Sign In",
+    "@signIn": {
+        "description": "Sign in button"
+    },
+    "createAccount": "Create Account",
+    "@createAccount": {
+        "description": "Create account button"
+    },
+    "orSignInWith": "or sign in with",
+    "@orSignInWith": {
+        "description": "Or sign in with text"
+    },
+    "orSignUpWith": "or sign up with",
+    "@orSignUpWith": {
+        "description": "Or sign up with text"
+    },
+    "iAgreeTo": "I agree to",
+    "@iAgreeTo": {
+        "description": "I agree to text"
+    },
+    "privacyPolicy": "Privacy Policy",
+    "@privacyPolicy": {
+        "description": "Privacy policy link"
+    },
+    "termsOfUse": "Terms of use",
+    "@termsOfUse": {
+        "description": "Terms of use link"
+    },
+    "verificationCode": "verificationCode",
+    "@verificationCode": {
+        "description": "Verification code label"
+    },
+    "resendEmail": "Resend Email",
+    "@resendEmail": {
+        "description": "Resend email button"
+    },
+    "resendEmailIn": "Resend email in",
+    "@resendEmailIn": {
+        "description": "Resend email in text"
+    },
+    "loginTitle": "Welcome back,",
+    "@loginTitle": {
+        "description": "Login screen title"
+    },
+    "loginSubTitle": "Discover Limitless Choices and Unmatched Convenience.",
+    "@loginSubTitle": {
+        "description": "Login screen subtitle"
+    },
+    "signupTitle": "Let’s create your account",
+    "@signupTitle": {
+        "description": "Signup screen title"
+    },
+    "forgetPasswordTitle": "Forget password",
+    "@forgetPasswordTitle": {
+        "description": "Forgot password screen title"
+    },
+    "forgetPasswordSubTitle": "Don’t worry sometimes people can forget too, enter your email and we will send you a password reset link.",
+    "@forgetPasswordSubTitle": {
+        "description": "Forgot password screen subtitle"
+    },
+    "changeYourPasswordTitle": "Password Reset Email Sent",
+    "@changeYourPasswordTitle": {
+        "description": "Password reset email sent title"
+    },
+    "changeYourPasswordSubTitle": "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.",
+    "@changeYourPasswordSubTitle": {
+        "description": "Password reset email sent subtitle"
+    },
+    "confirmEmail": "Verify your email address!",
+    "@confirmEmail": {
+        "description": "Confirm email title"
+    },
+    "confirmEmailSubTitle": "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.",
+    "@confirmEmailSubTitle": {
+        "description": "Confirm email subtitle"
+    },
+    "emailNotReceivedMessage": "Didn’t get the email? Check your junk/spam or resend it.",
+    "@emailNotReceivedMessage": {
+        "description": "Email not received message"
+    },
+    "yourAccountCreatedTitle": "Your account successfully created!",
+    "@yourAccountCreatedTitle": {
+        "description": "Account created title"
+    },
+    "yourAccountCreatedSubTitle": "Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!",
+    "@yourAccountCreatedSubTitle": {
+        "description": "Account created subtitle"
+    },
+    "popularProducts": "Popular Products",
+    "@popularProducts": {
+        "description": "Popular products section title"
+    },
+    "homeAppbarTitle": "Good day for shopping",
+    "@homeAppbarTitle": {
+        "description": "Home app bar title"
+    },
+    "homeAppbarSubTitle": "Taimoor Sikander",
+    "@homeAppbarSubTitle": {
+        "description": "Home app bar subtitle"
+    }
+}

@@ -4,10 +4,9 @@ import 'package:t_store/features/authentication/controllers/login/login_controll
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+
 class TSocialButtons extends StatelessWidget {
-  const TSocialButtons({
-    super.key,
-  });
+  const TSocialButtons({super.key});
 
   @override
   Widget build(BuildContext context) {

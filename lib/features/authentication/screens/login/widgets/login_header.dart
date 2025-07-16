@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/constants/text_string.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class TLoginHeader extends StatelessWidget {
@@ -9,6 +9,7 @@ class TLoginHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
+    final local = AppLocalizations.of(context)!;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -17,12 +18,12 @@ class TLoginHeader extends StatelessWidget {
           image: AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo),
         ),
         Text(
-          TTexts.loginTitle,
+          local.loginTitle,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         const SizedBox(height: TSizes.sm),
         Text(
-          TTexts.loginSubTitle,
+          local.loginSubTitle,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
       ],

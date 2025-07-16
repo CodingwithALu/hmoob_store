@@ -1,0 +1,215 @@
+{
+    "@@locale": "vi",
+    "adminEmail": "support@codingwitht.com",
+    "@adminEmail": {
+        "description": "Default admin email"
+    },
+    "adminPassword": "Admin@123",
+    "@adminPassword": {
+        "description": "Default admin password"
+    },
+    "bannersStoragePath": "/Banners",
+    "@bannersStoragePath": {
+        "description": "Storage path for banners"
+    },
+    "brandsStoragePath": "/Brands",
+    "@brandsStoragePath": {
+        "description": "Storage path for brands"
+    },
+    "categoriesStoragePath": "/Categories",
+    "@categoriesStoragePath": {
+        "description": "Storage path for categories"
+    },
+    "productsStoragePath": "/Products",
+    "@productsStoragePath": {
+        "description": "Storage path for products"
+    },
+    "usersStoragePath": "/Users",
+    "@usersStoragePath": {
+        "description": "Storage path for users"
+    },
+    "and": "và",
+    "@and": {
+        "description": "The word 'and'"
+    },
+    "skip": "Bỏ qua",
+    "@skip": {
+        "description": "Skip button"
+    },
+    "done": "Hoàn thành",
+    "@done": {
+        "description": "Done button"
+    },
+    "submit": "Gửi",
+    "@submit": {
+        "description": "Submit button"
+    },
+    "appName": "Cửa hàng T",
+    "@appName": {
+        "description": "Application name"
+    },
+    "tContinue": "Tiếp tục",
+    "@tContinue": {
+        "description": "Continue button"
+    },
+    "onBoardingTitle1": "Chọn sản phẩm của bạn",
+    "@onBoardingTitle1": {
+        "description": "Onboarding step 1 title"
+    },
+    "onBoardingTitle2": "Chọn phương thức thanh toán",
+    "@onBoardingTitle2": {
+        "description": "Onboarding step 2 title"
+    },
+    "onBoardingTitle3": "Giao hàng tận nơi",
+    "@onBoardingTitle3": {
+        "description": "Onboarding step 3 title"
+    },
+    "onBoardingSubTitle1": "Chào mừng đến với thế giới lựa chọn không giới hạn - Sản phẩm hoàn hảo đang chờ bạn!",
+    "@onBoardingSubTitle1": {
+        "description": "Onboarding step 1 subtitle"
+    },
+    "onBoardingSubTitle2": "Để giao dịch thuận tiện, hãy chọn phương thức thanh toán phù hợp - Sự tiện lợi của bạn là ưu tiên của chúng tôi!",
+    "@onBoardingSubTitle2": {
+        "description": "Onboarding step 2 subtitle"
+    },
+    "onBoardingSubTitle3": "Từ cửa hàng đến tận nhà bạn - Giao hàng nhanh chóng, an toàn và không tiếp xúc!",
+    "@onBoardingSubTitle3": {
+        "description": "Onboarding step 3 subtitle"
+    },
+    "firstName": "Họ",
+    "@firstName": {
+        "description": "First name field"
+    },
+    "lastName": "Tên",
+    "@lastName": {
+        "description": "Last name field"
+    },
+    "email": "Email",
+    "@email": {
+        "description": "Email field"
+    },
+    "password": "Mật khẩu",
+    "@password": {
+        "description": "Password field"
+    },
+    "newPassword": "Mật khẩu mới",
+    "@newPassword": {
+        "description": "New password field"
+    },
+    "username": "Tên đăng nhập",
+    "@username": {
+        "description": "Username field"
+    },
+    "phoneNo": "Số điện thoại",
+    "@phoneNo": {
+        "description": "Phone number field"
+    },
+    "rememberMe": "Ghi nhớ đăng nhập",
+    "@rememberMe": {
+        "description": "Remember me checkbox"
+    },
+    "forgetPassword": "Quên mật khẩu?",
+    "@forgetPassword": {
+        "description": "Forgot password link"
+    },
+    "signIn": "Đăng nhập",
+    "@signIn": {
+        "description": "Sign in button"
+    },
+    "createAccount": "Tạo tài khoản",
+    "@createAccount": {
+        "description": "Create account button"
+    },
+    "orSignInWith": "hoặc đăng nhập bằng",
+    "@orSignInWith": {
+        "description": "Or sign in with text"
+    },
+    "orSignUpWith": "hoặc đăng ký bằng",
+    "@orSignUpWith": {
+        "description": "Or sign up with text"
+    },
+    "iAgreeTo": "Tôi đồng ý với",
+    "@iAgreeTo": {
+        "description": "I agree to text"
+    },
+    "privacyPolicy": "Chính sách bảo mật",
+    "@privacyPolicy": {
+        "description": "Privacy policy link"
+    },
+    "termsOfUse": "Điều khoản sử dụng",
+    "@termsOfUse": {
+        "description": "Terms of use link"
+    },
+    "verificationCode": "Mã xác thực",
+    "@verificationCode": {
+        "description": "Verification code label"
+    },
+    "resendEmail": "Gửi lại email",
+    "@resendEmail": {
+        "description": "Resend email button"
+    },
+    "resendEmailIn": "Gửi lại email sau",
+    "@resendEmailIn": {
+        "description": "Resend email in text"
+    },
+    "loginTitle": "Chào mừng trở lại,",
+    "@loginTitle": {
+        "description": "Login screen title"
+    },
+    "loginSubTitle": "Khám phá vô vàn lựa chọn và sự tiện lợi vượt trội.",
+    "@loginSubTitle": {
+        "description": "Login screen subtitle"
+    },
+    "signupTitle": "Tạo tài khoản của bạn",
+    "@signupTitle": {
+        "description": "Signup screen title"
+    },
+    "forgetPasswordTitle": "Quên mật khẩu",
+    "@forgetPasswordTitle": {
+        "description": "Forgot password screen title"
+    },
+    "forgetPasswordSubTitle": "Đừng lo, đôi khi mọi người cũng quên, hãy nhập email và chúng tôi sẽ gửi liên kết đặt lại mật khẩu cho bạn.",
+    "@forgetPasswordSubTitle": {
+        "description": "Forgot password screen subtitle"
+    },
+    "changeYourPasswordTitle": "Đã gửi email đặt lại mật khẩu",
+    "@changeYourPasswordTitle": {
+        "description": "Password reset email sent title"
+    },
+    "changeYourPasswordSubTitle": "Bảo mật tài khoản của bạn là ưu tiên của chúng tôi! Chúng tôi đã gửi cho bạn một liên kết an toàn để thay đổi mật khẩu và bảo vệ tài khoản.",
+    "@changeYourPasswordSubTitle": {
+        "description": "Password reset email sent subtitle"
+    },
+    "confirmEmail": "Xác minh địa chỉ email của bạn!",
+    "@confirmEmail": {
+        "description": "Confirm email title"
+    },
+    "confirmEmailSubTitle": "Chúc mừng! Tài khoản của bạn đã sẵn sàng: Xác minh email để bắt đầu mua sắm và trải nghiệm ưu đãi tuyệt vời.",
+    "@confirmEmailSubTitle": {
+        "description": "Confirm email subtitle"
+    },
+    "emailNotReceivedMessage": "Không nhận được email? Kiểm tra thư rác hoặc gửi lại.",
+    "@emailNotReceivedMessage": {
+        "description": "Email not received message"
+    },
+    "yourAccountCreatedTitle": "Tạo tài khoản thành công!",
+    "@yourAccountCreatedTitle": {
+        "description": "Account created title"
+    },
+    "yourAccountCreatedSubTitle": "Chào mừng đến với điểm đến mua sắm tuyệt vời: Tài khoản của bạn đã được tạo, hãy tận hưởng mua sắm trực tuyến dễ dàng!",
+    "@yourAccountCreatedSubTitle": {
+        "description": "Account created subtitle"
+    },
+    "popularProducts": "Sản phẩm phổ biến",
+    "@popularProducts": {
+        "description": "Popular products section title"
+    },
+    "homeAppbarTitle": "Ngày tuyệt vời để mua sắm",
+    "@homeAppbarTitle": {
+        "description": "Home app bar title"
+    },
+    "homeAppbarSubTitle": "Taimoor Sikander",
+    "@homeAppbarSubTitle": {
+        "description": "Home app bar subtitle"
+    }
+}
