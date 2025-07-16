@@ -82,6 +82,37 @@ class ProductRepository extends GetxController {
     }
   }
 
+  /// Get limited featured product
+  Future<List<ProductModel>> getProductsForBrand({
+    required String brandId,
+    int limit = -1,
+  }) async {
+    try {
+      final querySnapshot = limit == -1
+          ? await _db
+                .collection('Products')
+                .where('Brand.Id', isEqualTo: brandId)
+                .get()
+          : await _db
+                .collection('Products')
+                .where('Brand.Id', isEqualTo: brandId)
+                .limit(limit)
+                .get();
+
+      final products = querySnapshot.docs
+          .map((doc) => ProductModel.fromSnapshot(doc))
+          .toList();
+
+      return products;
+    } on FirebaseException catch (e) {
+      throw TFirebaseException(e.code).message;
+    } on PlatformException catch (e) {
+      throw TPlatformException(e.code).message;
+    } catch (e) {
+      throw 'Something went wrong. Please try again';
+    }
+  }
+
   /// Upload dummy data to the Cloud Firebase
   Future<void> uploadDummyData(List<ProductModel> products) async {
     try {
@@ -123,7 +154,7 @@ class ProductRepository extends GetxController {
         if (product.productType == ProductType.variable.toString()) {
           for (var variable in product.productVariations!) {
             // Get image data link from local assets
-            final assetImage = await storage.getImageFormAssets(variable.image);
+            await storage.getImageFormAssets(variable.image);
             //Upload URL
             final url = await storage.uploadImageData(
               'Products/Images',

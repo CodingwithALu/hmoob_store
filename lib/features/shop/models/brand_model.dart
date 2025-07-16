@@ -26,7 +26,7 @@ class BrandModel {
       'Name': name,
       'Image': image,
       'ProductCount': productsCount,
-      'IsFeatured': isFeatured,
+      'IsFeatures': isFeatured,
     };
   }
 
@@ -38,7 +38,7 @@ class BrandModel {
       name: data['Name'] ?? '',
       image: data['Image'] ?? '',
       productsCount: data['ProductCount'] ?? '',
-      isFeatured: data['IsFeatured'] ?? false,
+      isFeatured: data['IsFeatures'] ?? false,
     );
   }
   // Map Jdon oriented document snapshot for Firebase to CategoryModels

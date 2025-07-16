@@ -6,7 +6,7 @@ import '../../../../../common/widgets/custom_shapes/container/circular_container
 import '../../../../../common/widgets/images/t_rounded_image.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
-import '../../../controllers/banner_controller.dart';
+import '../../../controllers/banners/banner_controller.dart';
 
 class TPromoSlider extends StatelessWidget {
   const TPromoSlider({super.key});

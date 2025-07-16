@@ -2,28 +2,28 @@ import 'package:get/get.dart';
 import 'package:t_store/data/repositories/banners/banner_repository.dart';
 import 'package:t_store/features/shop/models/banner_model.dart';
 
-import '../../../utils/popups/loaders.dart';
+import '../../../../utils/popups/loaders.dart';
+
 class BannerController extends GetxController {
   /// Variables
   final isLoading = false.obs;
   final carousalCurrentIndex = 0.obs;
   final RxList<BannerModel> banners = <BannerModel>[].obs;
 
-
   @override
   void onInit() {
     fetchBanners();
     super.onInit();
     //
-
   }
 
   /// Update Page Navigational Dots
   void updatePageIndicator(index) {
     carousalCurrentIndex.value = index;
   }
+
   /// Fetch Banners
-  Future <void> fetchBanners() async{
+  Future<void> fetchBanners() async {
     try {
       /// Todo -- Show loader while loading categories
       isLoading.value = true;
@@ -33,7 +33,7 @@ class BannerController extends GetxController {
 
       // Assign Banners
       this.banners.assignAll(banners);
-    } catch (e){
+    } catch (e) {
       TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     } finally {
       /// Todo -- Remove Loader
