@@ -3,7 +3,6 @@ import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/brands/t_brand_card.dart';
 import 'package:t_store/common/widgets/products/sortable/sortable_product.dart';
 import 'package:t_store/common/widgets/shimmer/vertical_product_shimmer.dart';
-import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/shop/controllers/brands/brands_contorller.dart';
 import 'package:t_store/features/shop/models/brand_model.dart';
 import 'package:t_store/utils/constants/sizes.dart';

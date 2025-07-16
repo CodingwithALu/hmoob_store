@@ -7,7 +7,6 @@ import 'package:t_store/common/widgets/shimmer/brand_shimmer.dart';
 import 'package:t_store/features/shop/controllers/brands/brands_contorller.dart';
 import 'package:t_store/features/shop/screens/brands/brand_products.dart';
 
-import '../../../../common/widgets/texts/section_heading.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class BrandScreen extends StatelessWidget {

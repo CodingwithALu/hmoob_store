@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/state_manager.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/shop/controllers/products/all_products_contorller.dart';
 
@@ -13,7 +13,7 @@ class TSortableProducts extends StatelessWidget {
   final List<ProductModel> products;
   @override
   Widget build(BuildContext context) {
-    final controller = AllProductController.instance;
+    final controller = Get.put(AllProductController());
     controller.assignProduct(products);
     return Column(
       children: [
