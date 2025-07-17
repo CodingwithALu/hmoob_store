@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets/list_titles/setting_menu_title.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/features/personalization/screens/address/address.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 
 import '../../../../common/widgets/list_titles/user_profile_title.dart';
 import '../../../../utils/constants/colors.dart';
@@ -20,6 +21,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // implement build
+    final local = AppLocalizations.of(context)!;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -31,7 +33,7 @@ class SettingsScreen extends StatelessWidget {
                   ///AppBar
                   TAppBar(
                     title: Text(
-                      'Account',
+                      local.account,
                       style: Theme.of(
                         context,
                       ).textTheme.headlineMedium!.apply(color: TColors.white),
@@ -55,82 +57,82 @@ class SettingsScreen extends StatelessWidget {
               child: Column(
                 children: [
                   /// Account Settings
-                  const TSectionHeading(
-                    title: 'Account Setting',
+                  TSectionHeading(
+                    title: local.accountSetting,
                     showActionButton: false,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   TSettingsMenuTitle(
                     icon: Iconsax.safe_home,
-                    title: 'My Address',
-                    subTitle: 'Set shopping delivery address',
+                    title: local.myAddress,
+                    subTitle: local.myAddressSub,
                     onTap: () => Get.to(() => const UserAddressScreen()),
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.shopping_cart,
-                    title: 'My Cart',
-                    subTitle: 'Add, remove products and move to checkout',
+                    title: local.myCart,
+                    subTitle: local.myCartSub,
                     onTap: () {},
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.bag_tick,
-                    title: 'My Orders',
-                    subTitle: 'In-progress and Completed Orders',
+                    title: local.myOrders,
+                    subTitle: local.myOrdersSub,
                     onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.bank,
-                    title: 'Bank Account',
-                    subTitle: 'Withdraw balance to registered bank account',
+                    title: local.bankAccount,
+                    subTitle: local.bankAccountSub,
                     onTap: () {},
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.discount_shape,
-                    title: 'My Coupons',
-                    subTitle: 'List off all the discounted coupons',
+                    title: local.myCoupons,
+                    subTitle: local.myCouponsSub,
                     onTap: () {},
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.notification,
-                    title: 'Notifications',
-                    subTitle: 'Set any kind of notifications message',
+                    title: local.notifications,
+                    subTitle: local.notificationsSub,
                     onTap: () {},
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.security_card,
-                    title: 'Account Privacy',
-                    subTitle: 'Manage data usage and connected accounts',
+                    title: local.accountPrivacy,
+                    subTitle: local.accountPrivacySub,
                     onTap: () {},
                   ),
 
                   /// App Settings
                   const SizedBox(height: TSizes.spaceBtwSections),
-                  const TSectionHeading(
-                    title: 'App Settings',
+                  TSectionHeading(
+                    title: local.appSettings,
                     showActionButton: false,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   TSettingsMenuTitle(
                     icon: Iconsax.document_upload,
-                    title: 'Load Data',
-                    subTitle: 'Upload Data to your Cloud Firebase',
+                    title: local.loadData,
+                    subTitle: local.loadDataSub,
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.location,
-                    title: 'Geolocation',
-                    subTitle: 'Set recommendation based on location',
+                    title: local.geolocation,
+                    subTitle: local.geolocationSub,
                     trailing: Switch(value: true, onChanged: (value) {}),
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.security_user,
-                    title: 'Safe Mode',
-                    subTitle: 'Search result is safe for all ages',
+                    title: local.safeMode,
+                    subTitle: local.safeModeSub,
                     trailing: Switch(value: false, onChanged: (value) {}),
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.image,
-                    title: 'HD Image Quality',
-                    subTitle: 'Set image quality to be seen',
+                    title: local.hdImageQuality,
+                    subTitle: local.hdImageQualitySub,
                     trailing: Switch(value: false, onChanged: (value) {}),
                   ),
 
@@ -140,7 +142,7 @@ class SettingsScreen extends StatelessWidget {
                     width: double.infinity,
                     child: OutlinedButton(
                       onPressed: () => Get.to(() => const LoginScreen()),
-                      child: const Text('Logout'),
+                      child: Text(local.logout),
                     ),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections * 2.5),

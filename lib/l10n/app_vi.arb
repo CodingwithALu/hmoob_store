@@ -4,9 +4,157 @@
     "@adminEmail": {
         "description": "Default admin email"
     },
+    "changeProfilePicture": "Đổi ảnh đại diện",
+    "@changeProfilePicture": {
+        "description": "Nút đổi ảnh đại diện"
+    },
+    "profileInformation": "Thông tin cá nhân",
+    "@profileInformation": {
+        "description": "Tiêu đề mục thông tin cá nhân"
+    },
+    "personalInformation": "Thông tin cá nhân chi tiết",
+    "@personalInformation": {
+        "description": "Tiêu đề mục thông tin cá nhân chi tiết"
+    },
+    "name": "Tên",
+    "@name": {
+        "description": "Nhãn trường tên"
+    },
+    "userId": "Mã người dùng",
+    "@userId": {
+        "description": "Nhãn trường mã người dùng"
+    },
+    "phoneNumber": "Số điện thoại",
+    "@phoneNumber": {
+        "description": "Nhãn trường số điện thoại"
+    },
+    "gender": "Giới tính",
+    "@gender": {
+        "description": "Nhãn trường giới tính"
+    },
+    "dateOfBirth": "Ngày sinh",
+    "@dateOfBirth": {
+        "description": "Nhãn trường ngày sinh"
+    },
+    "closeAccount": "Xóa tài khoản",
+    "@closeAccount": {
+        "description": "Nút đóng tài khoản"
+    },
+    "myAddressSub": "Thiết lập địa chỉ giao hàng",
+    "@myAddressSub": {
+        "description": "Phụ đề cho phần địa chỉ"
+    },
+    "myCartSub": "Thêm, xóa sản phẩm và chuyển đến thanh toán",
+    "@myCartSub": {
+        "description": "Phụ đề cho phần giỏ hàng"
+    },
+    "myOrdersSub": "Đơn hàng đang xử lý và đã hoàn thành",
+    "@myOrdersSub": {
+        "description": "Phụ đề cho phần đơn hàng"
+    },
+    "bankAccountSub": "Rút tiền về tài khoản ngân hàng đã đăng ký",
+    "@bankAccountSub": {
+        "description": "Phụ đề cho phần tài khoản ngân hàng"
+    },
+    "myCouponsSub": "Danh sách tất cả mã giảm giá",
+    "@myCouponsSub": {
+        "description": "Phụ đề cho phần mã giảm giá"
+    },
+    "notificationsSub": "Thiết lập các loại thông báo",
+    "@notificationsSub": {
+        "description": "Phụ đề cho phần thông báo"
+    },
+    "accountPrivacySub": "Quản lý dữ liệu và tài khoản liên kết",
+    "@accountPrivacySub": {
+        "description": "Phụ đề cho phần quyền riêng tư tài khoản"
+    },
+    "loadDataSub": "Tải dữ liệu lên Cloud Firebase của bạn",
+    "@loadDataSub": {
+        "description": "Phụ đề cho phần tải dữ liệu"
+    },
+    "geolocationSub": "Thiết lập gợi ý dựa trên vị trí",
+    "@geolocationSub": {
+        "description": "Phụ đề cho phần vị trí địa lý"
+    },
+    "safeModeSub": "Kết quả tìm kiếm an toàn cho mọi lứa tuổi",
+    "@safeModeSub": {
+        "description": "Phụ đề cho phần chế độ an toàn"
+    },
+    "hdImageQualitySub": "Thiết lập chất lượng hình ảnh hiển thị",
+    "@hdImageQualitySub": {
+        "description": "Phụ đề cho phần chất lượng hình ảnh HD"
+    },
+    "account": "Tài khoản",
+    "@account": {
+        "description": "Tiêu đề phần tài khoản trong cài đặt"
+    },
+    "accountSetting": "Cài đặt tài khoản",
+    "@accountSetting": {
+        "description": "Tiêu đề phần cài đặt tài khoản"
+    },
+    "myAddress": "Địa chỉ của tôi",
+    "@myAddress": {
+        "description": "Tiêu đề phần địa chỉ"
+    },
+    "myCart": "Giỏ hàng của tôi",
+    "@myCart": {
+        "description": "Tiêu đề phần giỏ hàng"
+    },
+    "myOrders": "Đơn hàng của tôi",
+    "@myOrders": {
+        "description": "Tiêu đề phần đơn hàng"
+    },
+    "bankAccount": "Tài khoản ngân hàng",
+    "@bankAccount": {
+        "description": "Tiêu đề phần tài khoản ngân hàng"
+    },
+    "myCoupons": "Mã giảm giá của tôi",
+    "@myCoupons": {
+        "description": "Tiêu đề phần mã giảm giá"
+    },
+    "notifications": "Thông báo",
+    "@notifications": {
+        "description": "Tiêu đề phần thông báo"
+    },
+    "accountPrivacy": "Quyền riêng tư tài khoản",
+    "@accountPrivacy": {
+        "description": "Tiêu đề phần quyền riêng tư tài khoản"
+    },
+    "appSettings": "Cài đặt ứng dụng",
+    "@appSettings": {
+        "description": "Tiêu đề phần cài đặt ứng dụng"
+    },
+    "loadData": "Tải dữ liệu",
+    "@loadData": {
+        "description": "Tiêu đề phần tải dữ liệu"
+    },
+    "geolocation": "Vị trí địa lý",
+    "@geolocation": {
+        "description": "Tiêu đề phần vị trí địa lý"
+    },
+    "safeMode": "Chế độ an toàn",
+    "@safeMode": {
+        "description": "Tiêu đề phần chế độ an toàn"
+    },
+    "hdImageQuality": "Chất lượng hình ảnh HD",
+    "@hdImageQuality": {
+        "description": "Tiêu đề phần chất lượng hình ảnh HD"
+    },
+    "logout": "Đăng xuất",
+    "@logout": {
+        "description": "Nút đăng xuất"
+    },
     "adminPassword": "Admin@123",
     "@adminPassword": {
         "description": "Default admin password"
+    },
+    "wishlistEmpty": "Ôi! Danh sách yêu thích đang trống...",
+    "@wishlistEmpty": {
+        "description": "Thông báo khi danh sách yêu thích trống"
+    },
+    "wishlistAddSome": "Thêm sản phẩm",
+    "@wishlistAddSome": {
+        "description": "Nút thêm sản phẩm vào danh sách yêu thích khi trống"
     },
     "bannersStoragePath": "/Banners",
     "@bannersStoragePath": {
@@ -211,5 +359,205 @@
     "homeAppbarSubTitle": "Taimoor Sikander",
     "@homeAppbarSubTitle": {
         "description": "Home app bar subtitle"
+    },
+    "searchInStore": "Tìm kiếm trong cửa hàng",
+    "@searchInStore": {
+        "description": "Search bar placeholder text on home screen"
+    },
+    "popularCategories": "Danh mục phổ biến",
+    "@popularCategories": {
+        "description": "Section heading for popular categories"
+    },
+    "popularProduct": "Sản phẩm phổ biến",
+    "@popularProduct": {
+        "description": "Title for all popular products screen"
+    },
+    "noDataFound": "Không có dữ liệu!",
+    "@noDataFound": {
+        "description": "Message when no data is found"
+    },
+    "viewAll": "Xem tất cả",
+    "@viewAll": {
+        "description": "Message no vew all"
+    },
+    "store": "Cửa hàng",
+    "@store": {
+        "description": "Tiêu đề màn hình cửa hàng"
+    },
+    "featuredBrands": "Thương hiệu nổi bật",
+    "@featuredBrands": {
+        "description": "Tiêu đề mục thương hiệu nổi bật"
+    },
+    "home": "Trang chủ",
+    "@home": {
+        "description": "Nhãn cho tab Trang chủ ở thanh điều hướng dưới"
+    },
+    "wishlist": "Yêu thích",
+    "@wishlist": {
+        "description": "Nhãn cho tab Yêu thích ở thanh điều hướng dưới"
+    },
+    "profile": "Cá nhân",
+    "@profile": {
+        "description": "Nhãn cho tab Cá nhân ở thanh điều hướng dưới"
+    },
+    "youMightLike": "Có thể bạn thích",
+    "@youMightLike": {
+        "description": "Tiêu đề mục sản phẩm gợi ý trong tab danh mục"
+    },
+    "deleteAccountTitle": "Xóa tài khoản",
+    "@deleteAccountTitle": {
+        "description": "Tiêu đề hộp thoại cảnh báo xóa tài khoản"
+    },
+    "deleteAccountMessage": "Bạn có chắc muốn xóa tài khoản vĩnh viễn? Hành động này không thể hoàn tác và toàn bộ dữ liệu sẽ bị xóa vĩnh viễn",
+    "@deleteAccountMessage": {
+        "description": "Nội dung cảnh báo xóa tài khoản"
+    },
+    "deleteAccountConfirm": "Xóa",
+    "@deleteAccountConfirm": {
+        "description": "Nút xác nhận xóa tài khoản"
+    },
+    "deleteAccountCancel": "Hủy",
+    "@deleteAccountCancel": {
+        "description": "Nút hủy xóa tài khoản"
+    },
+    "processing": "Đang xử lý",
+    "@processing": {
+        "description": "Thông báo loader khi xử lý hành động"
+    },
+    "ohSnap": "Ôi!",
+    "@ohSnap": {
+        "description": "Tiêu đề snackbar lỗi"
+    },
+    "dataNotSaved": "Dữ liệu chưa được lưu",
+    "@dataNotSaved": {
+        "description": "Tiêu đề snackbar dữ liệu chưa lưu"
+    },
+    "dataNotSavedMessage": "Có lỗi xảy ra khi lưu thông tin. Bạn có thể lưu lại dữ liệu trong mục Cá nhân",
+    "@dataNotSavedMessage": {
+        "description": "Nội dung snackbar dữ liệu chưa lưu"
+    },
+    "congratulations": "Chúc mừng",
+    "@congratulations": {
+        "description": "Tiêu đề snackbar thành công"
+    },
+    "profileImageUpdated": "Ảnh đại diện của bạn đã được cập nhật!",
+    "@profileImageUpdated": {
+        "description": "Nội dung cập nhật ảnh đại diện thành công"
+    },
+    "somethingWentWrong": "Có lỗi xảy ra!",
+    "@somethingWentWrong": {
+        "description": "Thông báo lỗi chung"
+    },
+    "changeNameTitle": "Đổi tên",
+    "@changeNameTitle": {
+        "description": "Tiêu đề màn hình Đổi tên"
+    },
+    "changeNameDescription": "Tên thật của người dùng để xác minh dễ dàng. Tên này sẽ xuất hiện ở nhiều trang khác nhau",
+    "@changeNameDescription": {
+        "description": "Mô tả dưới tiêu đề Đổi tên"
+    },
+    "saveButton": "Lưu",
+    "@saveButton": {
+        "description": "Nút lưu trên màn hình Đổi tên"
+    },
+    "addNewAddressTitle": "Thêm địa chỉ mới",
+    "@addNewAddressTitle": {
+        "description": "Tiêu đề màn hình Thêm địa chỉ mới"
+    },
+    "addressNameLabel": "Tên",
+    "@addressNameLabel": {
+        "description": "Nhãn trường tên trong form địa chỉ"
+    },
+    "addressPhoneLabel": "Số điện thoại",
+    "@addressPhoneLabel": {
+        "description": "Nhãn trường số điện thoại trong form địa chỉ"
+    },
+    "addressStreetLabel": "Đường",
+    "@addressStreetLabel": {
+        "description": "Nhãn trường đường trong form địa chỉ"
+    },
+    "addressPostalCodeLabel": "Mã bưu điện",
+    "@addressPostalCodeLabel": {
+        "description": "Nhãn trường mã bưu điện trong form địa chỉ"
+    },
+    "addressCityLabel": "Thành phố",
+    "@addressCityLabel": {
+        "description": "Nhãn trường thành phố trong form địa chỉ"
+    },
+    "addressStateLabel": "Tỉnh/Thành",
+    "@addressStateLabel": {
+        "description": "Nhãn trường tỉnh/thành trong form địa chỉ"
+    },
+    "addressCountryLabel": "Quốc gia",
+    "@addressCountryLabel": {
+        "description": "Nhãn trường quốc gia trong form địa chỉ"
+    },
+    "reAuthTitle": "Xác thực lại người dùng",
+    "@reAuthTitle": {
+        "description": "Tiêu đề màn hình xác thực lại người dùng"
+    },
+    "verifyButton": "Xác thực",
+    "@verifyButton": {
+        "description": "Nút xác thực trên màn hình xác thực lại người dùng"
+    },
+    "addressesTitle": "Địa chỉ",
+    "@addressesTitle": {
+        "description": "Tiêu đề màn hình địa chỉ người dùng"
+    },
+    "checkoutButton": "Thanh toán",
+    "variationSection": "Biến thể",
+    "@variationSection": {
+        "description": "Tiêu đề mục biến thể sản phẩm"
+    },
+    "priceLabel": "Giá : ",
+    "@priceLabel": {
+        "description": "Nhãn giá trong thuộc tính sản phẩm"
+    },
+    "stockLabel": "Kho : ",
+    "@stockLabel": {
+        "description": "Nhãn kho trong thuộc tính sản phẩm"
+    },
+    "attributesSection": "Thuộc tính",
+    "@attributesSection": {
+        "description": "Tiêu đề mục thuộc tính sản phẩm"
+    },
+    "attributeValueLabel": "Giá trị",
+    "@attributeValueLabel": {
+        "description": "Nhãn giá trị thuộc tính sản phẩm"
+    },
+    "attributeUnavailable": "Không khả dụng",
+    "@attributeUnavailable": {
+        "description": "Nhãn giá trị không khả dụng trong thuộc tính sản phẩm"
+    },
+    "variationDescription": "Mô tả",
+    "@variationDescription": {
+        "description": "Nhãn mô tả biến thể trong thuộc tính sản phẩm"
+    },
+    "@checkoutButton": {
+        "description": "Nút thanh toán trên màn hình chi tiết sản phẩm"
+    },
+    "descriptionSection": "Mô tả",
+    "@descriptionSection": {
+        "description": "Tiêu đề mục mô tả sản phẩm"
+    },
+    "reviewSection": "Đánh giá",
+    "@reviewSection": {
+        "description": "Tiêu đề mục đánh giá sản phẩm"
+    },
+    "showMore": " Xem thêm",
+    "@showMore": {
+        "description": "Nút xem thêm cho widget ReadMore"
+    },
+    "showLess": " Thu gọn",
+    "addToCartButton": "Thêm vào giỏ hàng",
+    "@addToCartButton": {
+        "description": "Nút thêm sản phẩm vào giỏ hàng"
+    },
+    "quantityLabel": "Số lượng",
+    "@quantityLabel": {
+        "description": "Nhãn số lượng sản phẩm trong widget thêm vào giỏ hàng"
+    },
+    "@showLess": {
+        "description": "Nút thu gọn cho widget ReadMore"
     }
 }

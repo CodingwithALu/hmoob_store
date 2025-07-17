@@ -5,6 +5,7 @@ import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/features/personalization/controllers/address_controller.dart';
 import 'package:t_store/features/personalization/screens/address/add_new_address.dart';
 import 'package:t_store/features/personalization/screens/address/widgets/single_address.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -25,7 +26,7 @@ class UserAddressScreen extends StatelessWidget {
       appBar: TAppBar(
         showBackArrow: true,
         title: Text(
-          'Addresses',
+          AppLocalizations.of(context)!.addressesTitle,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),

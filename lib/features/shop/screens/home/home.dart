@@ -6,6 +6,7 @@ import 'package:t_store/features/shop/screens/product/all_products/all_products.
 import 'package:t_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:t_store/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import '../../../../common/widgets/custom_shapes/container/primary_header_container.dart';
@@ -21,6 +22,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(ProductController());
+    final local = AppLocalizations.of(context)!;
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -34,7 +36,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Searchbar
-                  TSearchContainer(text: 'Search in Store'),
+                  TSearchContainer(text: local.searchInStore),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// Categories
@@ -43,7 +45,7 @@ class HomeScreen extends StatelessWidget {
                     child: Column(
                       children: [
                         TSectionHeading(
-                          title: 'Popular Categories',
+                          title: local.popularCategories,
                           showActionButton: false,
                           textColor: TColors.white,
                         ),
@@ -68,10 +70,10 @@ class HomeScreen extends StatelessWidget {
 
                   ///Heading
                   TSectionHeading(
-                    title: 'Popular Products',
+                    title: local.popularProducts,
                     onPressed: () => Get.to(
                       () => AllProducts(
-                        title: 'Popular Product',
+                        title: local.popularProduct,
                         query: FirebaseFirestore.instance
                             .collection('Products')
                             .where('IsFeatured', isEqualTo: true)
@@ -90,7 +92,7 @@ class HomeScreen extends StatelessWidget {
                     if (controller.featureProducts.isEmpty) {
                       return Center(
                         child: Text(
-                          'No Data Founs!',
+                          local.noDataFound,
                           style: Theme.of(context).textTheme.bodyMedium,
                         ),
                       );

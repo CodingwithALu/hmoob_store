@@ -4,9 +4,157 @@
     "@adminEmail": {
         "description": "Default admin email"
     },
+    "changeProfilePicture": "Change Profile Picture",
+    "@changeProfilePicture": {
+        "description": "Button to change profile picture"
+    },
+    "profileInformation": "Profile Information",
+    "@profileInformation": {
+        "description": "Section heading for profile information"
+    },
+    "personalInformation": "Personal Information",
+    "@personalInformation": {
+        "description": "Section heading for personal information"
+    },
+    "name": "Name",
+    "@name": {
+        "description": "Label for name field"
+    },
+    "userId": "User ID",
+    "@userId": {
+        "description": "Label for user ID field"
+    },
+    "phoneNumber": "Phone Number",
+    "@phoneNumber": {
+        "description": "Label for phone number field"
+    },
+    "gender": "Gender",
+    "@gender": {
+        "description": "Label for gender field"
+    },
+    "dateOfBirth": "Date of Birth",
+    "@dateOfBirth": {
+        "description": "Label for date of birth field"
+    },
+    "closeAccount": "Close Account",
+    "@closeAccount": {
+        "description": "Button to close account"
+    },
+    "myAddressSub": "Set shopping delivery address",
+    "@myAddressSub": {
+        "description": "Subtitle for address settings"
+    },
+    "myCartSub": "Add, remove products and move to checkout",
+    "@myCartSub": {
+        "description": "Subtitle for cart settings"
+    },
+    "myOrdersSub": "In-progress and Completed Orders",
+    "@myOrdersSub": {
+        "description": "Subtitle for orders settings"
+    },
+    "bankAccountSub": "Withdraw balance to registered bank account",
+    "@bankAccountSub": {
+        "description": "Subtitle for bank account settings"
+    },
+    "myCouponsSub": "List off all the discounted coupons",
+    "@myCouponsSub": {
+        "description": "Subtitle for coupons settings"
+    },
+    "notificationsSub": "Set any kind of notifications message",
+    "@notificationsSub": {
+        "description": "Subtitle for notifications settings"
+    },
+    "accountPrivacySub": "Manage data usage and connected accounts",
+    "@accountPrivacySub": {
+        "description": "Subtitle for account privacy settings"
+    },
+    "loadDataSub": "Upload Data to your Cloud Firebase",
+    "@loadDataSub": {
+        "description": "Subtitle for load data settings"
+    },
+    "geolocationSub": "Set recommendation based on location",
+    "@geolocationSub": {
+        "description": "Subtitle for geolocation settings"
+    },
+    "safeModeSub": "Search result is safe for all ages",
+    "@safeModeSub": {
+        "description": "Subtitle for safe mode settings"
+    },
+    "hdImageQualitySub": "Set image quality to be seen",
+    "@hdImageQualitySub": {
+        "description": "Subtitle for HD image quality settings"
+    },
+    "account": "Account",
+    "@account": {
+        "description": "Title for account section in settings"
+    },
+    "accountSetting": "Account Setting",
+    "@accountSetting": {
+        "description": "Title for account settings section"
+    },
+    "myAddress": "My Address",
+    "@myAddress": {
+        "description": "Title for address settings"
+    },
+    "myCart": "My Cart",
+    "@myCart": {
+        "description": "Title for cart settings"
+    },
+    "myOrders": "My Orders",
+    "@myOrders": {
+        "description": "Title for orders settings"
+    },
+    "bankAccount": "Bank Account",
+    "@bankAccount": {
+        "description": "Title for bank account settings"
+    },
+    "myCoupons": "My Coupons",
+    "@myCoupons": {
+        "description": "Title for coupons settings"
+    },
+    "notifications": "Notifications",
+    "@notifications": {
+        "description": "Title for notifications settings"
+    },
+    "accountPrivacy": "Account Privacy",
+    "@accountPrivacy": {
+        "description": "Title for account privacy settings"
+    },
+    "appSettings": "App Settings",
+    "@appSettings": {
+        "description": "Title for app settings section"
+    },
+    "loadData": "Load Data",
+    "@loadData": {
+        "description": "Title for load data settings"
+    },
+    "geolocation": "Geolocation",
+    "@geolocation": {
+        "description": "Title for geolocation settings"
+    },
+    "safeMode": "Safe Mode",
+    "@safeMode": {
+        "description": "Title for safe mode settings"
+    },
+    "hdImageQuality": "HD Image Quality",
+    "@hdImageQuality": {
+        "description": "Title for HD image quality settings"
+    },
+    "logout": "Logout",
+    "@logout": {
+        "description": "Logout button text"
+    },
     "adminPassword": "Admin@123",
     "@adminPassword": {
         "description": "Default admin password"
+    },
+    "wishlistEmpty": "Whoops! Wishlist is Empty...",
+    "@wishlistEmpty": {
+        "description": "Message when wishlist is empty"
+    },
+    "wishlistAddSome": "Let's add some",
+    "@wishlistAddSome": {
+        "description": "Action text to add items to wishlist when empty"
     },
     "bannersStoragePath": "/Banners",
     "@bannersStoragePath": {
@@ -200,10 +348,6 @@
     "@yourAccountCreatedSubTitle": {
         "description": "Account created subtitle"
     },
-    "popularProducts": "Popular Products",
-    "@popularProducts": {
-        "description": "Popular products section title"
-    },
     "homeAppbarTitle": "Good day for shopping",
     "@homeAppbarTitle": {
         "description": "Home app bar title"
@@ -211,5 +355,209 @@
     "homeAppbarSubTitle": "Taimoor Sikander",
     "@homeAppbarSubTitle": {
         "description": "Home app bar subtitle"
+    },
+    "searchInStore": "Search in Store",
+    "@searchInStore": {
+        "description": "Search bar placeholder text on home screen"
+    },
+    "popularCategories": "Popular Categories",
+    "@popularCategories": {
+        "description": "Section heading for popular categories"
+    },
+    "popularProducts": "Popular Products",
+    "@popularProducts": {
+        "description": "Section heading for popular products"
+    },
+    "popularProduct": "Popular Product",
+    "@popularProduct": {
+        "description": "Title for all popular products screen"
+    },
+    "noDataFound": "No data found!",
+    "@noDataFound": {
+        "description": "Message when no data is found"
+    },
+    "viewAll": "View all",
+    "@viewAll": {
+        "description": "Message no vew all"
+    },
+    "store": "Store",
+    "@store": {
+        "description": "Store screen title"
+    },
+    "featuredBrands": "Featured Brands",
+    "@featuredBrands": {
+        "description": "Section heading for featured brands"
+    },
+    "home": "Home",
+    "@home": {
+        "description": "Label for Home tab in bottom navigation"
+    },
+    "wishlist": "Wishlist",
+    "@wishlist": {
+        "description": "Label for Wishlist tab in bottom navigation"
+    },
+    "profile": "Profile",
+    "@profile": {
+        "description": "Label for Profile tab in bottom navigation"
+    },
+    "youMightLike": "You might like",
+    "@youMightLike": {
+        "description": "Section heading for recommended products in category tab"
+    },
+    "deleteAccountTitle": "Delete Account",
+    "@deleteAccountTitle": {
+        "description": "Dialog title for delete account warning"
+    },
+    "deleteAccountMessage": "Are you sure want to delete your account permanently? This is not reversible and all of your data will be removed permanently",
+    "@deleteAccountMessage": {
+        "description": "Dialog message for delete account warning"
+    },
+    "deleteAccountConfirm": "Delete",
+    "@deleteAccountConfirm": {
+        "description": "Confirm button for delete account dialog"
+    },
+    "deleteAccountCancel": "Cancel",
+    "@deleteAccountCancel": {
+        "description": "Cancel button for delete account dialog"
+    },
+    "processing": "Processing",
+    "@processing": {
+        "description": "Loader message for processing actions"
+    },
+    "ohSnap": "Oh Snap!",
+    "@ohSnap": {
+        "description": "Title for error snackbars"
+    },
+    "dataNotSaved": "Data not saved",
+    "@dataNotSaved": {
+        "description": "Title for data not saved snackbar"
+    },
+    "dataNotSavedMessage": "Something went wrong while saving your information. You can re-save your data in your Profile",
+    "@dataNotSavedMessage": {
+        "description": "Message for data not saved snackbar"
+    },
+    "congratulations": "Congratulations",
+    "@congratulations": {
+        "description": "Title for success snackbar"
+    },
+    "profileImageUpdated": "Your Profile Image has been updated!",
+    "@profileImageUpdated": {
+        "description": "Message for successful profile image update"
+    },
+    "somethingWentWrong": "Something went wrong!",
+    "@somethingWentWrong": {
+        "description": "Generic error message"
+    },
+    "changeNameTitle": "Change Name",
+    "@changeNameTitle": {
+        "description": "Title for Change Name screen"
+    },
+    "changeNameDescription": "User real name for easy verifications. This name will appear on several pages",
+    "@changeNameDescription": {
+        "description": "Description under Change Name title"
+    },
+    "saveButton": "Save",
+    "@saveButton": {
+        "description": "Save button text on Change Name screen"
+    },
+    "addNewAddressTitle": "Add new Address",
+    "@addNewAddressTitle": {
+        "description": "Title for Add New Address screen"
+    },
+    "addressNameLabel": "Name",
+    "@addressNameLabel": {
+        "description": "Label for name field in address form"
+    },
+    "addressPhoneLabel": "Phone Number",
+    "@addressPhoneLabel": {
+        "description": "Label for phone number field in address form"
+    },
+    "addressStreetLabel": "Street",
+    "@addressStreetLabel": {
+        "description": "Label for street field in address form"
+    },
+    "addressPostalCodeLabel": "Postal Code",
+    "@addressPostalCodeLabel": {
+        "description": "Label for postal code field in address form"
+    },
+    "addressCityLabel": "City",
+    "@addressCityLabel": {
+        "description": "Label for city field in address form"
+    },
+    "addressStateLabel": "State",
+    "@addressStateLabel": {
+        "description": "Label for state field in address form"
+    },
+    "addressCountryLabel": "Country",
+    "@addressCountryLabel": {
+        "description": "Label for country field in address form"
+    },
+    "reAuthTitle": "Re-Authenticate User",
+    "@reAuthTitle": {
+        "description": "Title for Re-Authentication screen"
+    },
+    "verifyButton": "Verify",
+    "@verifyButton": {
+        "description": "Button text for verify action on Re-Authentication screen"
+    },
+    "addressesTitle": "Addresses",
+    "@addressesTitle": {
+        "description": "Title for user addresses screen"
+    },
+    "checkoutButton": "Checkout",
+    "variationSection": "Variation",
+    "@variationSection": {
+        "description": "Section heading for product variation attributes"
+    },
+    "priceLabel": "Price : ",
+    "@priceLabel": {
+        "description": "Label for price in product attributes"
+    },
+    "stockLabel": "Stock : ",
+    "@stockLabel": {
+        "description": "Label for stock in product attributes"
+    },
+    "attributesSection": "Attributes",
+    "@attributesSection": {
+        "description": "Section heading for product attributes"
+    },
+    "attributeValueLabel": "Value",
+    "@attributeValueLabel": {
+        "description": "Label for attribute value in product attributes"
+    },
+    "attributeUnavailable": "Unavailable",
+    "@attributeUnavailable": {
+        "description": "Label for unavailable attribute value in product attributes"
+    },
+    "variationDescription": "Description",
+    "@variationDescription": {
+        "description": "Label for variation description in product attributes"
+    },
+    "@checkoutButton": {
+        "description": "Checkout button text on product detail screen"
+    },
+    "descriptionSection": "Description",
+    "@descriptionSection": {
+        "description": "Section heading for product description"
+    },
+    "reviewSection": "Review",
+    "@reviewSection": {
+        "description": "Section heading for product reviews"
+    },
+    "showMore": " Show more",
+    "@showMore": {
+        "description": "Show more text for ReadMore widget"
+    },
+    "showLess": " Less",
+    "addToCartButton": "Add to cart",
+    "@addToCartButton": {
+        "description": "Button text for adding product to cart"
+    },
+    "quantityLabel": "Quantity",
+    "@quantityLabel": {
+        "description": "Label for product quantity in add to cart widget"
+    },
+    "@showLess": {
+        "description": "Show less text for ReadMore widget"
     }
 }

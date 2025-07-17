@@ -12,7 +12,118 @@ class AppLocalizationsEn extends AppLocalizations {
   String get adminEmail => 'support@codingwitht.com';
 
   @override
+  String get changeProfilePicture => 'Change Profile Picture';
+
+  @override
+  String get profileInformation => 'Profile Information';
+
+  @override
+  String get personalInformation => 'Personal Information';
+
+  @override
+  String get name => 'Name';
+
+  @override
+  String get userId => 'User ID';
+
+  @override
+  String get phoneNumber => 'Phone Number';
+
+  @override
+  String get gender => 'Gender';
+
+  @override
+  String get dateOfBirth => 'Date of Birth';
+
+  @override
+  String get closeAccount => 'Close Account';
+
+  @override
+  String get myAddressSub => 'Set shopping delivery address';
+
+  @override
+  String get myCartSub => 'Add, remove products and move to checkout';
+
+  @override
+  String get myOrdersSub => 'In-progress and Completed Orders';
+
+  @override
+  String get bankAccountSub => 'Withdraw balance to registered bank account';
+
+  @override
+  String get myCouponsSub => 'List off all the discounted coupons';
+
+  @override
+  String get notificationsSub => 'Set any kind of notifications message';
+
+  @override
+  String get accountPrivacySub => 'Manage data usage and connected accounts';
+
+  @override
+  String get loadDataSub => 'Upload Data to your Cloud Firebase';
+
+  @override
+  String get geolocationSub => 'Set recommendation based on location';
+
+  @override
+  String get safeModeSub => 'Search result is safe for all ages';
+
+  @override
+  String get hdImageQualitySub => 'Set image quality to be seen';
+
+  @override
+  String get account => 'Account';
+
+  @override
+  String get accountSetting => 'Account Setting';
+
+  @override
+  String get myAddress => 'My Address';
+
+  @override
+  String get myCart => 'My Cart';
+
+  @override
+  String get myOrders => 'My Orders';
+
+  @override
+  String get bankAccount => 'Bank Account';
+
+  @override
+  String get myCoupons => 'My Coupons';
+
+  @override
+  String get notifications => 'Notifications';
+
+  @override
+  String get accountPrivacy => 'Account Privacy';
+
+  @override
+  String get appSettings => 'App Settings';
+
+  @override
+  String get loadData => 'Load Data';
+
+  @override
+  String get geolocation => 'Geolocation';
+
+  @override
+  String get safeMode => 'Safe Mode';
+
+  @override
+  String get hdImageQuality => 'HD Image Quality';
+
+  @override
+  String get logout => 'Logout';
+
+  @override
   String get adminPassword => 'Admin@123';
+
+  @override
+  String get wishlistEmpty => 'Whoops! Wishlist is Empty...';
+
+  @override
+  String get wishlistAddSome => 'Let\'s add some';
 
   @override
   String get bannersStoragePath => '/Banners';
@@ -159,11 +270,161 @@ class AppLocalizationsEn extends AppLocalizations {
   String get yourAccountCreatedSubTitle => 'Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!';
 
   @override
-  String get popularProducts => 'Popular Products';
-
-  @override
   String get homeAppbarTitle => 'Good day for shopping';
 
   @override
   String get homeAppbarSubTitle => 'Taimoor Sikander';
+
+  @override
+  String get searchInStore => 'Search in Store';
+
+  @override
+  String get popularCategories => 'Popular Categories';
+
+  @override
+  String get popularProducts => 'Popular Products';
+
+  @override
+  String get popularProduct => 'Popular Product';
+
+  @override
+  String get noDataFound => 'No data found!';
+
+  @override
+  String get viewAll => 'View all';
+
+  @override
+  String get store => 'Store';
+
+  @override
+  String get featuredBrands => 'Featured Brands';
+
+  @override
+  String get home => 'Home';
+
+  @override
+  String get wishlist => 'Wishlist';
+
+  @override
+  String get profile => 'Profile';
+
+  @override
+  String get youMightLike => 'You might like';
+
+  @override
+  String get deleteAccountTitle => 'Delete Account';
+
+  @override
+  String get deleteAccountMessage => 'Are you sure want to delete your account permanently? This is not reversible and all of your data will be removed permanently';
+
+  @override
+  String get deleteAccountConfirm => 'Delete';
+
+  @override
+  String get deleteAccountCancel => 'Cancel';
+
+  @override
+  String get processing => 'Processing';
+
+  @override
+  String get ohSnap => 'Oh Snap!';
+
+  @override
+  String get dataNotSaved => 'Data not saved';
+
+  @override
+  String get dataNotSavedMessage => 'Something went wrong while saving your information. You can re-save your data in your Profile';
+
+  @override
+  String get congratulations => 'Congratulations';
+
+  @override
+  String get profileImageUpdated => 'Your Profile Image has been updated!';
+
+  @override
+  String get somethingWentWrong => 'Something went wrong!';
+
+  @override
+  String get changeNameTitle => 'Change Name';
+
+  @override
+  String get changeNameDescription => 'User real name for easy verifications. This name will appear on several pages';
+
+  @override
+  String get saveButton => 'Save';
+
+  @override
+  String get addNewAddressTitle => 'Add new Address';
+
+  @override
+  String get addressNameLabel => 'Name';
+
+  @override
+  String get addressPhoneLabel => 'Phone Number';
+
+  @override
+  String get addressStreetLabel => 'Street';
+
+  @override
+  String get addressPostalCodeLabel => 'Postal Code';
+
+  @override
+  String get addressCityLabel => 'City';
+
+  @override
+  String get addressStateLabel => 'State';
+
+  @override
+  String get addressCountryLabel => 'Country';
+
+  @override
+  String get reAuthTitle => 'Re-Authenticate User';
+
+  @override
+  String get verifyButton => 'Verify';
+
+  @override
+  String get addressesTitle => 'Addresses';
+
+  @override
+  String get checkoutButton => 'Checkout';
+
+  @override
+  String get variationSection => 'Variation';
+
+  @override
+  String get priceLabel => 'Price : ';
+
+  @override
+  String get stockLabel => 'Stock : ';
+
+  @override
+  String get attributesSection => 'Attributes';
+
+  @override
+  String get attributeValueLabel => 'Value';
+
+  @override
+  String get attributeUnavailable => 'Unavailable';
+
+  @override
+  String get variationDescription => 'Description';
+
+  @override
+  String get descriptionSection => 'Description';
+
+  @override
+  String get reviewSection => 'Review';
+
+  @override
+  String get showMore => ' Show more';
+
+  @override
+  String get showLess => ' Less';
+
+  @override
+  String get addToCartButton => 'Add to cart';
+
+  @override
+  String get quantityLabel => 'Quantity';
 }

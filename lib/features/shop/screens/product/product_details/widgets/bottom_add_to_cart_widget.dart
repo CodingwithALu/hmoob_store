@@ -3,6 +3,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/icons/t_circular_icon.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../../../../utils/constants/sizes.dart';
 
@@ -12,6 +13,7 @@ class TButtonAddToCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
+    final localizations = AppLocalizations.of(context)!;
     return Container(
       padding: const EdgeInsets.symmetric(
         horizontal: TSizes.defaultSpace,
@@ -55,7 +57,7 @@ class TButtonAddToCart extends StatelessWidget {
               backgroundColor: TColors.black,
               side: const BorderSide(color: TColors.black),
             ),
-            child: const Text('Add to cart'),
+            child: Text(localizations.addToCartButton),
           ),
         ],
       ),

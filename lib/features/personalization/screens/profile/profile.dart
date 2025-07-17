@@ -8,6 +8,7 @@ import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/personalization/controllers/user_controller.dart';
 import 'package:t_store/features/personalization/screens/profile/widgets/change_name_users.dart';
 import 'package:t_store/features/personalization/screens/profile/widgets/t_profile_menu.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
@@ -19,9 +20,10 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // implement build
     final controller = UserController.instance;
+    final local = AppLocalizations.of(context)!;
     return Scaffold(
       /// AppBar
-      appBar: const TAppBar(title: Text('Profile'), showBackArrow: true),
+      appBar: TAppBar(title: Text(local.profile), showBackArrow: true),
 
       /// Body
       body: SingleChildScrollView(
@@ -54,7 +56,7 @@ class ProfileScreen extends StatelessWidget {
                     }),
                     TextButton(
                       onPressed: () => controller.uploadUseProfilePicture(),
-                      child: const Text('Change Profile Picture'),
+                      child: Text(local.changeProfilePicture),
                     ),
                   ],
                 ),
@@ -64,17 +66,17 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems / 2),
               const Divider(),
               const SizedBox(height: TSizes.spaceBtwItems),
-              const TSectionHeading(
-                title: 'Profile Information',
+              TSectionHeading(
+                title: local.profileInformation,
                 showActionButton: false,
               ),
               TProfileMenu(
-                title: 'Name',
+                title: local.name,
                 value: controller.user.value.fullName,
                 onPressed: () => Get.to(() => const ChangeName()),
               ),
               TProfileMenu(
-                title: 'Username',
+                title: local.username,
                 value: controller.user.value.lastName,
                 onPressed: () {},
               ),
@@ -84,32 +86,36 @@ class ProfileScreen extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems),
 
               /// Heading Personal Info
-              const TSectionHeading(
-                title: 'Personal Information',
+              TSectionHeading(
+                title: local.personalInformation,
                 showActionButton: false,
               ),
               const SizedBox(height: TSizes.spaceBtwItems),
 
               TProfileMenu(
                 onPressed: () {},
-                title: 'User ID',
+                title: local.userId,
                 value: controller.user.value.id,
                 icon: Iconsax.copy,
               ),
               TProfileMenu(
                 onPressed: () {},
-                title: 'E-mail',
+                title: local.email,
                 value: controller.user.value.email,
               ),
               TProfileMenu(
                 onPressed: () {},
-                title: 'Phone Number',
+                title: local.phoneNumber,
                 value: controller.user.value.phoneNumber,
               ),
-              TProfileMenu(onPressed: () {}, title: 'Gender', value: 'Male'),
               TProfileMenu(
                 onPressed: () {},
-                title: 'Date of Brith',
+                title: local.gender,
+                value: 'Male',
+              ),
+              TProfileMenu(
+                onPressed: () {},
+                title: local.dateOfBirth,
                 value: '10 Oct 2003',
               ),
 
@@ -120,7 +126,7 @@ class ProfileScreen extends StatelessWidget {
                 child: TextButton(
                   onPressed: () => controller.deleteAccountWarningPopup(),
                   child: Text(
-                    'Close Account',
+                    local.closeAccount,
                     style: TextStyle(color: Colors.red),
                   ),
                 ),

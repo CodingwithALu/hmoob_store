@@ -13,6 +13,7 @@ import 'package:t_store/features/shop/screens/product/product_review/prooduct_re
 import 'package:t_store/utils/constants/enums.dart';
 
 import '../../../../../utils/constants/sizes.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key, required this.products});
@@ -54,14 +55,14 @@ class ProductDetailScreen extends StatelessWidget {
                     width: double.infinity,
                     child: ElevatedButton(
                       onPressed: () {},
-                      child: const Text('Checkout'),
+                      child: Text(AppLocalizations.of(context)!.checkoutButton),
                     ),
                   ),
                   const SizedBox(height: TSizes.spaceBtwSections),
 
                   /// - Description
-                  const TSectionHeading(
-                    title: 'Description',
+                  TSectionHeading(
+                    title: AppLocalizations.of(context)!.descriptionSection,
                     showActionButton: false,
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
@@ -70,8 +71,8 @@ class ProductDetailScreen extends StatelessWidget {
                     products.description ?? '',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
-                    trimCollapsedText: ' Show more',
-                    trimExpandedText: ' Less',
+                    trimCollapsedText: AppLocalizations.of(context)!.showMore,
+                    trimExpandedText: AppLocalizations.of(context)!.showLess,
                     moreStyle: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.w800,
@@ -88,8 +89,9 @@ class ProductDetailScreen extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const TSectionHeading(
-                        title: 'Review(199)',
+                      TSectionHeading(
+                        title:
+                            '${AppLocalizations.of(context)!.reviewSection}(199)',
                         showActionButton: false,
                       ),
                       IconButton(

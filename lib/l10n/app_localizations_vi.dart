@@ -12,7 +12,118 @@ class AppLocalizationsVi extends AppLocalizations {
   String get adminEmail => 'support@codingwitht.com';
 
   @override
+  String get changeProfilePicture => 'Đổi ảnh đại diện';
+
+  @override
+  String get profileInformation => 'Thông tin cá nhân';
+
+  @override
+  String get personalInformation => 'Thông tin cá nhân chi tiết';
+
+  @override
+  String get name => 'Tên';
+
+  @override
+  String get userId => 'Mã người dùng';
+
+  @override
+  String get phoneNumber => 'Số điện thoại';
+
+  @override
+  String get gender => 'Giới tính';
+
+  @override
+  String get dateOfBirth => 'Ngày sinh';
+
+  @override
+  String get closeAccount => 'Xóa tài khoản';
+
+  @override
+  String get myAddressSub => 'Thiết lập địa chỉ giao hàng';
+
+  @override
+  String get myCartSub => 'Thêm, xóa sản phẩm và chuyển đến thanh toán';
+
+  @override
+  String get myOrdersSub => 'Đơn hàng đang xử lý và đã hoàn thành';
+
+  @override
+  String get bankAccountSub => 'Rút tiền về tài khoản ngân hàng đã đăng ký';
+
+  @override
+  String get myCouponsSub => 'Danh sách tất cả mã giảm giá';
+
+  @override
+  String get notificationsSub => 'Thiết lập các loại thông báo';
+
+  @override
+  String get accountPrivacySub => 'Quản lý dữ liệu và tài khoản liên kết';
+
+  @override
+  String get loadDataSub => 'Tải dữ liệu lên Cloud Firebase của bạn';
+
+  @override
+  String get geolocationSub => 'Thiết lập gợi ý dựa trên vị trí';
+
+  @override
+  String get safeModeSub => 'Kết quả tìm kiếm an toàn cho mọi lứa tuổi';
+
+  @override
+  String get hdImageQualitySub => 'Thiết lập chất lượng hình ảnh hiển thị';
+
+  @override
+  String get account => 'Tài khoản';
+
+  @override
+  String get accountSetting => 'Cài đặt tài khoản';
+
+  @override
+  String get myAddress => 'Địa chỉ của tôi';
+
+  @override
+  String get myCart => 'Giỏ hàng của tôi';
+
+  @override
+  String get myOrders => 'Đơn hàng của tôi';
+
+  @override
+  String get bankAccount => 'Tài khoản ngân hàng';
+
+  @override
+  String get myCoupons => 'Mã giảm giá của tôi';
+
+  @override
+  String get notifications => 'Thông báo';
+
+  @override
+  String get accountPrivacy => 'Quyền riêng tư tài khoản';
+
+  @override
+  String get appSettings => 'Cài đặt ứng dụng';
+
+  @override
+  String get loadData => 'Tải dữ liệu';
+
+  @override
+  String get geolocation => 'Vị trí địa lý';
+
+  @override
+  String get safeMode => 'Chế độ an toàn';
+
+  @override
+  String get hdImageQuality => 'Chất lượng hình ảnh HD';
+
+  @override
+  String get logout => 'Đăng xuất';
+
+  @override
   String get adminPassword => 'Admin@123';
+
+  @override
+  String get wishlistEmpty => 'Ôi! Danh sách yêu thích đang trống...';
+
+  @override
+  String get wishlistAddSome => 'Thêm sản phẩm';
 
   @override
   String get bannersStoragePath => '/Banners';
@@ -159,11 +270,161 @@ class AppLocalizationsVi extends AppLocalizations {
   String get yourAccountCreatedSubTitle => 'Chào mừng đến với điểm đến mua sắm tuyệt vời: Tài khoản của bạn đã được tạo, hãy tận hưởng mua sắm trực tuyến dễ dàng!';
 
   @override
-  String get popularProducts => 'Sản phẩm phổ biến';
-
-  @override
   String get homeAppbarTitle => 'Ngày tuyệt vời để mua sắm';
 
   @override
   String get homeAppbarSubTitle => 'Taimoor Sikander';
+
+  @override
+  String get searchInStore => 'Tìm kiếm trong cửa hàng';
+
+  @override
+  String get popularCategories => 'Danh mục phổ biến';
+
+  @override
+  String get popularProducts => 'Sản phẩm phổ biến';
+
+  @override
+  String get popularProduct => 'Sản phẩm phổ biến';
+
+  @override
+  String get noDataFound => 'Không có dữ liệu!';
+
+  @override
+  String get viewAll => 'Xem tất cả';
+
+  @override
+  String get store => 'Cửa hàng';
+
+  @override
+  String get featuredBrands => 'Thương hiệu nổi bật';
+
+  @override
+  String get home => 'Trang chủ';
+
+  @override
+  String get wishlist => 'Yêu thích';
+
+  @override
+  String get profile => 'Cá nhân';
+
+  @override
+  String get youMightLike => 'Có thể bạn thích';
+
+  @override
+  String get deleteAccountTitle => 'Xóa tài khoản';
+
+  @override
+  String get deleteAccountMessage => 'Bạn có chắc muốn xóa tài khoản vĩnh viễn? Hành động này không thể hoàn tác và toàn bộ dữ liệu sẽ bị xóa vĩnh viễn';
+
+  @override
+  String get deleteAccountConfirm => 'Xóa';
+
+  @override
+  String get deleteAccountCancel => 'Hủy';
+
+  @override
+  String get processing => 'Đang xử lý';
+
+  @override
+  String get ohSnap => 'Ôi!';
+
+  @override
+  String get dataNotSaved => 'Dữ liệu chưa được lưu';
+
+  @override
+  String get dataNotSavedMessage => 'Có lỗi xảy ra khi lưu thông tin. Bạn có thể lưu lại dữ liệu trong mục Cá nhân';
+
+  @override
+  String get congratulations => 'Chúc mừng';
+
+  @override
+  String get profileImageUpdated => 'Ảnh đại diện của bạn đã được cập nhật!';
+
+  @override
+  String get somethingWentWrong => 'Có lỗi xảy ra!';
+
+  @override
+  String get changeNameTitle => 'Đổi tên';
+
+  @override
+  String get changeNameDescription => 'Tên thật của người dùng để xác minh dễ dàng. Tên này sẽ xuất hiện ở nhiều trang khác nhau';
+
+  @override
+  String get saveButton => 'Lưu';
+
+  @override
+  String get addNewAddressTitle => 'Thêm địa chỉ mới';
+
+  @override
+  String get addressNameLabel => 'Tên';
+
+  @override
+  String get addressPhoneLabel => 'Số điện thoại';
+
+  @override
+  String get addressStreetLabel => 'Đường';
+
+  @override
+  String get addressPostalCodeLabel => 'Mã bưu điện';
+
+  @override
+  String get addressCityLabel => 'Thành phố';
+
+  @override
+  String get addressStateLabel => 'Tỉnh/Thành';
+
+  @override
+  String get addressCountryLabel => 'Quốc gia';
+
+  @override
+  String get reAuthTitle => 'Xác thực lại người dùng';
+
+  @override
+  String get verifyButton => 'Xác thực';
+
+  @override
+  String get addressesTitle => 'Địa chỉ';
+
+  @override
+  String get checkoutButton => 'Thanh toán';
+
+  @override
+  String get variationSection => 'Biến thể';
+
+  @override
+  String get priceLabel => 'Giá : ';
+
+  @override
+  String get stockLabel => 'Kho : ';
+
+  @override
+  String get attributesSection => 'Thuộc tính';
+
+  @override
+  String get attributeValueLabel => 'Giá trị';
+
+  @override
+  String get attributeUnavailable => 'Không khả dụng';
+
+  @override
+  String get variationDescription => 'Mô tả';
+
+  @override
+  String get descriptionSection => 'Mô tả';
+
+  @override
+  String get reviewSection => 'Đánh giá';
+
+  @override
+  String get showMore => ' Xem thêm';
+
+  @override
+  String get showLess => ' Thu gọn';
+
+  @override
+  String get addToCartButton => 'Thêm vào giỏ hàng';
+
+  @override
+  String get quantityLabel => 'Số lượng';
 }

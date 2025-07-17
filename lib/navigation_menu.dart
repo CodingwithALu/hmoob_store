@@ -5,6 +5,7 @@ import 'package:t_store/features/personalization/screens/settings/settings.dart'
 import 'package:t_store/features/shop/screens/home/home.dart';
 import 'package:t_store/features/shop/screens/store/store.dart';
 import 'package:t_store/features/shop/screens/wishlist/wishlist.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -15,20 +16,30 @@ class NavigationMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(NavigationController());
     final darkMode = THelperFunctions.isDarkMode(context);
+    final local = AppLocalizations.of(context)!;
     return Scaffold(
       bottomNavigationBar: Obx(
         () => NavigationBar(
           height: 80,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (index) => controller.selectedIndex.value = index,
+          onDestinationSelected: (index) =>
+              controller.selectedIndex.value = index,
           backgroundColor: darkMode ? TColors.black : TColors.white,
-          indicatorColor: darkMode ? TColors.white.withAlpha((0.1 * 255).round()) : TColors.black.withAlpha((0.1 * 255).round()),
+          indicatorColor: darkMode
+              ? TColors.white.withAlpha((0.1 * 255).round())
+              : TColors.black.withAlpha((0.1 * 255).round()),
           destinations: [
-            NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
-            NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
-            NavigationDestination(icon: Icon(Iconsax.heart), label: "Wishlist"),
-            NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
+            NavigationDestination(icon: Icon(Iconsax.home), label: local.home),
+            NavigationDestination(icon: Icon(Iconsax.shop), label: local.store),
+            NavigationDestination(
+              icon: Icon(Iconsax.heart),
+              label: local.wishlist,
+            ),
+            NavigationDestination(
+              icon: Icon(Iconsax.user),
+              label: local.profile,
+            ),
           ],
         ),
       ),
@@ -43,6 +54,6 @@ class NavigationController extends GetxController {
     const HomeScreen(),
     const StoreScreen(),
     const FavouriteScreen(),
-    const SettingsScreen()
+    const SettingsScreen(),
   ];
 }

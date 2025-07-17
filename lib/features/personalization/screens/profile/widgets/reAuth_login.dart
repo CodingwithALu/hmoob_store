@@ -8,6 +8,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/features/personalization/controllers/user_controller.dart';
 import 'package:t_store/utils/constants/sizes.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/validators/validation.dart';
 import '../../../../../utils/constants/text_string.dart';
 
@@ -20,7 +21,7 @@ class ReAuthLoginScreen extends StatelessWidget {
     // implement build
     return Scaffold(
       appBar: TAppBar(
-        title: Text('Re_Authentication User'),
+        title: Text(AppLocalizations.of(context)!.reAuthTitle),
         showBackArrow: true,
       ),
       body: SingleChildScrollView(
@@ -65,7 +66,7 @@ class ReAuthLoginScreen extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () =>
                         controller.reAuthenticateEmailAndPasswordUser(),
-                    child: const Text('Verify'),
+                    child: Text(AppLocalizations.of(context)!.verifyButton),
                   ),
                 ),
               ],

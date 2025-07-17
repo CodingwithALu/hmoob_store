@@ -12,6 +12,7 @@ import 'package:t_store/features/shop/screens/brands/all_brands.dart';
 import 'package:t_store/features/shop/screens/brands/brand_products.dart';
 import 'package:t_store/features/shop/screens/cart/cart.dart';
 import 'package:t_store/features/shop/screens/store/widgets/t_category_tab.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 import '../../../../common/widgets/appbar/t_tab_bar.dart';
@@ -25,13 +26,14 @@ class StoreScreen extends StatelessWidget {
     final categories = CategoryController.instance.featureCategories;
     final controller = Get.put(BrandsContorller());
     final dark = THelperFunctions.isDarkMode(context);
+    final local = AppLocalizations.of(context)!;
     // implement build
     return DefaultTabController(
       length: categories.length,
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
-            'Store',
+            local.store,
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           actions: [
@@ -56,7 +58,7 @@ class StoreScreen extends StatelessWidget {
                       /// Search bar
                       SizedBox(height: TSizes.spaceBtwItems),
                       TSearchContainer(
-                        text: 'Search in Store',
+                        text: local.searchInStore,
                         showBorder: true,
                         showBackground: false,
                         padding: EdgeInsets.zero,
@@ -65,7 +67,7 @@ class StoreScreen extends StatelessWidget {
 
                       /// Featured Brands
                       TSectionHeading(
-                        title: 'Featured Brands',
+                        title: local.featuredBrands,
                         onPressed: () => Get.to(() => BrandScreen()),
                       ),
                       const SizedBox(height: TSizes.spaceBtwItems / 1.5),
@@ -75,7 +77,7 @@ class StoreScreen extends StatelessWidget {
                         if (controller.featureBrands.isEmpty) {
                           return Center(
                             child: Text(
-                              'No Data Foud!',
+                              local.noDataFound,
                               style: Theme.of(context).textTheme.bodyMedium!
                                   .apply(color: Colors.white),
                             ),

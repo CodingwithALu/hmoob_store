@@ -6,6 +6,7 @@ import 'package:t_store/common/widgets/texts/product_title_text.dart';
 import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/features/shop/controllers/products/variation_controller.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -19,10 +20,11 @@ class TProductAttributes extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     final controller = Get.put(VariationController());
+    final localizations = AppLocalizations.of(context)!;
     return Obx(
       () => Column(
         children: [
-          /// Selection Attributes
+          // Selection Attributes
           if (controller.selectedVariation.value.id.isNotEmpty)
             TRoundedContainer(
               padding: EdgeInsets.all(TSizes.md),
@@ -32,8 +34,8 @@ class TProductAttributes extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      const TSectionHeading(
-                        title: 'Variation',
+                      TSectionHeading(
+                        title: localizations.variationSection,
                         showActionButton: false,
                       ),
                       const SizedBox(width: TSizes.spaceBtwItems),
@@ -42,8 +44,8 @@ class TProductAttributes extends StatelessWidget {
                         children: [
                           Row(
                             children: [
-                              const TProductTitleText(
-                                title: 'Price : ',
+                              TProductTitleText(
+                                title: localizations.priceLabel,
                                 smallSize: true,
                               ),
                               if (controller.selectedVariation.value.salePrice >
@@ -63,12 +65,11 @@ class TProductAttributes extends StatelessWidget {
                               ),
                             ],
                           ),
-
-                          /// Stock
+                          // Stock
                           Row(
                             children: [
-                              const TProductTitleText(
-                                title: 'Stock : ',
+                              TProductTitleText(
+                                title: localizations.stockLabel,
                                 smallSize: true,
                               ),
                               Text(
@@ -90,8 +91,7 @@ class TProductAttributes extends StatelessWidget {
               ),
             ),
           const SizedBox(height: TSizes.spaceBtwItems),
-
-          /// Attributes
+          // Attributes
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: products.productAttributeModel!
@@ -100,7 +100,8 @@ class TProductAttributes extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       TSectionHeading(
-                        title: attribute.name ?? '',
+                        title:
+                            attribute.name ?? localizations.attributesSection,
                         showActionButton: false,
                       ),
                       SizedBox(height: TSizes.spaceBtwItems / 2),

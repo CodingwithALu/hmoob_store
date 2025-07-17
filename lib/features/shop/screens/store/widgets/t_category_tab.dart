@@ -6,6 +6,7 @@ import 'package:t_store/features/shop/controllers/categories/category_controller
 import 'package:t_store/features/shop/models/category_model.dart';
 import 'package:t_store/features/shop/screens/product/all_products/all_products.dart';
 import 'package:t_store/features/shop/screens/store/widgets/category_brand.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
 
 import '../../../../../common/widgets/layouts/grid_layout.dart';
@@ -19,6 +20,7 @@ class TCategoryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = CategoryController.instance;
+    final local = AppLocalizations.of(context)!;
     return ListView(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -44,7 +46,7 @@ class TCategoryTab extends StatelessWidget {
                   return Column(
                     children: [
                       TSectionHeading(
-                        title: 'You might like',
+                        title: local.youMightLike,
                         showActionButton: true,
                         onPressed: () => Get.to(
                           AllProducts(

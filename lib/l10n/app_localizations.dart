@@ -6,7 +6,6 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
 import 'app_localizations_en.dart';
-import 'app_localizations_hmn.dart';
 import 'app_localizations_vi.dart';
 
 // ignore_for_file: type=lint
@@ -63,8 +62,7 @@ import 'app_localizations_vi.dart';
 /// be consistent with the languages listed in the AppLocalizations.supportedLocales
 /// property.
 abstract class AppLocalizations {
-  AppLocalizations(String locale)
-    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+  AppLocalizations(String locale) : localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
   final String localeName;
 
@@ -72,8 +70,7 @@ abstract class AppLocalizations {
     return Localizations.of<AppLocalizations>(context, AppLocalizations);
   }
 
-  static const LocalizationsDelegate<AppLocalizations> delegate =
-      _AppLocalizationsDelegate();
+  static const LocalizationsDelegate<AppLocalizations> delegate = _AppLocalizationsDelegate();
 
   /// A list of this localizations delegate along with the default localizations
   /// delegates.
@@ -85,19 +82,17 @@ abstract class AppLocalizations {
   /// Additional delegates can be added by appending to this list in
   /// MaterialApp. This list does not have to be used at all if a custom list
   /// of delegates is preferred or required.
-  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
-      <LocalizationsDelegate<dynamic>>[
-        delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalCupertinoLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ];
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates = <LocalizationsDelegate<dynamic>>[
+    delegate,
+    GlobalMaterialLocalizations.delegate,
+    GlobalCupertinoLocalizations.delegate,
+    GlobalWidgetsLocalizations.delegate,
+  ];
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
     Locale('en'),
-    Locale('hmn'),
-    Locale('vi'),
+    Locale('vi')
   ];
 
   /// Default admin email
@@ -106,11 +101,233 @@ abstract class AppLocalizations {
   /// **'support@codingwitht.com'**
   String get adminEmail;
 
+  /// Button to change profile picture
+  ///
+  /// In en, this message translates to:
+  /// **'Change Profile Picture'**
+  String get changeProfilePicture;
+
+  /// Section heading for profile information
+  ///
+  /// In en, this message translates to:
+  /// **'Profile Information'**
+  String get profileInformation;
+
+  /// Section heading for personal information
+  ///
+  /// In en, this message translates to:
+  /// **'Personal Information'**
+  String get personalInformation;
+
+  /// Label for name field
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get name;
+
+  /// Label for user ID field
+  ///
+  /// In en, this message translates to:
+  /// **'User ID'**
+  String get userId;
+
+  /// Label for phone number field
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get phoneNumber;
+
+  /// Label for gender field
+  ///
+  /// In en, this message translates to:
+  /// **'Gender'**
+  String get gender;
+
+  /// Label for date of birth field
+  ///
+  /// In en, this message translates to:
+  /// **'Date of Birth'**
+  String get dateOfBirth;
+
+  /// Button to close account
+  ///
+  /// In en, this message translates to:
+  /// **'Close Account'**
+  String get closeAccount;
+
+  /// Subtitle for address settings
+  ///
+  /// In en, this message translates to:
+  /// **'Set shopping delivery address'**
+  String get myAddressSub;
+
+  /// Subtitle for cart settings
+  ///
+  /// In en, this message translates to:
+  /// **'Add, remove products and move to checkout'**
+  String get myCartSub;
+
+  /// Subtitle for orders settings
+  ///
+  /// In en, this message translates to:
+  /// **'In-progress and Completed Orders'**
+  String get myOrdersSub;
+
+  /// Subtitle for bank account settings
+  ///
+  /// In en, this message translates to:
+  /// **'Withdraw balance to registered bank account'**
+  String get bankAccountSub;
+
+  /// Subtitle for coupons settings
+  ///
+  /// In en, this message translates to:
+  /// **'List off all the discounted coupons'**
+  String get myCouponsSub;
+
+  /// Subtitle for notifications settings
+  ///
+  /// In en, this message translates to:
+  /// **'Set any kind of notifications message'**
+  String get notificationsSub;
+
+  /// Subtitle for account privacy settings
+  ///
+  /// In en, this message translates to:
+  /// **'Manage data usage and connected accounts'**
+  String get accountPrivacySub;
+
+  /// Subtitle for load data settings
+  ///
+  /// In en, this message translates to:
+  /// **'Upload Data to your Cloud Firebase'**
+  String get loadDataSub;
+
+  /// Subtitle for geolocation settings
+  ///
+  /// In en, this message translates to:
+  /// **'Set recommendation based on location'**
+  String get geolocationSub;
+
+  /// Subtitle for safe mode settings
+  ///
+  /// In en, this message translates to:
+  /// **'Search result is safe for all ages'**
+  String get safeModeSub;
+
+  /// Subtitle for HD image quality settings
+  ///
+  /// In en, this message translates to:
+  /// **'Set image quality to be seen'**
+  String get hdImageQualitySub;
+
+  /// Title for account section in settings
+  ///
+  /// In en, this message translates to:
+  /// **'Account'**
+  String get account;
+
+  /// Title for account settings section
+  ///
+  /// In en, this message translates to:
+  /// **'Account Setting'**
+  String get accountSetting;
+
+  /// Title for address settings
+  ///
+  /// In en, this message translates to:
+  /// **'My Address'**
+  String get myAddress;
+
+  /// Title for cart settings
+  ///
+  /// In en, this message translates to:
+  /// **'My Cart'**
+  String get myCart;
+
+  /// Title for orders settings
+  ///
+  /// In en, this message translates to:
+  /// **'My Orders'**
+  String get myOrders;
+
+  /// Title for bank account settings
+  ///
+  /// In en, this message translates to:
+  /// **'Bank Account'**
+  String get bankAccount;
+
+  /// Title for coupons settings
+  ///
+  /// In en, this message translates to:
+  /// **'My Coupons'**
+  String get myCoupons;
+
+  /// Title for notifications settings
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notifications;
+
+  /// Title for account privacy settings
+  ///
+  /// In en, this message translates to:
+  /// **'Account Privacy'**
+  String get accountPrivacy;
+
+  /// Title for app settings section
+  ///
+  /// In en, this message translates to:
+  /// **'App Settings'**
+  String get appSettings;
+
+  /// Title for load data settings
+  ///
+  /// In en, this message translates to:
+  /// **'Load Data'**
+  String get loadData;
+
+  /// Title for geolocation settings
+  ///
+  /// In en, this message translates to:
+  /// **'Geolocation'**
+  String get geolocation;
+
+  /// Title for safe mode settings
+  ///
+  /// In en, this message translates to:
+  /// **'Safe Mode'**
+  String get safeMode;
+
+  /// Title for HD image quality settings
+  ///
+  /// In en, this message translates to:
+  /// **'HD Image Quality'**
+  String get hdImageQuality;
+
+  /// Logout button text
+  ///
+  /// In en, this message translates to:
+  /// **'Logout'**
+  String get logout;
+
   /// Default admin password
   ///
   /// In en, this message translates to:
   /// **'Admin@123'**
   String get adminPassword;
+
+  /// Message when wishlist is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Whoops! Wishlist is Empty...'**
+  String get wishlistEmpty;
+
+  /// Action text to add items to wishlist when empty
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s add some'**
+  String get wishlistAddSome;
 
   /// Storage path for banners
   ///
@@ -400,12 +617,6 @@ abstract class AppLocalizations {
   /// **'Welcome to Your Ultimate Shopping Destination: Your Account is Created, Unleash the Joy of Seamless Online Shopping!'**
   String get yourAccountCreatedSubTitle;
 
-  /// Popular products section title
-  ///
-  /// In en, this message translates to:
-  /// **'Popular Products'**
-  String get popularProducts;
-
   /// Home app bar title
   ///
   /// In en, this message translates to:
@@ -417,10 +628,315 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Taimoor Sikander'**
   String get homeAppbarSubTitle;
+
+  /// Search bar placeholder text on home screen
+  ///
+  /// In en, this message translates to:
+  /// **'Search in Store'**
+  String get searchInStore;
+
+  /// Section heading for popular categories
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Categories'**
+  String get popularCategories;
+
+  /// Section heading for popular products
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Products'**
+  String get popularProducts;
+
+  /// Title for all popular products screen
+  ///
+  /// In en, this message translates to:
+  /// **'Popular Product'**
+  String get popularProduct;
+
+  /// Message when no data is found
+  ///
+  /// In en, this message translates to:
+  /// **'No data found!'**
+  String get noDataFound;
+
+  /// Message no vew all
+  ///
+  /// In en, this message translates to:
+  /// **'View all'**
+  String get viewAll;
+
+  /// Store screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Store'**
+  String get store;
+
+  /// Section heading for featured brands
+  ///
+  /// In en, this message translates to:
+  /// **'Featured Brands'**
+  String get featuredBrands;
+
+  /// Label for Home tab in bottom navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get home;
+
+  /// Label for Wishlist tab in bottom navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Wishlist'**
+  String get wishlist;
+
+  /// Label for Profile tab in bottom navigation
+  ///
+  /// In en, this message translates to:
+  /// **'Profile'**
+  String get profile;
+
+  /// Section heading for recommended products in category tab
+  ///
+  /// In en, this message translates to:
+  /// **'You might like'**
+  String get youMightLike;
+
+  /// Dialog title for delete account warning
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Account'**
+  String get deleteAccountTitle;
+
+  /// Dialog message for delete account warning
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure want to delete your account permanently? This is not reversible and all of your data will be removed permanently'**
+  String get deleteAccountMessage;
+
+  /// Confirm button for delete account dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get deleteAccountConfirm;
+
+  /// Cancel button for delete account dialog
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get deleteAccountCancel;
+
+  /// Loader message for processing actions
+  ///
+  /// In en, this message translates to:
+  /// **'Processing'**
+  String get processing;
+
+  /// Title for error snackbars
+  ///
+  /// In en, this message translates to:
+  /// **'Oh Snap!'**
+  String get ohSnap;
+
+  /// Title for data not saved snackbar
+  ///
+  /// In en, this message translates to:
+  /// **'Data not saved'**
+  String get dataNotSaved;
+
+  /// Message for data not saved snackbar
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong while saving your information. You can re-save your data in your Profile'**
+  String get dataNotSavedMessage;
+
+  /// Title for success snackbar
+  ///
+  /// In en, this message translates to:
+  /// **'Congratulations'**
+  String get congratulations;
+
+  /// Message for successful profile image update
+  ///
+  /// In en, this message translates to:
+  /// **'Your Profile Image has been updated!'**
+  String get profileImageUpdated;
+
+  /// Generic error message
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong!'**
+  String get somethingWentWrong;
+
+  /// Title for Change Name screen
+  ///
+  /// In en, this message translates to:
+  /// **'Change Name'**
+  String get changeNameTitle;
+
+  /// Description under Change Name title
+  ///
+  /// In en, this message translates to:
+  /// **'User real name for easy verifications. This name will appear on several pages'**
+  String get changeNameDescription;
+
+  /// Save button text on Change Name screen
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get saveButton;
+
+  /// Title for Add New Address screen
+  ///
+  /// In en, this message translates to:
+  /// **'Add new Address'**
+  String get addNewAddressTitle;
+
+  /// Label for name field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get addressNameLabel;
+
+  /// Label for phone number field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'Phone Number'**
+  String get addressPhoneLabel;
+
+  /// Label for street field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'Street'**
+  String get addressStreetLabel;
+
+  /// Label for postal code field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'Postal Code'**
+  String get addressPostalCodeLabel;
+
+  /// Label for city field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'City'**
+  String get addressCityLabel;
+
+  /// Label for state field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'State'**
+  String get addressStateLabel;
+
+  /// Label for country field in address form
+  ///
+  /// In en, this message translates to:
+  /// **'Country'**
+  String get addressCountryLabel;
+
+  /// Title for Re-Authentication screen
+  ///
+  /// In en, this message translates to:
+  /// **'Re-Authenticate User'**
+  String get reAuthTitle;
+
+  /// Button text for verify action on Re-Authentication screen
+  ///
+  /// In en, this message translates to:
+  /// **'Verify'**
+  String get verifyButton;
+
+  /// Title for user addresses screen
+  ///
+  /// In en, this message translates to:
+  /// **'Addresses'**
+  String get addressesTitle;
+
+  /// Checkout button text on product detail screen
+  ///
+  /// In en, this message translates to:
+  /// **'Checkout'**
+  String get checkoutButton;
+
+  /// Section heading for product variation attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Variation'**
+  String get variationSection;
+
+  /// Label for price in product attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Price : '**
+  String get priceLabel;
+
+  /// Label for stock in product attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Stock : '**
+  String get stockLabel;
+
+  /// Section heading for product attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Attributes'**
+  String get attributesSection;
+
+  /// Label for attribute value in product attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Value'**
+  String get attributeValueLabel;
+
+  /// Label for unavailable attribute value in product attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Unavailable'**
+  String get attributeUnavailable;
+
+  /// Label for variation description in product attributes
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get variationDescription;
+
+  /// Section heading for product description
+  ///
+  /// In en, this message translates to:
+  /// **'Description'**
+  String get descriptionSection;
+
+  /// Section heading for product reviews
+  ///
+  /// In en, this message translates to:
+  /// **'Review'**
+  String get reviewSection;
+
+  /// Show more text for ReadMore widget
+  ///
+  /// In en, this message translates to:
+  /// **' Show more'**
+  String get showMore;
+
+  /// Show less text for ReadMore widget
+  ///
+  /// In en, this message translates to:
+  /// **' Less'**
+  String get showLess;
+
+  /// Button text for adding product to cart
+  ///
+  /// In en, this message translates to:
+  /// **'Add to cart'**
+  String get addToCartButton;
+
+  /// Label for product quantity in add to cart widget
+  ///
+  /// In en, this message translates to:
+  /// **'Quantity'**
+  String get quantityLabel;
 }
 
-class _AppLocalizationsDelegate
-    extends LocalizationsDelegate<AppLocalizations> {
+class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
   const _AppLocalizationsDelegate();
 
   @override
@@ -429,28 +945,25 @@ class _AppLocalizationsDelegate
   }
 
   @override
-  bool isSupported(Locale locale) =>
-      <String>['en', 'hmn', 'vi'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['en', 'vi'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
 }
 
 AppLocalizations lookupAppLocalizations(Locale locale) {
+
+
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
-    case 'en':
-      return AppLocalizationsEn();
-    case 'hmn':
-      return AppLocalizationsHmn();
-    case 'vi':
-      return AppLocalizationsVi();
+    case 'en': return AppLocalizationsEn();
+    case 'vi': return AppLocalizationsVi();
   }
 
   throw FlutterError(
     'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
     'an issue with the localizations generation tool. Please file an issue '
     'on GitHub with a reproducible sample app and the gen-l10n configuration '
-    'that was used.',
+    'that was used.'
   );
 }

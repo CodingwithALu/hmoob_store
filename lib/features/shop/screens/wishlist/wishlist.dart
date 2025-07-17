@@ -7,7 +7,7 @@ import 'package:t_store/common/widgets/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets/shimmer/vertical_product_shimmer.dart';
 import 'package:t_store/features/shop/controllers/favourite_controller.dart';
 import 'package:t_store/features/shop/screens/home/home.dart';
-import 'package:t_store/navigation_menu.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
 import 'package:t_store/utils/loaders/animation_loader.dart';
@@ -22,11 +22,12 @@ class FavouriteScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // implement build
     final controller = FavouritesController.instance;
+    final local = AppLocalizations.of(context)!;
     return Scaffold(
       /// AppBar
       appBar: TAppBar(
         title: Text(
-          'Wishlist',
+          local.wishlist,
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         actions: [
@@ -47,11 +48,11 @@ class FavouriteScreen extends StatelessWidget {
               builder: (context, snapshot) {
                 /// Nothing Found Widget
                 final emptyWidget = TAnimationLoaderWidget(
-                  text: 'Whoops! Wishlist is Empty...',
+                  text: local.wishlistEmpty,
                   animation: TImages.pencilAnimation,
                   showAction: true,
-                  actionText: 'Let\'s add some',
-                  onActionPressed: () => Get.off(() => const NavigationMenu()),
+                  actionText: local.wishlistAddSome,
+                  onActionPressed: () => {},
                 );
 
                 const loader = TVerticalProductShimmer(itemCount: 6);

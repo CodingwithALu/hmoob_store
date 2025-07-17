@@ -5,6 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_string.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import '../../../../../utils/validators/validation.dart';
 import '../../../controllers/profile_controller/update_name_controller.dart';
 
@@ -18,7 +19,7 @@ class ChangeName extends StatelessWidget {
     return Scaffold(
       appBar: TAppBar(
         title: Text(
-          'Change Name',
+          AppLocalizations.of(context)!.changeNameTitle,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         showBackArrow: true,
@@ -30,7 +31,7 @@ class ChangeName extends StatelessWidget {
           children: [
             /// Headings
             Text(
-              'user real name for easy verifications. This name will appear on several pages',
+              AppLocalizations.of(context)!.changeNameDescription,
               style: Theme.of(context).textTheme.labelMedium,
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
@@ -69,7 +70,7 @@ class ChangeName extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () => controller.updateUserName(),
-                child: Text('Save'),
+                child: Text(AppLocalizations.of(context)!.saveButton),
               ),
             ),
           ],
