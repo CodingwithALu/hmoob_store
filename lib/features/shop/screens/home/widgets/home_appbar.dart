@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/common/widgets/shimmer/shimmer.dart';
 import 'package:t_store/features/personalization/controllers/user_controller.dart';
+import 'package:t_store/features/shop/controllers/products/cart_controller.dart';
 import 'package:t_store/features/shop/screens/cart/cart.dart';
 import 'package:t_store/l10n/app_localizations.dart';
 
@@ -11,10 +12,10 @@ import '../../../../../utils/constants/colors.dart';
 
 class THomeAppBar extends StatelessWidget {
   const THomeAppBar({super.key});
-
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(UserController());
+    Get.put(CartController());
     final local = AppLocalizations.of(context)!;
     return TAppBar(
       title: Column(

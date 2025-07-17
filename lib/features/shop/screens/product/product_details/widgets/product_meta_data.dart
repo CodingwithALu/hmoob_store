@@ -5,6 +5,7 @@ import 'package:t_store/common/widgets/texts/product_title_text.dart';
 import 'package:t_store/common/widgets/texts/t_brand_title_with_verified_icon.dart';
 import 'package:t_store/features/shop/controllers/products/product_controller.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
+import 'package:t_store/l10n/app_localizations.dart';
 import 'package:t_store/utils/constants/enums.dart';
 import '../../../../../../common/widgets/texts/product_price_text.dart';
 import '../../../../../../utils/constants/colors.dart';
@@ -20,6 +21,7 @@ class TProductMetaData extends StatelessWidget {
       products.price,
       products.salePrices,
     );
+    final local = AppLocalizations.of(context)!;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -70,7 +72,7 @@ class TProductMetaData extends StatelessWidget {
         /// Stock Status
         Row(
           children: [
-            const TProductTitleText(title: 'status'),
+            TProductTitleText(title: local.stockLabel),
             const SizedBox(width: TSizes.spaceBtwItems),
             Text(
               controller.getProductStockStatus(products.stock),

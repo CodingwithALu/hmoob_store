@@ -63,6 +63,8 @@ class TImages {
       "assets/images/animations/sammy-line-travel-backpack-with-passport-and-air-ticket.gif";
   static const String pencilAnimation =
       "assets/images/animations/140429-pencil-drawing.json";
+  static const String cartAnimation =
+      "assets/images/animations/lady-adding-product-in-cart-animation.json";
 
   // -- OnBoarding Texts
   static const String onBoardingImage1 =

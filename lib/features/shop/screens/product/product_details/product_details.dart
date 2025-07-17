@@ -22,7 +22,7 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // implement build
     return Scaffold(
-      bottomNavigationBar: TButtonAddToCart(),
+      bottomNavigationBar: TButtomAddToCart(product: products),
       body: SingleChildScrollView(
         child: Column(
           children: [

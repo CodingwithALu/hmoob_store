@@ -17,7 +17,7 @@ class TLocalStorage {
   }
 
   // Generic method to save data
-  Future<void> saveData<T>(String key, T value) async {
+  Future<void> writeData<T>(String key, T value) async {
     await _storage.write(key, value);
   }
 
