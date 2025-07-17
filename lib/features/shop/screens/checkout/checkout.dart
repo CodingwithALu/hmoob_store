@@ -2,17 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/common/widgets/appbar/appbar.dart';
 import 'package:t_store/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:t_store/common/widgets/success_screen/success_screen.dart';
+import 'package:t_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:t_store/features/shop/controllers/products/order_controller.dart';
 import 'package:t_store/features/shop/screens/cart/widgets/cart_item_list.dart';
 import 'package:t_store/features/shop/screens/checkout/widgets/billing_address_section.dart';
 import 'package:t_store/features/shop/screens/checkout/widgets/billing_amount_section.dart';
 import 'package:t_store/features/shop/screens/checkout/widgets/billing_payment_section.dart';
-import 'package:t_store/navigation_menu.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:t_store/utils/helpers/pricing_calculator.dart';
+import 'package:t_store/utils/popups/loaders.dart';
 
 import '../../../../common/widgets/products/cart/coupon_widget.dart';
-import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class CheckoutScreen extends StatelessWidget {
@@ -21,6 +22,10 @@ class CheckoutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
     // implement build
+    final controller = CartController.instance;
+    final subTotal = controller.totalCartPrice.value;
+    final orderController = Get.put(OrderController());
+    final totalAmout = TPricingCalculator.calculateTotalPrice(subTotal, 'Us');
     return Scaffold(
       appBar: TAppBar(
         showBackArrow: true,
@@ -76,16 +81,15 @@ class CheckoutScreen extends StatelessWidget {
       bottomNavigationBar: Padding(
         padding: EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
-          onPressed: () => Get.to(
-            () => SuccessScreen(
-              showEmail: false,
-              image: TImages.successfulPaymentIcon,
-              title: 'Payment Success!',
-              subtitle: 'Your item will be shipped soon!',
-              onPressed: () => Get.offAll(() => const NavigationMenu()),
-            ),
+          onPressed: subTotal > 0
+              ? () => orderController.processOrder(totalAmout)
+              : () => TLoaders.warningSnackBar(
+                  title: 'Empty Cart',
+                  message: 'Add items in the cart order to proseed',
+                ),
+          child: Text(
+            'Checkout \$${TPricingCalculator.calculateTotalPrice(subTotal, 'US')}',
           ),
-          child: Text('Checkout \$256.0'),
         ),
       ),
     );

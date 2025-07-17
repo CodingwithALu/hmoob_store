@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:t_store/common/widgets/texts/section_heading.dart';
 import 'package:t_store/data/repositories/address/address_repository.dart';
 import 'package:t_store/features/personalization/models/address_model.dart';
+import 'package:t_store/features/personalization/screens/address/add_new_address.dart';
+import 'package:t_store/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
+import 'package:t_store/utils/constants/sizes.dart';
+import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
 import 'package:t_store/utils/helpers/network_manager.dart';
 import 'package:t_store/utils/loaders/circular_loader.dart';
 import 'package:t_store/utils/popups/full_screen_loader.dart';
@@ -145,5 +150,54 @@ class AddressController extends GetxController {
     state.clear();
     country.clear();
     addressFormKey.currentState?.reset();
+  }
+
+  /// Show Addresses ModalBottomSheet at Checkout
+  Future<dynamic> selectNewAddressPopup(BuildContext context) {
+    return showModalBottomSheet(
+      context: context,
+      builder: (_) => Container(
+        padding: const EdgeInsets.all(TSizes.lg),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const TSectionHeading(
+              title: 'Select Address',
+              showActionButton: false,
+            ),
+            FutureBuilder(
+              future: getAllUserAddresses(),
+              builder: (_, snapshot) {
+                /// Helper Function: Handle Loader, No Record, OR ERROR Message
+                final response = TCloudHelperFunctions.checkMultiRecordState(
+                  snapshot: snapshot,
+                );
+                if (response != null) return response;
+
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: snapshot.data!.length,
+                  itemBuilder: (_, index) => TSingleAddress(
+                    address: snapshot.data![index],
+                    onTap: () async {
+                      await selectAddress(snapshot.data![index]);
+                      Get.back();
+                    },
+                  ), // TSingleAddress
+                ); // ListView.builder
+              },
+            ),
+            const SizedBox(height: TSizes.defaultSpace),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => Get.to(() => const AddNewAddressScreen()),
+                child: const Text('Add new address'),
+              ),
+            ), // FutureBuilder
+          ],
+        ),
+      ),
+    );
   }
 }
