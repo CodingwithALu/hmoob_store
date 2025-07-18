@@ -11,7 +11,7 @@ class OrderModel {
   final double totalAmount;
   final DateTime orderDate;
   final String paymentMethod;
-  final AddressModel? address;
+  final AddressModel? shippingAddress;
   final DateTime? deliveryDate;
   final List<CartItemModel> items;
 
@@ -24,7 +24,7 @@ class OrderModel {
     required this.orderDate,
     this.paymentMethod = 'Paypal',
     this.deliveryDate,
-    this.address,
+    this.shippingAddress,
   });
 
   String get formattedOrderDate => THelperFunctions.getFormattedDate(orderDate);
@@ -53,12 +53,12 @@ class OrderModel {
     return {
       'id': id,
       'userId': userId,
-      'status': status.toString().split('.').last,
+      'status': status.toString(),
       'totalAmount': totalAmount,
-      'orderDate': orderDate.toIso8601String(),
+      'orderDate': orderDate,
       'paymentMethod': paymentMethod,
-      'address': address?.toJson(),
-      'deliveryDate': deliveryDate?.toIso8601String(),
+      'shippingAddress': shippingAddress?.toJson(),
+      'deliveryDate': deliveryDate,
       'items': items.map((item) => item.toJson()).toList(),
     };
   }
@@ -78,7 +78,9 @@ class OrderModel {
       deliveryDate: json['deliveryDate'] != null
           ? DateTime.parse(json['deliveryDate'])
           : null,
-      address: AddressModel.fromJson(json['address'] as Map<String, dynamic>),
+      shippingAddress: AddressModel.fromJson(
+        json['shippingAddress'] as Map<String, dynamic>,
+      ),
       items:
           (json['items'] as List<dynamic>?)
               ?.map((item) => CartItemModel.fromJson(item))
@@ -110,8 +112,10 @@ class OrderModel {
       deliveryDate: data.containsKey('deliveryDate') != null
           ? (data['deliveryDate'] as Timestamp).toDate()
           : null,
-      address: data.containsKey('address')
-          ? AddressModel.fromJson(data['address'] as Map<String, dynamic>)
+      shippingAddress: data.containsKey('shippingAddress')
+          ? AddressModel.fromJson(
+              data['shippingAddress'] as Map<String, dynamic>,
+            )
           : AddressModel.empty(),
       items: data.containsKey('items')
           ? (data['items'] as List<dynamic>)

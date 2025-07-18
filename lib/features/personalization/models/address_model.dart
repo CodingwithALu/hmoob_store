@@ -42,6 +42,7 @@ class AddressModel {
   // Convert model to JSON structure for storing data in Firebase
   Map<String, dynamic> toJson() {
     return {
+      'Id': id,
       'Name': name,
       'PhoneNumber': phoneNumber,
       'Street': street,

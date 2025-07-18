@@ -16,7 +16,7 @@ class UserAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // implement build
-    final controller = Get.put(AddressController());
+    final controller = AddressController.instance;
     return Scaffold(
       floatingActionButton: FloatingActionButton(
         backgroundColor: TColors.primary,

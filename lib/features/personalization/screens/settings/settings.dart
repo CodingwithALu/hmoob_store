@@ -72,7 +72,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.shopping_cart,
                     title: local.myCart,
                     subTitle: local.myCartSub,
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.bag_tick,

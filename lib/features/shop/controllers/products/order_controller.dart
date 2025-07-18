@@ -7,7 +7,7 @@ import 'package:t_store/features/personalization/controllers/address_controller.
 import 'package:t_store/features/shop/controllers/checkouts/checkout_controller.dart';
 import 'package:t_store/features/shop/controllers/products/cart_controller.dart';
 import 'package:t_store/features/shop/models/order_model.dart';
-import 'package:t_store/navigation_menu.dart';
+import 'package:t_store/features/shop/screens/order/order.dart';
 import 'package:t_store/utils/constants/enums.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/popups/full_screen_loader.dart';
@@ -18,7 +18,7 @@ class OrderController extends GetxController {
 
   /// Variables
   final cartController = CartController.instance;
-  final addressController = Get.put(AddressController());
+  final addressController = AddressController.instance;
   final checkoutController = Get.put(CheckoutController());
   final orderRepository = Get.put(OrderRepository());
 
@@ -54,7 +54,7 @@ class OrderController extends GetxController {
         totalAmount: totalAmount,
         orderDate: DateTime.now(),
         paymentMethod: checkoutController.selectecPaymentMethod.value.name,
-        address: addressController.selectedAddress.value,
+        shippingAddress: addressController.selectedAddress.value,
         // Set Date as needed
         deliveryDate: DateTime.now(),
         items: cartController.cartItems.toList(),
@@ -71,7 +71,7 @@ class OrderController extends GetxController {
           image: TImages.orderCompletedAnimation,
           title: 'Payment Success!',
           subtitle: 'Your item will be shpipped soon!',
-          onPressed: () => Get.off(() => const NavigationMenu()),
+          onPressed: () => Get.off(() => const OrderScreen()),
         ),
       );
     } catch (e) {

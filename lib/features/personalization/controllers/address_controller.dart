@@ -156,7 +156,8 @@ class AddressController extends GetxController {
   Future<dynamic> selectNewAddressPopup(BuildContext context) {
     return showModalBottomSheet(
       context: context,
-      builder: (_) => Container(
+      isScrollControlled: true,
+      builder: (_) => SingleChildScrollView(
         padding: const EdgeInsets.all(TSizes.lg),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
