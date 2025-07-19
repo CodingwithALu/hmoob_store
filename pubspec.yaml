@@ -53,6 +53,11 @@ dev_dependencies:
 
   flutter_lints: ^5.0.0
 
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/logos/hmoob_store.jpg
+  android: true
+  ios: true
 
 flutter:
   generate: true
