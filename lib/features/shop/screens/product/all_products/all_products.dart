@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/shimmer/vertical_product_shimmer.dart';
-import 'package:t_store/features/shop/controllers/products/all_products_contorller.dart';
-import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
+import 'package:hmoob_store/common/widgets/shimmer/vertical_product_shimmer.dart';
+import 'package:hmoob_store/features/shop/controllers/products/all_products_contorller.dart';
+import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
 
 import '../../../../../common/widgets/products/sortable/sortable_product.dart';
 import '../../../../../utils/constants/sizes.dart';

@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories/products/product_repository.dart';
-import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/utils/constants/enums.dart';
-import 'package:t_store/utils/popups/loaders.dart';
+import 'package:hmoob_store/data/repositories/products/product_repository.dart';
+import 'package:hmoob_store/features/shop/models/product_model.dart';
+import 'package:hmoob_store/utils/constants/enums.dart';
+import 'package:hmoob_store/utils/popups/loaders.dart';
 
 class ProductController extends GetxController {
   static ProductController get instance => Get.find();

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/helpers/network_manager.dart';
-import 'package:t_store/utils/popups/full_screen_loader.dart';
-import 'package:t_store/utils/popups/loaders.dart';
+import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/helpers/network_manager.dart';
+import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
+import 'package:hmoob_store/utils/popups/loaders.dart';
 
 import '../../screens/password_configuration/reset_passsword.dart';
 

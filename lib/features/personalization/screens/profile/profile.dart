@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/images/t_circular_image.dart';
-import 'package:t_store/common/widgets/shimmer/shimmer.dart';
-import 'package:t_store/common/widgets/texts/section_heading.dart';
-import 'package:t_store/features/personalization/controllers/user_controller.dart';
-import 'package:t_store/features/personalization/screens/profile/widgets/change_name_users.dart';
-import 'package:t_store/features/personalization/screens/profile/widgets/t_profile_menu.dart';
-import 'package:t_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
+import 'package:hmoob_store/common/widgets/images/t_circular_image.dart';
+import 'package:hmoob_store/common/widgets/shimmer/shimmer.dart';
+import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
+import 'package:hmoob_store/features/personalization/controllers/user_controller.dart';
+import 'package:hmoob_store/features/personalization/screens/profile/widgets/change_name_users.dart';
+import 'package:hmoob_store/features/personalization/screens/profile/widgets/t_profile_menu.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
 
 import '../../../../utils/constants/image_strings.dart';
 import '../../../../utils/constants/sizes.dart';

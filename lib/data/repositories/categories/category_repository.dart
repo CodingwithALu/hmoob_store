@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:t_store/features/shop/models/category_model.dart';
-import 'package:t_store/utils/exceptions/firebase_exceptions.dart';
-import 'package:t_store/utils/exceptions/format_exceptions.dart';
-import 'package:t_store/utils/exceptions/platform_exceptions.dart';
+import 'package:hmoob_store/features/shop/models/category_model.dart';
+import 'package:hmoob_store/utils/exceptions/firebase_exceptions.dart';
+import 'package:hmoob_store/utils/exceptions/format_exceptions.dart';
+import 'package:hmoob_store/utils/exceptions/platform_exceptions.dart';
 import '../../services/firebase_storage_services.dart';
 
 class CategoryRepository extends GetxController {

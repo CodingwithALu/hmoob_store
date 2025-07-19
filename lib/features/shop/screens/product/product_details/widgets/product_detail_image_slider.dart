@@ -1,14 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
-import 'package:t_store/common/widgets/images/t_rounded_image.dart';
-import 'package:t_store/common/widgets/products/favourite_icon.dart';
-import 'package:t_store/features/shop/controllers/products/images_controller.dart';
-import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
+import 'package:hmoob_store/common/widgets/custom_shapes/curved_edges/curved_edges_widget.dart';
+import 'package:hmoob_store/common/widgets/images/t_rounded_image.dart';
+import 'package:hmoob_store/common/widgets/products/favourite_icon.dart';
+import 'package:hmoob_store/features/shop/controllers/products/images_controller.dart';
+import 'package:hmoob_store/features/shop/models/product_model.dart';
+import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 
 import '../../../../../../utils/constants/colors.dart';
 

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/success_screen/success_screen.dart';
-import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:t_store/data/repositories/products/order_repository.dart';
-import 'package:t_store/features/personalization/controllers/address_controller.dart';
-import 'package:t_store/features/shop/controllers/checkouts/checkout_controller.dart';
-import 'package:t_store/features/shop/controllers/products/cart_controller.dart';
-import 'package:t_store/features/shop/models/order_model.dart';
-import 'package:t_store/features/shop/screens/order/order.dart';
-import 'package:t_store/utils/constants/enums.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/popups/full_screen_loader.dart';
-import 'package:t_store/utils/popups/loaders.dart';
+import 'package:hmoob_store/common/widgets/success_screen/success_screen.dart';
+import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:hmoob_store/data/repositories/products/order_repository.dart';
+import 'package:hmoob_store/features/personalization/controllers/address_controller.dart';
+import 'package:hmoob_store/features/shop/controllers/checkouts/checkout_controller.dart';
+import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:hmoob_store/features/shop/models/order_model.dart';
+import 'package:hmoob_store/features/shop/screens/order/order.dart';
+import 'package:hmoob_store/utils/constants/enums.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
+import 'package:hmoob_store/utils/popups/loaders.dart';
 
 class OrderController extends GetxController {
   static OrderController get instance => Get.find();
@@ -61,17 +61,21 @@ class OrderController extends GetxController {
       ); // OrderModel
 
       // Save the order to Firestore
-      await orderRepository.saveOrder(order, userId);
+      await orderRepository.saveOrder(order);
 
       // Update the cart status
       cartController.cleanCart();
       // Show success screen
-      Get.off(
+      Get.to(
         () => SuccessScreen(
           image: TImages.orderCompletedAnimation,
           title: 'Payment Success!',
           subtitle: 'Your item will be shpipped soon!',
-          onPressed: () => Get.off(() => const OrderScreen()),
+          onPressed: () {
+            Get.back();
+            Get.back();
+            Get.to(() => const OrderScreen());
+          },
         ),
       );
     } catch (e) {

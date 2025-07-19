@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/login_signup/social_buttons.dart';
-import 'package:t_store/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/constants/text_string.dart';
+import 'package:hmoob_store/common/widgets/login_signup/social_buttons.dart';
+import 'package:hmoob_store/features/authentication/screens/signup/widgets/signup_form.dart';
+import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:hmoob_store/utils/constants/text_string.dart';
 import '../../../../common/widgets/login_signup/from_divider.dart';
 
 class SignupScreen extends StatelessWidget {

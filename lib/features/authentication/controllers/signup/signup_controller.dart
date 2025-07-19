@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:t_store/data/repositories/user/user_repository.dart';
-import 'package:t_store/features/authentication/screens/signup/widgets/verify_email.dart';
-import 'package:t_store/features/personalization/models/user_model.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/helpers/network_manager.dart';
-import 'package:t_store/utils/popups/full_screen_loader.dart';
-import 'package:t_store/utils/popups/loaders.dart';
+import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:hmoob_store/data/repositories/user/user_repository.dart';
+import 'package:hmoob_store/features/authentication/screens/signup/widgets/verify_email.dart';
+import 'package:hmoob_store/features/personalization/models/user_model.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/helpers/network_manager.dart';
+import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
+import 'package:hmoob_store/utils/popups/loaders.dart';
 
 class SignupController extends GetxController {
   static SignupController get instance => Get.find();
@@ -70,10 +70,13 @@ class SignupController extends GetxController {
       final userRepository = Get.put(UserRepository());
       await userRepository.saveUserRecord(newUser);
       // Show Success Message
-      TLoaders.successSnackBar(title: 'Congratulations', message: 'Your account has been created! Verify email to continue.');
+      TLoaders.successSnackBar(
+        title: 'Congratulations',
+        message: 'Your account has been created! Verify email to continue.',
+      );
 
       // move to Verify Email Screen
-      Get.to(() => VerifyEmailScreen(email: email.text.trim(),));
+      Get.to(() => VerifyEmailScreen(email: email.text.trim()));
     } catch (e) {
       // Remove Loader
       TFullScreenLoader.stopLoading();

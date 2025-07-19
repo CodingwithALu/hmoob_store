@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/features/authentication/controllers/forget_password/forget_controller.dart';
-import 'package:t_store/features/authentication/screens/login/login.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/constants/text_string.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/features/authentication/controllers/forget_password/forget_controller.dart';
+import 'package:hmoob_store/features/authentication/screens/login/login.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/constants/text_string.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class ResetPassword extends StatelessWidget {

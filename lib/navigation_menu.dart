@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/features/personalization/screens/settings/settings.dart';
-import 'package:t_store/features/shop/screens/home/home.dart';
-import 'package:t_store/features/shop/screens/store/store.dart';
-import 'package:t_store/features/shop/screens/wishlist/wishlist.dart';
-import 'package:t_store/l10n/app_localizations.dart';
-import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/features/personalization/screens/settings/settings.dart';
+import 'package:hmoob_store/features/shop/screens/home/home.dart';
+import 'package:hmoob_store/features/shop/screens/store/store.dart';
+import 'package:hmoob_store/features/shop/screens/wishlist/wishlist.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/utils/constants/colors.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});

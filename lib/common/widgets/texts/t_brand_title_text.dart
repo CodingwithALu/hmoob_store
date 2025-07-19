@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/utils/constants/enums.dart';
+import 'package:hmoob_store/utils/constants/enums.dart';
 
 class TBrandTitleText extends StatelessWidget {
   const TBrandTitleText({

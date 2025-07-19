@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/common/widgets/texts/section_heading.dart';
-import 'package:t_store/features/shop/screens/checkout/widgets/payment_title.dart';
-import 'package:t_store/features/shop/models/payment_methood_model.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/constants/sizes.dart';
+import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
+import 'package:hmoob_store/features/shop/screens/checkout/widgets/payment_title.dart';
+import 'package:hmoob_store/features/shop/models/payment_methood_model.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/constants/sizes.dart';
 
 class CheckoutController extends GetxController {
   static CheckoutController get instance => Get.find();

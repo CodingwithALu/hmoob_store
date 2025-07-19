@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/common/widgets/custom_shapes/container/primary_header_container.dart';
-import 'package:t_store/common/widgets/list_titles/setting_menu_title.dart';
-import 'package:t_store/common/widgets/texts/section_heading.dart';
-import 'package:t_store/features/authentication/screens/login/login.dart';
-import 'package:t_store/features/personalization/screens/address/address.dart';
-import 'package:t_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
+import 'package:hmoob_store/common/widgets/custom_shapes/container/primary_header_container.dart';
+import 'package:hmoob_store/common/widgets/list_titles/setting_menu_title.dart';
+import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
+import 'package:hmoob_store/features/authentication/screens/login/login.dart';
+import 'package:hmoob_store/features/personalization/screens/address/address.dart';
+import 'package:hmoob_store/features/shop/screens/cart/cart.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
 
 import '../../../../common/widgets/list_titles/user_profile_title.dart';
 import '../../../../utils/constants/colors.dart';
@@ -72,7 +73,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.shopping_cart,
                     title: local.myCart,
                     subTitle: local.myCartSub,
-                    onTap: () => Get.to(() => const OrderScreen()),
+                    onTap: () => Get.to(() => const CartScreen()),
                   ),
                   TSettingsMenuTitle(
                     icon: Iconsax.bag_tick,

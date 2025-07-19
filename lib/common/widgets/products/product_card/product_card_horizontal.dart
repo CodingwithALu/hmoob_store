@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:t_store/common/widgets/images/t_rounded_image.dart';
-import 'package:t_store/common/widgets/products/favourite_icon.dart';
-import 'package:t_store/common/widgets/texts/product_price_text.dart';
-import 'package:t_store/common/widgets/texts/product_title_text.dart';
-import 'package:t_store/common/widgets/texts/t_brand_title_with_verified_icon.dart';
-import 'package:t_store/features/shop/controllers/products/product_controller.dart';
-import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/utils/constants/colors.dart';
-import 'package:t_store/utils/constants/enums.dart';
-import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:hmoob_store/common/widgets/images/t_rounded_image.dart';
+import 'package:hmoob_store/common/widgets/products/favourite_icon.dart';
+import 'package:hmoob_store/common/widgets/texts/product_price_text.dart';
+import 'package:hmoob_store/common/widgets/texts/product_title_text.dart';
+import 'package:hmoob_store/common/widgets/texts/t_brand_title_with_verified_icon.dart';
+import 'package:hmoob_store/features/shop/controllers/products/product_controller.dart';
+import 'package:hmoob_store/features/shop/models/product_model.dart';
+import 'package:hmoob_store/utils/constants/colors.dart';
+import 'package:hmoob_store/utils/constants/enums.dart';
+import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 
 class TProductCardHorizontal extends StatelessWidget {
   const TProductCardHorizontal({super.key, required this.product});

@@ -1,10 +1,10 @@
 import 'dart:convert';
 
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories/products/product_repository.dart';
-import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/utils/local_storage/storage_utility.dart';
-import 'package:t_store/utils/popups/loaders.dart';
+import 'package:hmoob_store/data/repositories/products/product_repository.dart';
+import 'package:hmoob_store/features/shop/models/product_model.dart';
+import 'package:hmoob_store/utils/local_storage/storage_utility.dart';
+import 'package:hmoob_store/utils/popups/loaders.dart';
 
 class FavouritesController extends GetxController {
   static FavouritesController get instance => Get.find();

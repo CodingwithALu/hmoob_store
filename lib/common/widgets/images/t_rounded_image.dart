@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:t_store/common/widgets/shimmer/shimmer.dart';
+import 'package:hmoob_store/common/widgets/shimmer/shimmer.dart';
 // ignore: unused_import
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
+
 class TRoundedImage extends StatelessWidget {
   const TRoundedImage({
     super.key,
@@ -52,15 +53,16 @@ class TRoundedImage extends StatelessWidget {
               : BorderRadius.zero,
           child: isNetworkImage
               ? CachedNetworkImage(
-                fit: fit,
-                imageUrl: imageUrl,
-                progressIndicatorBuilder: (context, url, downloadProgress) =>
-                    TShimmerEffect(width: width ?? double.infinity, height: height ?? 158),
-                errorWidget: (context, url, error) => const Icon(Icons.error),)
-              : Image(
-                fit: fit,
-                image: AssetImage(imageUrl),
-          ),
+                  fit: fit,
+                  imageUrl: imageUrl,
+                  progressIndicatorBuilder: (context, url, downloadProgress) =>
+                      TShimmerEffect(
+                        width: width ?? double.infinity,
+                        height: height ?? 158,
+                      ),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                )
+              : Image(fit: fit, image: AssetImage(imageUrl)),
         ),
       ),
     );

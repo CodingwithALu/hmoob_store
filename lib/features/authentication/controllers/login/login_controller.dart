@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:t_store/features/personalization/controllers/user_controller.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/helpers/network_manager.dart';
-import 'package:t_store/utils/popups/full_screen_loader.dart';
-import 'package:t_store/utils/popups/loaders.dart';
+import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:hmoob_store/features/personalization/controllers/user_controller.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/helpers/network_manager.dart';
+import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
+import 'package:hmoob_store/utils/popups/loaders.dart';
+
 class LoginController extends GetxController {
   // variables
   final rememberMe = false.obs;
@@ -27,7 +28,10 @@ class LoginController extends GetxController {
   Future<void> emailAndPasswordSignIn() async {
     try {
       // Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging you in ...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog(
+        'Logging you in ...',
+        TImages.docerAnimation,
+      );
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
       if (!isConnected) {
@@ -40,7 +44,10 @@ class LoginController extends GetxController {
         localStorage.write('REMEMBER_ME_PASSWORD', password.text.trim());
       }
       // Login user using Email & password Authentication
-      await AuthenticationRepository.instance.loginWithEmailAndPassword(email.text.trim(), password.text.trim());
+      await AuthenticationRepository.instance.loginWithEmailAndPassword(
+        email.text.trim(),
+        password.text.trim(),
+      );
 
       //Remove Loader
       TFullScreenLoader.stopLoading();
@@ -56,15 +63,19 @@ class LoginController extends GetxController {
   Future<void> googleSignIn() async {
     try {
       // Start Loading
-      TFullScreenLoader.openLoadingDialog('Logging you in...', TImages.docerAnimation);
+      TFullScreenLoader.openLoadingDialog(
+        'Logging you in...',
+        TImages.docerAnimation,
+      );
       // Check Internet Connectivity
       final isConnected = await NetworkManager.instance.isConnected();
-      if(!isConnected) {
+      if (!isConnected) {
         TFullScreenLoader.stopLoading();
         return;
       }
       // Google Authentication
-      final userCredentials = await AuthenticationRepository.instance.signInWithGoogle();
+      final userCredentials = await AuthenticationRepository.instance
+          .signInWithGoogle();
 
       // Save User Record
       await userController.saveUserRecord(userCredentials);
@@ -77,5 +88,4 @@ class LoginController extends GetxController {
       TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
     }
   }
-
 }

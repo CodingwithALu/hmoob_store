@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/features/shop/controllers/products/cart_controller.dart';
-import 'package:t_store/utils/helpers/pricing_calculator.dart';
+import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:hmoob_store/utils/helpers/pricing_calculator.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 

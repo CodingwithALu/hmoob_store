@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
-import 'package:t_store/common/widgets/texts/section_heading.dart';
-import 'package:t_store/features/personalization/controllers/address_controller.dart';
+import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
+import 'package:hmoob_store/features/personalization/controllers/address_controller.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 

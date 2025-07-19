@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/features/shop/models/product_model.dart';
+import 'package:hmoob_store/features/shop/models/product_model.dart';
 
 import '../../../../utils/constants/sizes.dart';
 

@@ -2,10 +2,10 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/state_manager.dart';
-import 'package:t_store/common/widgets/brands/t_brand_card.dart';
-import 'package:t_store/common/widgets/shimmer/shimmer.dart';
-import 'package:t_store/features/shop/models/brand_model.dart';
-import 'package:t_store/features/shop/screens/brands/brand_products.dart';
+import 'package:hmoob_store/common/widgets/brands/t_brand_card.dart';
+import 'package:hmoob_store/common/widgets/shimmer/shimmer.dart';
+import 'package:hmoob_store/features/shop/models/brand_model.dart';
+import 'package:hmoob_store/features/shop/screens/brands/brand_products.dart';
 
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';

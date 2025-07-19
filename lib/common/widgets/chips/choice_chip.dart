@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/common/widgets/custom_shapes/container/circular_container.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/common/widgets/custom_shapes/container/circular_container.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 
 import '../../../utils/constants/colors.dart';
 
@@ -26,8 +26,13 @@ class TChoiceChip extends StatelessWidget {
         selected: selected,
         onSelected: onSelected,
         labelStyle: TextStyle(color: selected ? TColors.white : null),
-        avatar: isColors ? TCircularContainer(
-          width: 50, height: 50, backgroundColor: THelperFunctions.getColor(text)!,) : null,
+        avatar: isColors
+            ? TCircularContainer(
+                width: 50,
+                height: 50,
+                backgroundColor: THelperFunctions.getColor(text)!,
+              )
+            : null,
         shape: isColors ? const CircleBorder() : null,
         labelPadding: isColors ? EdgeInsets.all(0) : null,
         padding: isColors ? EdgeInsets.all(0) : null,

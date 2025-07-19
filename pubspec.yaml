@@ -1,4 +1,4 @@
-name: t_store
+name: hmoob_store
 description: "A new Flutter project."
 publish_to: 'none'
 
@@ -79,26 +79,26 @@ flutter:
   #--------------- LOCAL FONTS ------------------#
 
   fonts:
-    - family: Poppins
+    - family: Montserrat
       fonts:
-        - asset: assets/fonts/Poppins-Light.ttf
+        - asset: assets/fonts/Montserrat-Light.ttf
           weight: 300
-        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Poppins-Italic.ttf
+        - asset: assets/fonts/Montserrat-Italic.ttf
           style: italic
-        - asset: assets/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Montserrat-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Poppins-MediumItalic.ttf
+        - asset: assets/fonts/Montserrat-MediumItalic.ttf
           weight: 500
           style: italic
-        - asset: assets/fonts/Poppins-SemiBold.ttf
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/Poppins-Bold.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Poppins-Black.ttf
-        - asset: assets/fonts/Poppins-BlackItalic.ttf
-        - asset: assets/fonts/Poppins-BoldItalic.ttf
+        - asset: assets/fonts/Montserrat-Black.ttf
+        - asset: assets/fonts/Montserrat-BlackItalic.ttf
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf
           weight: 300
 
 

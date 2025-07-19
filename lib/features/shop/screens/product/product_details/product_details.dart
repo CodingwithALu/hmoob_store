@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
-import 'package:t_store/common/widgets/texts/section_heading.dart';
-import 'package:t_store/features/shop/models/product_model.dart';
-import 'package:t_store/features/shop/screens/product/product_details/widgets/bottom_add_to_cart_widget.dart';
-import 'package:t_store/features/shop/screens/product/product_details/widgets/product_attributes.dart';
-import 'package:t_store/features/shop/screens/product/product_details/widgets/product_detail_image_slider.dart';
-import 'package:t_store/features/shop/screens/product/product_details/widgets/product_meta_data.dart';
-import 'package:t_store/features/shop/screens/product/product_details/widgets/rating_share_widgets.dart';
-import 'package:t_store/features/shop/screens/product/product_review/prooduct_review.dart';
-import 'package:t_store/utils/constants/enums.dart';
+import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
+import 'package:hmoob_store/features/shop/models/product_model.dart';
+import 'package:hmoob_store/features/shop/screens/product/product_details/widgets/bottom_add_to_cart_widget.dart';
+import 'package:hmoob_store/features/shop/screens/product/product_details/widgets/product_attributes.dart';
+import 'package:hmoob_store/features/shop/screens/product/product_details/widgets/product_detail_image_slider.dart';
+import 'package:hmoob_store/features/shop/screens/product/product_details/widgets/product_meta_data.dart';
+import 'package:hmoob_store/features/shop/screens/product/product_details/widgets/rating_share_widgets.dart';
+import 'package:hmoob_store/features/shop/screens/product/product_review/prooduct_review.dart';
+import 'package:hmoob_store/utils/constants/enums.dart';
 
 import '../../../../../utils/constants/sizes.dart';
-import 'package:t_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key, required this.products});

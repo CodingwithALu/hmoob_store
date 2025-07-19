@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:t_store/l10n/app_localizations.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
-import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
+import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 
 class TLoginHeader extends StatelessWidget {
   const TLoginHeader({super.key});
@@ -15,7 +15,7 @@ class TLoginHeader extends StatelessWidget {
       children: [
         Image(
           height: 150,
-          image: AssetImage(dark ? TImages.lightAppLogo : TImages.darkAppLogo),
+          image: AssetImage(dark ? TImages.hmoobLogos : TImages.hmoobLogos),
         ),
         Text(
           local.loginTitle,

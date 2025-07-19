@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:t_store/common/widgets/shimmer/vertical_product_shimmer.dart';
-import 'package:t_store/features/shop/controllers/categories/category_controller.dart';
-import 'package:t_store/features/shop/models/category_model.dart';
-import 'package:t_store/features/shop/screens/product/all_products/all_products.dart';
-import 'package:t_store/features/shop/screens/store/widgets/category_brand.dart';
-import 'package:t_store/l10n/app_localizations.dart';
-import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:hmoob_store/common/widgets/shimmer/vertical_product_shimmer.dart';
+import 'package:hmoob_store/features/shop/controllers/categories/category_controller.dart';
+import 'package:hmoob_store/features/shop/models/category_model.dart';
+import 'package:hmoob_store/features/shop/screens/product/all_products/all_products.dart';
+import 'package:hmoob_store/features/shop/screens/store/widgets/category_brand.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
 
 import '../../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../../common/widgets/products/product_card/product_card_vertical.dart';

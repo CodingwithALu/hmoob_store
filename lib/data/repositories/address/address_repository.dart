@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:t_store/features/personalization/models/address_model.dart';
+import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:hmoob_store/features/personalization/models/address_model.dart';
 
 class AddressRepository extends GetxController {
   static AddressRepository get instance => Get.find();

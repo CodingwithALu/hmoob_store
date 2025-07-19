@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories/banners/banner_repository.dart';
-import 'package:t_store/features/shop/models/banner_model.dart';
+import 'package:hmoob_store/data/repositories/banners/banner_repository.dart';
+import 'package:hmoob_store/features/shop/models/banner_model.dart';
 
 import '../../../../utils/popups/loaders.dart';
 

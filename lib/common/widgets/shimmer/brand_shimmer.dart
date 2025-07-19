@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:t_store/common/widgets/layouts/grid_layout.dart';
-import 'package:t_store/common/widgets/shimmer/shimmer.dart';
+import 'package:hmoob_store/common/widgets/layouts/grid_layout.dart';
+import 'package:hmoob_store/common/widgets/shimmer/shimmer.dart';
 
 class TBrandsShimmer extends StatelessWidget {
   const TBrandsShimmer({super.key, this.itemCount = 4});

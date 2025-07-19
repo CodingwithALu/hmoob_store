@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:t_store/common/styles/spacing_style.dart';
-import 'package:t_store/utils/constants/text_string.dart';
+import 'package:hmoob_store/common/styles/spacing_style.dart';
+import 'package:hmoob_store/utils/constants/text_string.dart';
 
 import '../../../utils/constants/sizes.dart';
 

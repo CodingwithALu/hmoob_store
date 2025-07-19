@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/icons/t_circular_icon.dart';
-import 'package:t_store/features/shop/controllers/favourite_controller.dart';
-import 'package:t_store/utils/constants/colors.dart';
+import 'package:hmoob_store/common/widgets/icons/t_circular_icon.dart';
+import 'package:hmoob_store/features/shop/controllers/favourite_controller.dart';
+import 'package:hmoob_store/utils/constants/colors.dart';
 
 class TFavouriteIcon extends StatelessWidget {
   const TFavouriteIcon({super.key, required this.productId});

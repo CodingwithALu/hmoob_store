@@ -5,7 +5,7 @@ import 'package:iconsax/iconsax.dart';
 import '../../../../../common/widgets/appbar/appbar.dart';
 import '../../../../../utils/constants/sizes.dart';
 import '../../../../../utils/constants/text_string.dart';
-import 'package:t_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
 import '../../../../../utils/validators/validation.dart';
 import '../../../controllers/profile_controller/update_name_controller.dart';
 

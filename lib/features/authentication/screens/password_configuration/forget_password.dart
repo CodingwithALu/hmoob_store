@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/features/authentication/controllers/forget_password/forget_controller.dart';
-import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/validators/validation.dart';
+import 'package:hmoob_store/features/authentication/controllers/forget_password/forget_controller.dart';
+import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:hmoob_store/utils/validators/validation.dart';
 
 import '../../../../utils/constants/text_string.dart';
 

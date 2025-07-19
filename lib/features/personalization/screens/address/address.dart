@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/common/widgets/appbar/appbar.dart';
-import 'package:t_store/features/personalization/controllers/address_controller.dart';
-import 'package:t_store/features/personalization/screens/address/add_new_address.dart';
-import 'package:t_store/features/personalization/screens/address/widgets/single_address.dart';
-import 'package:t_store/l10n/app_localizations.dart';
-import 'package:t_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
+import 'package:hmoob_store/features/personalization/controllers/address_controller.dart';
+import 'package:hmoob_store/features/personalization/screens/address/add_new_address.dart';
+import 'package:hmoob_store/features/personalization/screens/address/widgets/single_address.dart';
+import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
 import '../../../../utils/constants/colors.dart';
 import '../../../../utils/constants/sizes.dart';
 
