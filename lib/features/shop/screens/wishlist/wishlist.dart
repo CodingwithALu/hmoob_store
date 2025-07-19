@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hmoob_store/navigation_menu.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
 import 'package:hmoob_store/common/widgets/icons/t_circular_icon.dart';
 import 'package:hmoob_store/common/widgets/layouts/grid_layout.dart';
 import 'package:hmoob_store/common/widgets/shimmer/vertical_product_shimmer.dart';
 import 'package:hmoob_store/features/shop/controllers/favourite_controller.dart';
-import 'package:hmoob_store/features/shop/screens/home/home.dart';
 import 'package:hmoob_store/l10n/app_localizations.dart';
 import 'package:hmoob_store/utils/constants/image_strings.dart';
 import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
@@ -33,7 +33,7 @@ class FavouriteScreen extends StatelessWidget {
         actions: [
           TCircularIcon(
             icon: Iconsax.add,
-            onPressed: () => Get.to(const HomeScreen()),
+            onPressed: () => Get.offAll(NavigationMenu()),
           ),
         ],
       ),

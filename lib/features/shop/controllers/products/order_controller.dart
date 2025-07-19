@@ -7,7 +7,7 @@ import 'package:hmoob_store/features/personalization/controllers/address_control
 import 'package:hmoob_store/features/shop/controllers/checkouts/checkout_controller.dart';
 import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
 import 'package:hmoob_store/features/shop/models/order_model.dart';
-import 'package:hmoob_store/features/shop/screens/order/order.dart';
+import 'package:hmoob_store/navigation_menu.dart';
 import 'package:hmoob_store/utils/constants/enums.dart';
 import 'package:hmoob_store/utils/constants/image_strings.dart';
 import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
@@ -62,19 +62,18 @@ class OrderController extends GetxController {
 
       // Save the order to Firestore
       await orderRepository.saveOrder(order);
-
       // Update the cart status
       cartController.cleanCart();
+      TFullScreenLoader.stopLoading();
       // Show success screen
       Get.to(
         () => SuccessScreen(
+          showEmail: false,
           image: TImages.orderCompletedAnimation,
           title: 'Payment Success!',
           subtitle: 'Your item will be shpipped soon!',
           onPressed: () {
-            Get.back();
-            Get.back();
-            Get.to(() => const OrderScreen());
+            Get.offAll(() => NavigationMenu());
           },
         ),
       );

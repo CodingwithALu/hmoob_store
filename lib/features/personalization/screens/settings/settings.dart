@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hmoob_store/features/authentication/controllers/login/login_controller.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
 import 'package:hmoob_store/common/widgets/custom_shapes/container/primary_header_container.dart';
 import 'package:hmoob_store/common/widgets/list_titles/setting_menu_title.dart';
 import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
-import 'package:hmoob_store/features/authentication/screens/login/login.dart';
 import 'package:hmoob_store/features/personalization/screens/address/address.dart';
 import 'package:hmoob_store/features/shop/screens/cart/cart.dart';
 import 'package:hmoob_store/l10n/app_localizations.dart';
@@ -137,12 +137,70 @@ class SettingsScreen extends StatelessWidget {
                     trailing: Switch(value: false, onChanged: (value) {}),
                   ),
 
+                  // Language Switcher
+                  TSettingsMenuTitle(
+                    icon: Iconsax.language_square,
+                    title: 'Ngôn ngữ / Language',
+                    subTitle: 'Chuyển đổi giữa Tiếng Việt và English',
+                    onTap: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) => AlertDialog(
+                          title: const Text('Chọn ngôn ngữ / Select language'),
+                          content: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              ListTile(
+                                title: const Text('Tiếng Việt'),
+                                onTap: () {
+                                  Get.updateLocale(const Locale('vi'));
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                              ListTile(
+                                title: const Text('English'),
+                                onTap: () {
+                                  Get.updateLocale(const Locale('en'));
+                                  Navigator.of(context).pop();
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+
                   /// Logout Button
                   const SizedBox(height: TSizes.spaceBtwSections),
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () => Get.to(() => const LoginScreen()),
+                      onPressed: () {
+                        // Hiển thị dialog xác nhận đăng xuất, dùng controller
+                        showDialog(
+                          context: context,
+                          builder: (context) => AlertDialog(
+                            title: const Text('Đăng xuất'),
+                            content: const Text(
+                              'Bạn có chắc chắn muốn đăng xuất không?',
+                            ),
+                            actions: [
+                              TextButton(
+                                onPressed: () => Navigator.of(context).pop(),
+                                child: const Text('Không'),
+                              ),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.of(context).pop();
+                                  Get.put(LoginController()).logout();
+                                },
+                                child: const Text('Đồng ý'),
+                              ),
+                            ],
+                          ),
+                        );
+                      },
                       child: Text(local.logout),
                     ),
                   ),

@@ -8,9 +8,12 @@ import 'package:hmoob_store/features/shop/screens/cart/widgets/cart_item_list.da
 import 'package:hmoob_store/features/shop/screens/checkout/widgets/billing_address_section.dart';
 import 'package:hmoob_store/features/shop/screens/checkout/widgets/billing_amount_section.dart';
 import 'package:hmoob_store/features/shop/screens/checkout/widgets/billing_payment_section.dart';
+import 'package:hmoob_store/navigation_menu.dart';
 import 'package:hmoob_store/utils/constants/colors.dart';
+import 'package:hmoob_store/utils/constants/image_strings.dart';
 import 'package:hmoob_store/utils/helpers/helper_functions.dart';
 import 'package:hmoob_store/utils/helpers/pricing_calculator.dart';
+import 'package:hmoob_store/utils/loaders/animation_loader.dart';
 import 'package:hmoob_store/utils/popups/loaders.dart';
 
 import '../../../../common/widgets/products/cart/coupon_widget.dart';
@@ -34,48 +37,59 @@ class CheckoutScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.all(TSizes.defaultSpace),
-          child: Column(
-            children: [
-              /// Items in cart
-              TCartItemList(showAddRemoveButtons: false),
-              SizedBox(height: TSizes.spaceBtwSections),
+      body: Obx(() {
+        final emptyWodget = TAnimationLoaderWidget(
+          text: 'Whoops! Cart is EMPTY',
+          animation: TImages.cartAnimation,
+          showAction: true,
+          actionText: 'Let\'s fill it',
+          onActionPressed: () => Get.off(() => const NavigationMenu()),
+        );
+        return controller.cartItems.isEmpty
+            ? emptyWodget
+            : SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  child: Column(
+                    children: [
+                      /// Items in cart
+                      TCartItemList(showAddRemoveButtons: false),
+                      SizedBox(height: TSizes.spaceBtwSections),
 
-              /// Coupon TextField
-              TCouponCode(),
-              const SizedBox(height: TSizes.spaceBtwSections),
+                      /// Coupon TextField
+                      TCouponCode(),
+                      const SizedBox(height: TSizes.spaceBtwSections),
 
-              /// Billing Section
-              TRoundedContainer(
-                showBorder: true,
-                padding: EdgeInsets.all(TSizes.md),
-                backgroundColor: dark ? TColors.black : TColors.white,
-                child: Column(
-                  children: [
-                    /// Pricing
-                    TBillingAmountSection(),
-                    const SizedBox(height: TSizes.spaceBtwItems),
+                      /// Billing Section
+                      TRoundedContainer(
+                        showBorder: true,
+                        padding: EdgeInsets.all(TSizes.md),
+                        backgroundColor: dark ? TColors.black : TColors.white,
+                        child: Column(
+                          children: [
+                            /// Pricing
+                            TBillingAmountSection(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
 
-                    /// Divider
-                    const Divider(),
-                    const SizedBox(height: TSizes.spaceBtwItems),
+                            /// Divider
+                            const Divider(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
 
-                    /// Payment Methods
-                    TBillingPaymentSection(),
-                    const SizedBox(height: TSizes.spaceBtwItems),
+                            /// Payment Methods
+                            TBillingPaymentSection(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
 
-                    /// Address
-                    TBillingAddressSection(),
-                    const SizedBox(height: TSizes.spaceBtwItems),
-                  ],
+                            /// Address
+                            TBillingAddressSection(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-              ),
-            ],
-          ),
-        ),
-      ),
+              );
+      }),
 
       ///Checkout Button
       bottomNavigationBar: Padding(

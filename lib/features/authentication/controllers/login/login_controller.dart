@@ -1,3 +1,4 @@
+import 'package:hmoob_store/features/authentication/screens/login/login.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
@@ -86,6 +87,34 @@ class LoginController extends GetxController {
     } catch (e) {
       TFullScreenLoader.stopLoading();
       TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+    }
+  }
+
+  /// Đăng xuất tài khoản
+  Future<void> logout() async {
+    try {
+      // Hiển thị loading
+      TFullScreenLoader.openLoadingDialog(
+        'Đang đăng xuất...',
+        TImages.docerAnimation,
+      );
+      // Thực hiện đăng xuất
+      await AuthenticationRepository.instance.logout();
+      // Xóa thông tin Remember Me nếu có
+      localStorage.remove('REMEMBER_ME_EMAIL');
+      localStorage.remove('REMEMBER_ME_PASSWORD');
+      // Ẩn loading
+      TFullScreenLoader.stopLoading();
+      // Hiển thị thông báo thành công
+      TLoaders.successSnackBar(
+        title: 'Thành công',
+        message: 'Bạn đã đăng xuất thành công.',
+      );
+      // Chuyển hướng về màn hình đăng nhập
+      Get.offAll(() => const LoginScreen());
+    } catch (e) {
+      TFullScreenLoader.stopLoading();
+      TLoaders.errorSnackBar(title: 'Lỗi', message: e.toString());
     }
   }
 }
