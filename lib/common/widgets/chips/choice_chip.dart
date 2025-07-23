@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/common/widgets/custom_shapes/container/circular_container.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/common/widgets/custom_shapes/container/circular_container.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 import '../../../utils/constants/colors.dart';
 

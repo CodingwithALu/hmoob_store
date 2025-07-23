@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/styles/spacing_style.dart';
-import 'package:hmoob_store/common/widgets/login_signup/from_divider.dart';
-import 'package:hmoob_store/common/widgets/login_signup/social_buttons.dart';
-import 'package:hmoob_store/features/authentication/screens/login/widgets/login_from.dart';
-import 'package:hmoob_store/features/authentication/screens/login/widgets/login_header.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/constants/text_string.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/common/styles/spacing_style.dart';
+import 'package:trip_store/common/widgets/login_signup/from_divider.dart';
+import 'package:trip_store/common/widgets/login_signup/social_buttons.dart';
+import 'package:trip_store/features/authentication/screens/login/widgets/login_from.dart';
+import 'package:trip_store/features/authentication/screens/login/widgets/login_header.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/constants/text_string.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

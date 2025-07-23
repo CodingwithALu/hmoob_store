@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/features/authentication/controllers/login/login_controller.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:trip_store/features/authentication/controllers/login/login_controller.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
 
 class TSocialButtons extends StatelessWidget {
   const TSocialButtons({super.key});

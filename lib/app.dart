@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:hmoob_store/bindings/general_binding.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
-import 'package:hmoob_store/routes/app_routers.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
-import 'package:hmoob_store/utils/constants/text_string.dart';
-import 'package:hmoob_store/utils/theme/theme.dart';
+import 'package:trip_store/bindings/general_binding.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
+import 'package:trip_store/routes/app_routers.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/constants/text_string.dart';
+import 'package:trip_store/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
   const App({super.key});

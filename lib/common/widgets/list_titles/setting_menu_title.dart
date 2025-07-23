@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/constants/colors.dart';
 
 class TSettingsMenuTitle extends StatelessWidget {
   const TSettingsMenuTitle({

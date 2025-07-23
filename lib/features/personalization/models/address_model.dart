@@ -1,5 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hmoob_store/utils/formatters/formatter.dart';
+import 'package:trip_store/utils/formatters/formatter.dart';
 
 class AddressModel {
   late final String id;

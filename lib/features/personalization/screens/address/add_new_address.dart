@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
-import 'package:hmoob_store/features/personalization/controllers/address_controller.dart';
-import 'package:hmoob_store/utils/validators/validation.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:trip_store/common/widgets/appbar/appbar.dart';
+import 'package:trip_store/features/personalization/controllers/address_controller.dart';
+import 'package:trip_store/utils/validators/validation.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 
 import '../../../../utils/constants/sizes.dart';
 

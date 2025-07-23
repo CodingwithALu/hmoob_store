@@ -5,11 +5,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
-import 'package:hmoob_store/features/personalization/controllers/user_controller.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
-import 'package:hmoob_store/utils/validators/validation.dart';
+import 'package:trip_store/common/widgets/appbar/appbar.dart';
+import 'package:trip_store/features/personalization/controllers/user_controller.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
+import 'package:trip_store/utils/validators/validation.dart';
 import '../../../../../utils/constants/text_string.dart';
 
 class ReAuthLoginScreen extends StatelessWidget {

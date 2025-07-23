@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/state_manager.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/common/widgets/icons/t_circular_icon.dart';
-import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
-import 'package:hmoob_store/features/shop/models/product_model.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/common/widgets/icons/t_circular_icon.dart';
+import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/features/shop/models/product_model.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 import '../../../../../../utils/constants/sizes.dart';
 

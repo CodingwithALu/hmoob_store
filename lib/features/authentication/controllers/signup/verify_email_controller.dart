@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/widgets/success_screen/success_screen.dart';
-import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:hmoob_store/utils/constants/text_string.dart';
-import 'package:hmoob_store/utils/popups/loaders.dart';
+import 'package:trip_store/common/widgets/success_screen/success_screen.dart';
+import 'package:trip_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:trip_store/utils/constants/text_string.dart';
+import 'package:trip_store/utils/popups/loaders.dart';
 
 import '../../../../utils/constants/image_strings.dart';
 

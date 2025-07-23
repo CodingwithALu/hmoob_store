@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/common/widgets/shimmer/shimmer.dart';
+import 'package:trip_store/common/widgets/shimmer/shimmer.dart';
 
 class THorizontalProductShimmer extends StatelessWidget {
   const THorizontalProductShimmer({super.key, this.itemCount = 4});

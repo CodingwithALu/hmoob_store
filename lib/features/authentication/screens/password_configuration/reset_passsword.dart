@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/features/authentication/controllers/forget_password/forget_controller.dart';
-import 'package:hmoob_store/features/authentication/screens/login/login.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/constants/text_string.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/features/authentication/controllers/forget_password/forget_controller.dart';
+import 'package:trip_store/features/authentication/screens/login/login.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class ResetPassword extends StatelessWidget {
@@ -13,6 +13,8 @@ class ResetPassword extends StatelessWidget {
   final String email;
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     // implement build
     return Scaffold(
       appBar: AppBar(
@@ -44,13 +46,13 @@ class ResetPassword extends StatelessWidget {
               ),
               const SizedBox(height: TSizes.spaceBtwItems),
               Text(
-                TTexts.changeYourPasswordTitle,
+                localizations.changeYourPasswordTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: TSizes.spaceBtwItems),
               Text(
-                TTexts.changeYourPasswordSubTitle,
+                localizations.changeYourPasswordSubTitle,
                 style: Theme.of(context).textTheme.labelMedium,
                 textAlign: TextAlign.center,
               ),
@@ -61,7 +63,7 @@ class ResetPassword extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () => Get.offAll(() => const LoginScreen()),
-                  child: Text(TTexts.done),
+                  child: Text(localizations.done),
                 ),
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
@@ -70,7 +72,7 @@ class ResetPassword extends StatelessWidget {
                 child: TextButton(
                   onPressed: () => ForgetPasswordController.instance
                       .resendPassWordResetEmail(email),
-                  child: Text(TTexts.resendEmail),
+                  child: Text(localizations.resendEmail),
                 ),
               ),
             ],

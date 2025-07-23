@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
-import 'package:hmoob_store/data/repositories/address/address_repository.dart';
-import 'package:hmoob_store/features/personalization/models/address_model.dart';
-import 'package:hmoob_store/features/personalization/screens/address/add_new_address.dart';
-import 'package:hmoob_store/features/personalization/screens/address/widgets/single_address.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
-import 'package:hmoob_store/utils/helpers/network_manager.dart';
-import 'package:hmoob_store/utils/loaders/circular_loader.dart';
-import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
-import 'package:hmoob_store/utils/popups/loaders.dart';
+import 'package:trip_store/common/widgets/texts/section_heading.dart';
+import 'package:trip_store/data/repositories/address/address_repository.dart';
+import 'package:trip_store/features/personalization/models/address_model.dart';
+import 'package:trip_store/features/personalization/screens/address/add_new_address.dart';
+import 'package:trip_store/features/personalization/screens/address/widgets/single_address.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:trip_store/utils/helpers/network_manager.dart';
+import 'package:trip_store/utils/loaders/circular_loader.dart';
+import 'package:trip_store/utils/popups/full_screen_loader.dart';
+import 'package:trip_store/utils/popups/loaders.dart';
 
 class AddressController extends GetxController {
   static AddressController get instance => Get.find();

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/features/personalization/controllers/address_controller.dart';
-import 'package:hmoob_store/features/personalization/models/address_model.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/features/personalization/controllers/address_controller.dart';
+import 'package:trip_store/features/personalization/models/address_model.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 import '../../../../../common/widgets/custom_shapes/container/rounded_container.dart';
 import '../../../../../utils/constants/sizes.dart';
 

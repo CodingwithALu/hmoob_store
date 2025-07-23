@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/features/shop/models/brand_model.dart';
+import 'package:trip_store/features/shop/models/brand_model.dart';
 import '../../../utils/constants/enums.dart';
 import '../../../utils/constants/sizes.dart';
 import '../custom_shapes/container/rounded_container.dart';

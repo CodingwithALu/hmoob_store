@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
-import 'package:hmoob_store/features/shop/controllers/checkouts/checkout_controller.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:trip_store/common/widgets/texts/section_heading.dart';
+import 'package:trip_store/features/shop/controllers/checkouts/checkout_controller.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 

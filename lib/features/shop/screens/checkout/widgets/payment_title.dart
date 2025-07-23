@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:hmoob_store/features/shop/controllers/checkouts/checkout_controller.dart';
-import 'package:hmoob_store/features/shop/models/payment_methood_model.dart';
-import 'package:hmoob_store/utils/constants/colors.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:trip_store/features/shop/controllers/checkouts/checkout_controller.dart';
+import 'package:trip_store/features/shop/models/payment_methood_model.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 class TPaymentTile extends StatelessWidget {
   const TPaymentTile({super.key, required this.paymentMethod});

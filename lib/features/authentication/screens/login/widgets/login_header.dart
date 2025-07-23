@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 class TLoginHeader extends StatelessWidget {
   const TLoginHeader({super.key});

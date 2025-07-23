@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/utils/devices/device_utility.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/utils/devices/device_utility.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 import '../../../utils/constants/colors.dart';
 

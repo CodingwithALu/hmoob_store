@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/widgets/success_screen/success_screen.dart';
-import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:hmoob_store/data/repositories/products/order_repository.dart';
-import 'package:hmoob_store/features/personalization/controllers/address_controller.dart';
-import 'package:hmoob_store/features/shop/controllers/checkouts/checkout_controller.dart';
-import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
-import 'package:hmoob_store/features/shop/models/order_model.dart';
-import 'package:hmoob_store/navigation_menu.dart';
-import 'package:hmoob_store/utils/constants/enums.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
-import 'package:hmoob_store/utils/popups/loaders.dart';
+import 'package:trip_store/common/widgets/success_screen/success_screen.dart';
+import 'package:trip_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:trip_store/data/repositories/products/order_repository.dart';
+import 'package:trip_store/features/personalization/controllers/address_controller.dart';
+import 'package:trip_store/features/shop/controllers/checkouts/checkout_controller.dart';
+import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/features/shop/models/order_model.dart';
+import 'package:trip_store/navigation_menu.dart';
+import 'package:trip_store/utils/constants/enums.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/popups/full_screen_loader.dart';
+import 'package:trip_store/utils/popups/loaders.dart';
 
 class OrderController extends GetxController {
   static OrderController get instance => Get.find();

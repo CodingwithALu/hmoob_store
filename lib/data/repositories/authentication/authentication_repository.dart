@@ -7,18 +7,18 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:hmoob_store/data/repositories/user/user_repository.dart';
+import 'package:trip_store/data/repositories/user/user_repository.dart';
 // ignore: unused_import
-import 'package:hmoob_store/features/authentication/controllers/signup/verify_email_controller.dart';
-import 'package:hmoob_store/features/authentication/screens/login/login.dart';
-import 'package:hmoob_store/features/authentication/screens/onboarding/onboarding.dart';
-import 'package:hmoob_store/features/authentication/screens/signup/widgets/verify_email.dart';
-import 'package:hmoob_store/navigation_menu.dart';
-import 'package:hmoob_store/utils/exceptions/firebase_auth_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/firebase_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/format_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/platform_exceptions.dart';
-import 'package:hmoob_store/utils/local_storage/storage_utility.dart';
+import 'package:trip_store/features/authentication/controllers/signup/verify_email_controller.dart';
+import 'package:trip_store/features/authentication/screens/login/login.dart';
+import 'package:trip_store/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:trip_store/features/authentication/screens/signup/widgets/verify_email.dart';
+import 'package:trip_store/navigation_menu.dart';
+import 'package:trip_store/utils/exceptions/firebase_auth_exceptions.dart';
+import 'package:trip_store/utils/exceptions/firebase_exceptions.dart';
+import 'package:trip_store/utils/exceptions/format_exceptions.dart';
+import 'package:trip_store/utils/exceptions/platform_exceptions.dart';
+import 'package:trip_store/utils/local_storage/storage_utility.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();

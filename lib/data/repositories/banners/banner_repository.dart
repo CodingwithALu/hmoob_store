@@ -1,9 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/utils/exceptions/firebase_auth_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/format_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/platform_exceptions.dart';
+import 'package:trip_store/utils/exceptions/firebase_auth_exceptions.dart';
+import 'package:trip_store/utils/exceptions/format_exceptions.dart';
+import 'package:trip_store/utils/exceptions/platform_exceptions.dart';
 
 import '../../../features/shop/models/banner_model.dart';
 

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/features/authentication/controllers/forget_password/forget_controller.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/validators/validation.dart';
-
-import '../../../../utils/constants/text_string.dart';
+import 'package:trip_store/features/authentication/controllers/forget_password/forget_controller.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/validators/validation.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 
 class ForgetPassWord extends StatelessWidget {
   const ForgetPassWord({super.key});
@@ -13,22 +12,24 @@ class ForgetPassWord extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(ForgetPasswordController());
+    final localizations = AppLocalizations.of(context)!;
+
     // implement build
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.all(TSizes.defaultSpace),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             /// Headings
             Text(
-              TTexts.forgetPasswordTitle,
+              localizations.forgetPasswordTitle,
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             const SizedBox(height: TSizes.spaceBtwSections),
             Text(
-              TTexts.forgetPasswordSubTitle,
+              localizations.forgetPasswordSubTitle,
               style: Theme.of(context).textTheme.labelMedium,
             ),
             const SizedBox(height: TSizes.spaceBtwSections * 2),
@@ -40,7 +41,7 @@ class ForgetPassWord extends StatelessWidget {
                 controller: controller.email,
                 validator: TValidator.validateEmail,
                 decoration: InputDecoration(
-                  labelText: TTexts.email,
+                  labelText: localizations.email,
                   prefixIcon: Icon(Iconsax.direct_right),
                 ),
               ),
@@ -52,7 +53,7 @@ class ForgetPassWord extends StatelessWidget {
               width: double.infinity,
               child: ElevatedButton(
                 onPressed: () => controller.sendPasswordResetEmail(),
-                child: const Text(TTexts.submit),
+                child: Text(localizations.submit),
               ),
             ),
           ],

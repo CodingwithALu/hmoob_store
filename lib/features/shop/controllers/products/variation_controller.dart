@@ -1,8 +1,8 @@
 import 'package:get/get.dart';
-import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
-import 'package:hmoob_store/features/shop/controllers/products/images_controller.dart';
-import 'package:hmoob_store/features/shop/models/product_model.dart';
-import 'package:hmoob_store/features/shop/models/product_variation_model.dart';
+import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/features/shop/controllers/products/images_controller.dart';
+import 'package:trip_store/features/shop/models/product_model.dart';
+import 'package:trip_store/features/shop/models/product_variation_model.dart';
 
 class VariationController extends GetxController {
   static VariationController get instance => Get.find();

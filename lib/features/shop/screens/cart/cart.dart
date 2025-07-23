@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
-import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
-import 'package:hmoob_store/features/shop/screens/cart/widgets/cart_item_list.dart';
-import 'package:hmoob_store/features/shop/screens/checkout/checkout.dart';
-import 'package:hmoob_store/navigation_menu.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/loaders/animation_loader.dart';
+import 'package:trip_store/common/widgets/appbar/appbar.dart';
+import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/features/shop/screens/cart/widgets/cart_item_list.dart';
+import 'package:trip_store/features/shop/screens/checkout/checkout.dart';
+import 'package:trip_store/navigation_menu.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/loaders/animation_loader.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class CartScreen extends StatelessWidget {

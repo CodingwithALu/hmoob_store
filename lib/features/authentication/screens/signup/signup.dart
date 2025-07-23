@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/common/widgets/login_signup/social_buttons.dart';
-import 'package:hmoob_store/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/constants/text_string.dart';
+import 'package:trip_store/common/widgets/login_signup/social_buttons.dart';
+import 'package:trip_store/features/authentication/screens/signup/widgets/signup_form.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import '../../../../common/widgets/login_signup/from_divider.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -11,6 +11,8 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     // implement build
     return Scaffold(
       appBar: AppBar(),
@@ -22,7 +24,7 @@ class SignupScreen extends StatelessWidget {
             children: [
               /// Title
               Text(
-                TTexts.signupTitle,
+                localizations.signupTitle,
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
               const SizedBox(height: TSizes.spaceBtwSections),
@@ -32,7 +34,7 @@ class SignupScreen extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwSections),
 
               ///Divider
-              TFromDivider(dividerText: TTexts.orSignInWith.capitalize!),
+              TFromDivider(dividerText: localizations.orSignUpWith.capitalize!),
               const SizedBox(height: TSizes.spaceBtwSections),
 
               ///Social Buttons

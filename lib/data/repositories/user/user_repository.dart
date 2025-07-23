@@ -5,11 +5,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:hmoob_store/data/repositories/authentication/authentication_repository.dart';
-import 'package:hmoob_store/features/personalization/models/user_model.dart';
-import 'package:hmoob_store/utils/exceptions/firebase_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/format_exceptions.dart';
-import 'package:hmoob_store/utils/exceptions/platform_exceptions.dart';
+import 'package:trip_store/data/repositories/authentication/authentication_repository.dart';
+import 'package:trip_store/features/personalization/models/user_model.dart';
+import 'package:trip_store/utils/exceptions/firebase_exceptions.dart';
+import 'package:trip_store/utils/exceptions/format_exceptions.dart';
+import 'package:trip_store/utils/exceptions/platform_exceptions.dart';
 
 class UserRepository extends GetxController {
   static UserRepository get instance => Get.find();

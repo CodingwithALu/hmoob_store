@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hmoob_store/features/personalization/models/address_model.dart';
-import 'package:hmoob_store/features/shop/models/cart_item_model.dart';
-import 'package:hmoob_store/utils/constants/enums.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/features/personalization/models/address_model.dart';
+import 'package:trip_store/features/shop/models/cart_item_model.dart';
+import 'package:trip_store/utils/constants/enums.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 class OrderModel {
   final String id;

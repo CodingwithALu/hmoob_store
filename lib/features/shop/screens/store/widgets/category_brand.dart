@@ -1,13 +1,13 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hmoob_store/common/widgets/brands/brand_show_case.dart';
-import 'package:hmoob_store/common/widgets/shimmer/boxes_shimmer.dart';
-import 'package:hmoob_store/common/widgets/shimmer/list_title_shimmer.dart';
-import 'package:hmoob_store/features/shop/controllers/brands/brands_contorller.dart';
-import 'package:hmoob_store/features/shop/models/category_model.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
-import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:trip_store/common/widgets/brands/brand_show_case.dart';
+import 'package:trip_store/common/widgets/shimmer/boxes_shimmer.dart';
+import 'package:trip_store/common/widgets/shimmer/list_title_shimmer.dart';
+import 'package:trip_store/features/shop/controllers/brands/brands_contorller.dart';
+import 'package:trip_store/features/shop/models/category_model.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/helpers/cloud_helper_functions.dart';
 
 class CategoryBrands extends StatelessWidget {
   const CategoryBrands({super.key, required this.category});

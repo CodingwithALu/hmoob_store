@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/data/repositories/user/user_repository.dart';
-import 'package:hmoob_store/features/personalization/controllers/user_controller.dart';
-import 'package:hmoob_store/features/personalization/screens/profile/profile.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/helpers/network_manager.dart';
-import 'package:hmoob_store/utils/popups/full_screen_loader.dart';
-import 'package:hmoob_store/utils/popups/loaders.dart';
+import 'package:trip_store/data/repositories/user/user_repository.dart';
+import 'package:trip_store/features/personalization/controllers/user_controller.dart';
+import 'package:trip_store/features/personalization/screens/profile/profile.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/helpers/network_manager.dart';
+import 'package:trip_store/utils/popups/full_screen_loader.dart';
+import 'package:trip_store/utils/popups/loaders.dart';
 
 class UpdateNameController extends GetxController {
   static UpdateNameController get instance => Get.find();

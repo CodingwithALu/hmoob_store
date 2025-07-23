@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/features/authentication/controllers/signup/signup_controller.dart';
+import 'package:trip_store/features/authentication/controllers/signup/signup_controller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import '../../../../../utils/constants/colors.dart';
 import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/constants/text_string.dart';
 import '../../../../../utils/helpers/helper_functions.dart';
 
 class TTermAndConditionCheckbox extends StatelessWidget {
@@ -12,6 +12,8 @@ class TTermAndConditionCheckbox extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = SignupController.instance;
     final dark = THelperFunctions.isDarkMode(context);
+    final localizations = AppLocalizations.of(context)!;
+
     return Row(
       children: [
         SizedBox(
@@ -26,34 +28,36 @@ class TTermAndConditionCheckbox extends StatelessWidget {
           ),
         ),
         const SizedBox(width: TSizes.spaceBtwItems),
-        Text.rich(
-          TextSpan(
-            children: [
-              TextSpan(
-                text: '${TTexts.iAgreeTo} ',
-                style: Theme.of(context).textTheme.labelSmall,
-              ),
-              TextSpan(
-                text: '${TTexts.privacyPolicy} ',
-                style: Theme.of(context).textTheme.labelSmall!.apply(
-                  color: dark ? TColors.white : TColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? TColors.white : TColors.primary,
+        Expanded(
+          child: Text.rich(
+            TextSpan(
+              children: [
+                TextSpan(
+                  text: '${localizations.iAgreeTo} ',
+                  style: Theme.of(context).textTheme.labelSmall,
                 ),
-              ),
-              TextSpan(
-                text: '${TTexts.and} ',
-                style: Theme.of(context).textTheme.labelSmall,
-              ),
-              TextSpan(
-                text: '${TTexts.termsOfUse} ',
-                style: Theme.of(context).textTheme.labelSmall!.apply(
-                  color: dark ? TColors.white : TColors.primary,
-                  decoration: TextDecoration.underline,
-                  decorationColor: dark ? TColors.white : TColors.primary,
+                TextSpan(
+                  text: '${localizations.privacyPolicy} ',
+                  style: Theme.of(context).textTheme.labelSmall!.apply(
+                    color: dark ? TColors.white : TColors.primary,
+                    decoration: TextDecoration.underline,
+                    decorationColor: dark ? TColors.white : TColors.primary,
+                  ),
                 ),
-              ),
-            ],
+                TextSpan(
+                  text: '${localizations.and} ',
+                  style: Theme.of(context).textTheme.labelSmall,
+                ),
+                TextSpan(
+                  text: '${localizations.termsOfUse} ',
+                  style: Theme.of(context).textTheme.labelSmall!.apply(
+                    color: dark ? TColors.white : TColors.primary,
+                    decoration: TextDecoration.underline,
+                    decorationColor: dark ? TColors.white : TColors.primary,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],

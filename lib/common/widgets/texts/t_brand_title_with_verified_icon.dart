@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/common/widgets/texts/t_brand_title_text.dart';
-import 'package:hmoob_store/utils/constants/enums.dart';
+import 'package:trip_store/common/widgets/texts/t_brand_title_text.dart';
+import 'package:trip_store/utils/constants/enums.dart';
 import '../../../utils/constants/colors.dart';
 import '../../../utils/constants/sizes.dart';
 

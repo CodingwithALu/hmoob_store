@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 // ignore: unused_import, library_prefixes
 import 'package:http/http.dart' as deviceStorage;
-import 'package:hmoob_store/features/authentication/screens/login/login.dart';
+import 'package:trip_store/features/authentication/screens/login/login.dart';
 
 class OnBoardingController extends GetxController {
   static OnBoardingController get instance => Get.find();

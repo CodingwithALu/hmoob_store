@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
-import 'package:hmoob_store/common/widgets/custom_shapes/container/rounded_container.dart';
-import 'package:hmoob_store/common/widgets/products/ratings/rating_indicator.dart';
-import 'package:hmoob_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:trip_store/common/widgets/products/ratings/rating_indicator.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 import '../../../../../../utils/constants/colors.dart';
 import '../../../../../../utils/constants/image_strings.dart';

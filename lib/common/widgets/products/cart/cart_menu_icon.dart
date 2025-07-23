@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
 
 import '../../../../utils/constants/colors.dart';
 

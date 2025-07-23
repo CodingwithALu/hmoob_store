@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/features/shop/controllers/products/order_controller.dart';
-import 'package:hmoob_store/navigation_menu.dart';
-import 'package:hmoob_store/utils/constants/image_strings.dart';
-import 'package:hmoob_store/utils/helpers/cloud_helper_functions.dart';
-import 'package:hmoob_store/utils/loaders/animation_loader.dart';
+import 'package:trip_store/features/shop/controllers/products/order_controller.dart';
+import 'package:trip_store/navigation_menu.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/helpers/cloud_helper_functions.dart';
+import 'package:trip_store/utils/loaders/animation_loader.dart';
 
 import '../../../../../common/widgets/custom_shapes/container/rounded_container.dart';
 import '../../../../../utils/constants/colors.dart';

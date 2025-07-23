@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/features/authentication/controllers/signup/signup_controller.dart';
-import 'package:hmoob_store/features/authentication/screens/signup/widgets/terms_condotions_checkbox.dart';
-import 'package:hmoob_store/utils/validators/validation.dart';
+import 'package:trip_store/features/authentication/controllers/signup/signup_controller.dart';
+import 'package:trip_store/features/authentication/screens/signup/widgets/terms_condotions_checkbox.dart';
+import 'package:trip_store/utils/validators/validation.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import '../../../../../utils/constants/sizes.dart';
-import '../../../../../utils/constants/text_string.dart';
 
 class TSignupFrom extends StatelessWidget {
   const TSignupFrom({super.key});
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(SignupController());
+    final localizations = AppLocalizations.of(context)!;
+
     return Form(
       key: controller.signupFromKey,
       child: Column(
@@ -22,11 +24,13 @@ class TSignupFrom extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   controller: controller.firstName,
-                  validator: (value) =>
-                      TValidator.validateEmptyText(TTexts.firstName, value),
+                  validator: (value) => TValidator.validateEmptyText(
+                    localizations.firstName,
+                    value,
+                  ),
                   expands: false,
-                  decoration: const InputDecoration(
-                    labelText: TTexts.firstName,
+                  decoration: InputDecoration(
+                    labelText: localizations.firstName,
                     prefixIcon: Icon(Iconsax.user),
                   ),
                 ),
@@ -35,11 +39,13 @@ class TSignupFrom extends StatelessWidget {
               Expanded(
                 child: TextFormField(
                   controller: controller.lastName,
-                  validator: (value) =>
-                      TValidator.validateEmptyText(TTexts.lastName, value),
+                  validator: (value) => TValidator.validateEmptyText(
+                    localizations.lastName,
+                    value,
+                  ),
                   expands: false,
-                  decoration: const InputDecoration(
-                    labelText: TTexts.lastName,
+                  decoration: InputDecoration(
+                    labelText: localizations.lastName,
                     prefixIcon: Icon(Iconsax.user),
                   ),
                 ),
@@ -52,10 +58,10 @@ class TSignupFrom extends StatelessWidget {
           TextFormField(
             controller: controller.userName,
             validator: (value) =>
-                TValidator.validateEmptyText(TTexts.username, value),
+                TValidator.validateEmptyText(localizations.username, value),
             expands: false,
-            decoration: const InputDecoration(
-              labelText: TTexts.username,
+            decoration: InputDecoration(
+              labelText: localizations.username,
               prefixIcon: Icon(Iconsax.user_edit),
             ),
           ),
@@ -65,8 +71,8 @@ class TSignupFrom extends StatelessWidget {
           TextFormField(
             controller: controller.email,
             validator: (value) => TValidator.validateEmail(value),
-            decoration: const InputDecoration(
-              labelText: TTexts.email,
+            decoration: InputDecoration(
+              labelText: localizations.email,
               prefixIcon: Icon(Iconsax.direct),
             ),
           ),
@@ -76,8 +82,8 @@ class TSignupFrom extends StatelessWidget {
           TextFormField(
             controller: controller.phoneNumber,
             validator: (value) => TValidator.validatePhoneNumber(value),
-            decoration: const InputDecoration(
-              labelText: TTexts.phoneNo,
+            decoration: InputDecoration(
+              labelText: localizations.phoneNo,
               prefixIcon: Icon(Iconsax.call),
             ),
           ),
@@ -90,7 +96,7 @@ class TSignupFrom extends StatelessWidget {
               validator: (value) => TValidator.validatePassword(value),
               obscureText: controller.hidePassword.value,
               decoration: InputDecoration(
-                labelText: TTexts.password,
+                labelText: localizations.password,
                 prefixIcon: Icon(Iconsax.password_check),
                 suffixIcon: IconButton(
                   onPressed: () => controller.hidePassword.value =
@@ -115,7 +121,7 @@ class TSignupFrom extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () => controller.signup(),
-              child: const Text(TTexts.createAccount),
+              child: Text(localizations.createAccount),
             ),
           ),
         ],

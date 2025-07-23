@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
-import 'package:hmoob_store/features/shop/screens/order/widgets/order_list.dart';
-import 'package:hmoob_store/utils/constants/sizes.dart';
+import 'package:trip_store/common/widgets/appbar/appbar.dart';
+import 'package:trip_store/features/shop/screens/order/widgets/order_list.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
 
 class OrderScreen extends StatelessWidget {
   const OrderScreen({super.key});

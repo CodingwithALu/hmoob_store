@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/features/shop/controllers/categories/category_controller.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:trip_store/features/shop/controllers/categories/category_controller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import '../../../../../common/widgets/image_text_widgets/vertical_image_text.dart';
 import '../../../../../common/widgets/shimmer/category_shimmer.dart';
 import '../../sub_category/sub_category.dart';

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/utils/devices/device_utility.dart';
+import 'package:trip_store/utils/devices/device_utility.dart';
 
 import '../../../utils/constants/sizes.dart';
 

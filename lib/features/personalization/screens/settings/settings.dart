@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:hmoob_store/features/authentication/controllers/login/login_controller.dart';
+import 'package:trip_store/features/authentication/controllers/login/login_controller.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:hmoob_store/common/widgets/appbar/appbar.dart';
-import 'package:hmoob_store/common/widgets/custom_shapes/container/primary_header_container.dart';
-import 'package:hmoob_store/common/widgets/list_titles/setting_menu_title.dart';
-import 'package:hmoob_store/common/widgets/texts/section_heading.dart';
-import 'package:hmoob_store/features/personalization/screens/address/address.dart';
-import 'package:hmoob_store/features/shop/screens/cart/cart.dart';
-import 'package:hmoob_store/l10n/app_localizations.dart';
+import 'package:trip_store/common/widgets/appbar/appbar.dart';
+import 'package:trip_store/common/widgets/custom_shapes/container/primary_header_container.dart';
+import 'package:trip_store/common/widgets/list_titles/setting_menu_title.dart';
+import 'package:trip_store/common/widgets/texts/section_heading.dart';
+import 'package:trip_store/features/personalization/screens/address/address.dart';
+import 'package:trip_store/features/shop/screens/cart/cart.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 
 import '../../../../common/widgets/list_titles/user_profile_title.dart';
 import '../../../../utils/constants/colors.dart';
