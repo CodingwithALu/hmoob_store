@@ -23,8 +23,10 @@ class VariationController extends GetxController {
   void onAttributeSelected(
     ProductModel product,
     attributeName,
-    attributeValue,
-  ) {
+    attributeValue, {
+    String? inStockText,
+    String? outOfStockText,
+  }) {
     final selectedAttributes = Map<String, dynamic>.from(selectedAttribute);
     selectedAttributes[attributeName] = attributeValue;
     selectedAttribute[attributeName] = attributeValue;
@@ -45,6 +47,12 @@ class VariationController extends GetxController {
           .getVariationQuantityInCart(product.id, selectedVariable.id);
     }
     selectedVariation.value = selectedVariable;
+
+    // Update stock status with localized text
+    getProductVariationStockStatus(
+      inStockText: inStockText,
+      outOfStockText: outOfStockText,
+    );
   }
 
   /// check if selected attribute matches any variable attribute
@@ -88,10 +96,13 @@ class VariationController extends GetxController {
   }
 
   /// Check Product Variation Stock Status
-  void getProductVariationStockStatus() {
+  void getProductVariationStockStatus({
+    String? inStockText,
+    String? outOfStockText,
+  }) {
     variationStockStatus.value = selectedVariation.value.stock > 0
-        ? 'In Stock'
-        : 'Out of stock';
+        ? (inStockText ?? 'In Stock')
+        : (outOfStockText ?? 'Out of stock');
   }
 
   /// Reset selected Attribute when switching products

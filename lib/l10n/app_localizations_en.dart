@@ -427,4 +427,145 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get quantityLabel => 'Quantity';
+
+  @override
+  String get cart => 'Cart';
+
+  @override
+  String get cartEmpty => 'Whoops! Cart is EMPTY';
+
+  @override
+  String get cartFillIt => 'Let\'s fill it';
+
+  @override
+  String get checkout => 'Checkout';
+
+  @override
+  String get orderReview => 'Order Review';
+
+  @override
+  String get emptyCart => 'Empty Cart';
+
+  @override
+  String get addItemsToCart => 'Add items in the cart order to proceed';
+
+  @override
+  String get subtotal => 'Subtotal';
+
+  @override
+  String get shippingFee => 'Shipping Fee';
+
+  @override
+  String get taxFee => 'Tax Fee';
+
+  @override
+  String get orderTotal => 'Order Total';
+
+  @override
+  String get paymentMethod => 'Payment Method';
+
+  @override
+  String get change => 'Change';
+
+  @override
+  String get shippingAddress => 'Shipping Address';
+
+  @override
+  String get selectAddress => 'Select Address';
+
+  @override
+  String get myOrder => 'My Order';
+
+  @override
+  String get noOrdersYet => 'Whoops! No Orders Yet!';
+
+  @override
+  String get orderFillIt => 'Let\'s fill it';
+
+  @override
+  String get order => 'Order';
+
+  @override
+  String get shippingDate => 'Shipping Date';
+
+  @override
+  String get selectPaymentMethod => 'Select payment Method';
+
+  @override
+  String get productAddedToWishlist => 'Product has been added to the Wishlist.';
+
+  @override
+  String get productRemovedFromWishlist => 'Product has been removed from the Wishlist.';
+
+  @override
+  String get sortByName => 'Name';
+
+  @override
+  String get sortByHigherPrice => 'Higher Price';
+
+  @override
+  String get sortByLowerPrice => 'Lower Price';
+
+  @override
+  String get sortByNewest => 'Newest';
+
+  @override
+  String get sortByPopularity => 'Popularity';
+
+  @override
+  String get bannerErrorTitle => 'Oh Snap!';
+
+  @override
+  String get bannerErrorMessage => 'Failed to load banners. Please try again.';
+
+  @override
+  String get selectQuantity => 'Select Quantity';
+
+  @override
+  String get selectVariation => 'Select Variation';
+
+  @override
+  String get outOfStockVariation => 'Selected variation is out of stock.';
+
+  @override
+  String get outOfStockProduct => 'Selected product is out of stock.';
+
+  @override
+  String get productAddedToCart => 'Your Product has been added to the Cart';
+
+  @override
+  String get removeProduct => 'Remove Product';
+
+  @override
+  String get removeProductConfirm => 'Are you sure you want to remove this product?';
+
+  @override
+  String get productRemovedFromCart => 'Product removed from the Cart.';
+
+  @override
+  String get processingOrder => 'Processing your order';
+
+  @override
+  String get paymentSuccess => 'Payment Success!';
+
+  @override
+  String get orderShippingSoon => 'Your item will be shipped soon!';
+
+  @override
+  String get inStock => 'In stock';
+
+  @override
+  String get outOfStock => 'Out of stock';
+
+  @override
+  String get productsErrorTitle => 'Oh Snap';
+
+  @override
+  String get failedToLoadProducts => 'Failed to load products. Please try again.';
+
+  @override
+  String get promoCodeHint => 'Have a promo code? Enter here';
+
+  @override
+  String get applyButton => 'Apply';
 }

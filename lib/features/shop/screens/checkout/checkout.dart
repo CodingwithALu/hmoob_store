@@ -8,6 +8,7 @@ import 'package:trip_store/features/shop/screens/cart/widgets/cart_item_list.dar
 import 'package:trip_store/features/shop/screens/checkout/widgets/billing_address_section.dart';
 import 'package:trip_store/features/shop/screens/checkout/widgets/billing_amount_section.dart';
 import 'package:trip_store/features/shop/screens/checkout/widgets/billing_payment_section.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/navigation_menu.dart';
 import 'package:trip_store/utils/constants/colors.dart';
 import 'package:trip_store/utils/constants/image_strings.dart';
@@ -23,6 +24,7 @@ class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     final dark = THelperFunctions.isDarkMode(context);
     // implement build
     final controller = CartController.instance;
@@ -33,16 +35,16 @@ class CheckoutScreen extends StatelessWidget {
       appBar: TAppBar(
         showBackArrow: true,
         title: Text(
-          'Order Review',
+          localizations.orderReview,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
       ),
       body: Obx(() {
         final emptyWodget = TAnimationLoaderWidget(
-          text: 'Whoops! Cart is EMPTY',
+          text: localizations.cartEmpty,
           animation: TImages.cartAnimation,
           showAction: true,
-          actionText: 'Let\'s fill it',
+          actionText: localizations.cartFillIt,
           onActionPressed: () => Get.off(() => const NavigationMenu()),
         );
         return controller.cartItems.isEmpty
@@ -96,13 +98,19 @@ class CheckoutScreen extends StatelessWidget {
         padding: EdgeInsets.all(TSizes.defaultSpace),
         child: ElevatedButton(
           onPressed: subTotal > 0
-              ? () => orderController.processOrder(totalAmout)
+              ? () => orderController.processOrder(
+                  totalAmout,
+                  processingMessage: localizations.processingOrder,
+                  successTitle: localizations.paymentSuccess,
+                  successSubtitle: localizations.orderShippingSoon,
+                  errorTitle: localizations.bannerErrorTitle,
+                )
               : () => TLoaders.warningSnackBar(
-                  title: 'Empty Cart',
-                  message: 'Add items in the cart order to proseed',
+                  title: localizations.emptyCart,
+                  message: localizations.addItemsToCart,
                 ),
           child: Text(
-            'Checkout \$${TPricingCalculator.calculateTotalPrice(subTotal, 'US')}',
+            '${localizations.checkout} \$${TPricingCalculator.calculateTotalPrice(subTotal, 'US')}',
           ),
         ),
       ),

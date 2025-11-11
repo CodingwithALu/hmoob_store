@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:trip_store/common/widgets/appbar/appbar.dart';
 import 'package:trip_store/common/widgets/shimmer/vertical_product_shimmer.dart';
 import 'package:trip_store/features/shop/controllers/products/all_products_contorller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/utils/helpers/cloud_helper_functions.dart';
 
 import '../../../../../common/widgets/products/sortable/sortable_product.dart';
@@ -24,13 +25,20 @@ class AllProducts extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(AllProductController());
+    final localizations = AppLocalizations.of(context)!;
     return Scaffold(
       appBar: TAppBar(title: Text(title), showBackArrow: true),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(TSizes.defaultSpace),
           child: FutureBuilder(
-            future: futureMethod ?? controller.fetchProductsByQuery(query),
+            future:
+                futureMethod ??
+                controller.fetchProductsByQuery(
+                  query,
+                  errorTitle: localizations.productsErrorTitle,
+                  errorMessage: localizations.failedToLoadProducts,
+                ),
             builder: (context, asyncSnapshot) {
               const loader = TVerticalProductShimmer();
               final widget = TCloudHelperFunctions.checkMultiRecordState(

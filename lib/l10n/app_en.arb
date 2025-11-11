@@ -549,6 +549,7 @@
         "description": "Show more text for ReadMore widget"
     },
     "showLess": " Less",
+    "@showLess": {},
     "addToCartButton": "Add to cart",
     "@addToCartButton": {
         "description": "Button text for adding product to cart"
@@ -557,7 +558,192 @@
     "@quantityLabel": {
         "description": "Label for product quantity in add to cart widget"
     },
-    "@showLess": {
-        "description": "Show less text for ReadMore widget"
+    "cart": "Cart",
+    "@cart": {
+        "description": "Cart screen title"
+    },
+    "cartEmpty": "Whoops! Cart is EMPTY",
+    "@cartEmpty": {
+        "description": "Message when cart is empty"
+    },
+    "cartFillIt": "Let's fill it",
+    "@cartFillIt": {
+        "description": "Action text to fill empty cart"
+    },
+    "checkout": "Checkout",
+    "@checkout": {
+        "description": "Checkout button text"
+    },
+    "orderReview": "Order Review",
+    "@orderReview": {
+        "description": "Title for order review screen"
+    },
+    "emptyCart": "Empty Cart",
+    "@emptyCart": {
+        "description": "Warning title for empty cart"
+    },
+    "addItemsToCart": "Add items in the cart order to proceed",
+    "@addItemsToCart": {
+        "description": "Warning message to add items before checkout"
+    },
+    "subtotal": "Subtotal",
+    "@subtotal": {
+        "description": "Label for subtotal in billing section"
+    },
+    "shippingFee": "Shipping Fee",
+    "@shippingFee": {
+        "description": "Label for shipping fee in billing section"
+    },
+    "taxFee": "Tax Fee",
+    "@taxFee": {
+        "description": "Label for tax fee in billing section"
+    },
+    "orderTotal": "Order Total",
+    "@orderTotal": {
+        "description": "Label for order total in billing section"
+    },
+    "paymentMethod": "Payment Method",
+    "@paymentMethod": {
+        "description": "Label for payment method section"
+    },
+    "change": "Change",
+    "@change": {
+        "description": "Button text to change payment method or address"
+    },
+    "shippingAddress": "Shipping Address",
+    "@shippingAddress": {
+        "description": "Label for shipping address section"
+    },
+    "selectAddress": "Select Address",
+    "@selectAddress": {
+        "description": "Text when no address is selected"
+    },
+    "myOrder": "My Order",
+    "@myOrder": {
+        "description": "Title for my orders screen"
+    },
+    "noOrdersYet": "Whoops! No Orders Yet!",
+    "@noOrdersYet": {
+        "description": "Message when user has no orders"
+    },
+    "orderFillIt": "Let's fill it",
+    "@orderFillIt": {
+        "description": "Action text to start shopping when no orders"
+    },
+    "order": "Order",
+    "@order": {
+        "description": "Label for order in order list"
+    },
+    "shippingDate": "Shipping Date",
+    "@shippingDate": {
+        "description": "Label for shipping date in order list"
+    },
+    "selectPaymentMethod": "Select payment Method",
+    "@selectPaymentMethod": {
+        "description": "Title for payment method selection modal"
+    },
+    "productAddedToWishlist": "Product has been added to the Wishlist.",
+    "@productAddedToWishlist": {
+        "description": "Message when product is added to wishlist"
+    },
+    "productRemovedFromWishlist": "Product has been removed from the Wishlist.",
+    "@productRemovedFromWishlist": {
+        "description": "Message when product is removed from wishlist"
+    },
+    "sortByName": "Name",
+    "@sortByName": {
+        "description": "Sort option by product name"
+    },
+    "sortByHigherPrice": "Higher Price",
+    "@sortByHigherPrice": {
+        "description": "Sort option by higher price"
+    },
+    "sortByLowerPrice": "Lower Price",
+    "@sortByLowerPrice": {
+        "description": "Sort option by lower price"
+    },
+    "sortByNewest": "Newest",
+    "@sortByNewest": {
+        "description": "Sort option by newest products"
+    },
+    "sortByPopularity": "Popularity",
+    "@sortByPopularity": {
+        "description": "Sort option by popularity"
+    },
+    "bannerErrorTitle": "Oh Snap!",
+    "@bannerErrorTitle": {
+        "description": "Error title when banner loading fails"
+    },
+    "bannerErrorMessage": "Failed to load banners. Please try again.",
+    "@bannerErrorMessage": {
+        "description": "Error message when banner loading fails"
+    },
+    "selectQuantity": "Select Quantity",
+    "@selectQuantity": {
+        "description": "Message when no quantity is selected"
+    },
+    "selectVariation": "Select Variation",
+    "@selectVariation": {
+        "description": "Message when no variation is selected"
+    },
+    "outOfStockVariation": "Selected variation is out of stock.",
+    "@outOfStockVariation": {
+        "description": "Message when selected variation is out of stock"
+    },
+    "outOfStockProduct": "Selected product is out of stock.",
+    "@outOfStockProduct": {
+        "description": "Message when selected product is out of stock"
+    },
+    "productAddedToCart": "Your Product has been added to the Cart",
+    "@productAddedToCart": {
+        "description": "Message when product is added to cart"
+    },
+    "removeProduct": "Remove Product",
+    "@removeProduct": {
+        "description": "Dialog title for removing product from cart"
+    },
+    "removeProductConfirm": "Are you sure you want to remove this product?",
+    "@removeProductConfirm": {
+        "description": "Confirmation message for removing product from cart"
+    },
+    "productRemovedFromCart": "Product removed from the Cart.",
+    "@productRemovedFromCart": {
+        "description": "Message when product is removed from cart"
+    },
+    "processingOrder": "Processing your order",
+    "@processingOrder": {
+        "description": "Loading message when processing order"
+    },
+    "paymentSuccess": "Payment Success!",
+    "@paymentSuccess": {
+        "description": "Success message for payment"
+    },
+    "orderShippingSoon": "Your item will be shipped soon!",
+    "@orderShippingSoon": {
+        "description": "Message about shipping after successful payment"
+    },
+    "inStock": "In stock",
+    "@inStock": {
+        "description": "Product stock status - in stock"
+    },
+    "outOfStock": "Out of stock",
+    "@outOfStock": {
+        "description": "Product stock status - out of stock"
+    },
+    "productsErrorTitle": "Oh Snap",
+    "@productsErrorTitle": {
+        "description": "Error title for product loading"
+    },
+    "failedToLoadProducts": "Failed to load products. Please try again.",
+    "@failedToLoadProducts": {
+        "description": "Error message when products fail to load"
+    },
+    "promoCodeHint": "Have a promo code? Enter here",
+    "@promoCodeHint": {
+        "description": "Hint text for promo code input field"
+    },
+    "applyButton": "Apply",
+    "@applyButton": {
+        "description": "Apply button text for promo code"
     }
 }

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:trip_store/common/widgets/custom_shapes/container/rounded_container.dart';
 import 'package:trip_store/common/widgets/texts/section_heading.dart';
 import 'package:trip_store/features/shop/controllers/checkouts/checkout_controller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/utils/constants/colors.dart';
 import 'package:trip_store/utils/helpers/helper_functions.dart';
 
@@ -13,14 +14,15 @@ class TBillingPaymentSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     // implement build
     final controller = Get.put(CheckoutController());
     final dark = THelperFunctions.isDarkMode(context);
     return Column(
       children: [
         TSectionHeading(
-          title: 'Payment Method',
-          buttonTitle: "Change",
+          title: localizations.paymentMethod,
+          buttonTitle: localizations.change,
           onPressed: () => controller.selectPaymentMethod(context),
         ),
         const SizedBox(height: TSizes.spaceBtwItems),

@@ -21,15 +21,16 @@ class TSectionHeading extends StatelessWidget {
   Widget build(BuildContext context) {
     final local = AppLocalizations.of(context)!;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Text(
-          title,
-          style: Theme.of(
-            context,
-          ).textTheme.headlineSmall!.apply(color: textColor),
-          maxLines: 1,
-          overflow: TextOverflow.ellipsis,
+        Expanded(
+          child: Text(
+            title,
+            style: Theme.of(
+              context,
+            ).textTheme.headlineSmall!.apply(color: textColor),
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
         if (showActionButton)
           TextButton(

@@ -3,6 +3,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:trip_store/features/shop/controllers/products/order_controller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/navigation_menu.dart';
 import 'package:trip_store/utils/constants/image_strings.dart';
 import 'package:trip_store/utils/helpers/cloud_helper_functions.dart';
@@ -17,6 +18,7 @@ class TOrderListItems extends StatelessWidget {
   const TOrderListItems({super.key});
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     final dark = THelperFunctions.isDarkMode(context);
     final controller = Get.put(OrderController());
     return FutureBuilder(
@@ -24,10 +26,10 @@ class TOrderListItems extends StatelessWidget {
       builder: (_, snapshot) {
         /// Nothing Found Widget
         final emptyWidget = TAnimationLoaderWidget(
-          text: 'Whoops! No Orders Yet!',
+          text: localizations.noOrdersYet,
           animation: TImages.orderCompletedAnimation,
           showAction: true,
-          actionText: 'Let\'s fill it',
+          actionText: localizations.orderFillIt,
           onActionPressed: () => Get.off(() => const NavigationMenu()),
         ); // TAnimationLoaderWidget
 
@@ -110,7 +112,7 @@ class TOrderListItems extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Order',
+                                    localizations.order,
                                     style: Theme.of(context)
                                         .textTheme
                                         .labelMedium!
@@ -145,7 +147,7 @@ class TOrderListItems extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    'Shipping Date',
+                                    localizations.shippingDate,
                                     style: Theme.of(context)
                                         .textTheme
                                         .labelMedium!

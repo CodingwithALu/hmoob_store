@@ -23,22 +23,31 @@ class OrderController extends GetxController {
   final orderRepository = Get.put(OrderRepository());
 
   /// Fetch user's order history
-  Future<List<OrderModel>> fetchUserOrders() async {
+  Future<List<OrderModel>> fetchUserOrders({String? errorTitle}) async {
     try {
       final userOrders = await orderRepository.fetchUserOrders();
       return userOrders;
     } catch (e) {
-      TLoaders.warningSnackBar(title: 'Oh Snap!', message: e.toString());
+      TLoaders.warningSnackBar(
+        title: errorTitle ?? 'Oh Snap!',
+        message: e.toString(),
+      );
       return [];
     }
   }
 
   /// Add methods for order processing
-  void processOrder(double totalAmount) async {
+  void processOrder(
+    double totalAmount, {
+    String? processingMessage,
+    String? successTitle,
+    String? successSubtitle,
+    String? errorTitle,
+  }) async {
     try {
       // Start Loader
       TFullScreenLoader.openLoadingDialog(
-        'Processing your order',
+        processingMessage ?? 'Processing your order',
         TImages.pencilAnimation,
       );
 
@@ -70,15 +79,18 @@ class OrderController extends GetxController {
         () => SuccessScreen(
           showEmail: false,
           image: TImages.orderCompletedAnimation,
-          title: 'Payment Success!',
-          subtitle: 'Your item will be shpipped soon!',
+          title: successTitle ?? 'Payment Success!',
+          subtitle: successSubtitle ?? 'Your item will be shpipped soon!',
           onPressed: () {
             Get.offAll(() => NavigationMenu());
           },
         ),
       );
     } catch (e) {
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(
+        title: errorTitle ?? 'Oh Snap',
+        message: e.toString(),
+      );
     }
   }
 }

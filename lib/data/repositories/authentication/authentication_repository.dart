@@ -152,9 +152,19 @@ class AuthenticationRepository extends GetxController {
         accessToken: googleAuth?.accessToken,
         idToken: googleAuth?.idToken,
       );
-
       // Once signed in, return UserCredential
-      return await _auth.signInWithCredential(credentials);
+      final UserCredential userCredential = await _auth.signInWithCredential(
+        credentials,
+      );
+      final User? user = userCredential.user;
+      if (user != null) {
+        final String? idToken = await user.getIdToken();
+        if (kDebugMode) {
+          print('Firebase ID Token: $idToken');
+        }
+        // Gửi idToken này lên backend để xác thực
+      }
+      return userCredential;
     } on FirebaseAuthException catch (e) {
       throw TFirebaseAuthException(e.code).message;
     } on FirebaseException catch (e) {

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:trip_store/common/widgets/texts/section_heading.dart';
 import 'package:trip_store/features/shop/models/product_model.dart';
@@ -87,17 +86,17 @@ class ProductDetailScreen extends StatelessWidget {
                   const Divider(),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TSectionHeading(
-                        title:
-                            '${AppLocalizations.of(context)!.reviewSection}(199)',
-                        showActionButton: false,
+                      Expanded(
+                        child: Text(
+                          '${AppLocalizations.of(context)!.reviewSection}(199)',
+                          style: Theme.of(context).textTheme.headlineSmall,
+                        ),
                       ),
-                      IconButton(
-                        icon: const Icon(Iconsax.arrow_right_3, size: 18),
+                      TextButton(
                         onPressed: () =>
                             Get.to(() => const ProductReviewScreen()),
+                        child: Text(AppLocalizations.of(context)!.viewAll),
                       ),
                     ],
                   ),

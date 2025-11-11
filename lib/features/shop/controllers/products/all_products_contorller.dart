@@ -11,13 +11,20 @@ class AllProductController extends GetxController {
   final RxString selectedSortOption = 'Name'.obs;
   final RxList<ProductModel> products = <ProductModel>[].obs;
 
-  Future<List<ProductModel>> fetchProductsByQuery(Query? query) async {
+  Future<List<ProductModel>> fetchProductsByQuery(
+    Query? query, {
+    String? errorTitle,
+    String? errorMessage,
+  }) async {
     try {
       if (query == null) return [];
       final products = await repository.fetchProductByQuery(query);
       return products;
     } catch (e) {
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(
+        title: errorTitle ?? 'Oh Snap',
+        message: errorMessage ?? e.toString(),
+      );
       return [];
     }
   }
@@ -38,7 +45,7 @@ class AllProductController extends GetxController {
       case 'Newest':
         products.sort((a, b) => a.date!.compareTo(b.date!));
         break;
-      case 'Sale':
+      case 'Popularity':
         products.sort((a, b) {
           if (b.salePrices > 0) {
             return b.salePrices.compareTo(a.salePrices);

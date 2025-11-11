@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:trip_store/common/widgets/texts/section_heading.dart';
 import 'package:trip_store/features/shop/screens/checkout/widgets/payment_title.dart';
 import 'package:trip_store/features/shop/models/payment_methood_model.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/utils/constants/image_strings.dart';
 import 'package:trip_store/utils/constants/sizes.dart';
 
@@ -20,6 +21,7 @@ class CheckoutController extends GetxController {
   }
 
   Future<dynamic> selectPaymentMethod(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     return showModalBottomSheet(
       context: context,
       builder: (_) => SingleChildScrollView(
@@ -28,8 +30,8 @@ class CheckoutController extends GetxController {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const TSectionHeading(
-                title: 'Select payment Methob',
+              TSectionHeading(
+                title: localizations.selectPaymentMethod,
                 showActionButton: false,
               ),
               const SizedBox(height: TSizes.spaceBtwSections),

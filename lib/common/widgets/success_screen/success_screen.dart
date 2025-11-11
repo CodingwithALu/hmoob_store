@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:trip_store/common/styles/spacing_style.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/utils/constants/text_string.dart';
 
 import '../../../utils/constants/sizes.dart';
@@ -22,6 +23,7 @@ class SuccessScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // implement build
+    final local = AppLocalizations.of(context)!;
     return Scaffold(
       body: SingleChildScrollView(
         child: Padding(
@@ -55,7 +57,7 @@ class SuccessScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: onPressed,
-                  child: const Text(TTexts.tContinue),
+                  child: Text(local.tContinue),
                 ),
               ),
               const SizedBox(height: TSizes.spaceBtwSections),

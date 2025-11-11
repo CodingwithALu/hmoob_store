@@ -33,7 +33,7 @@ class BrandsContorller extends GetxController {
       );
     } catch (e) {
       // Handle error here
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
     } finally {
       isLoading.value = false;
     }

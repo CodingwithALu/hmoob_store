@@ -23,7 +23,7 @@ class BannerController extends GetxController {
   }
 
   /// Fetch Banners
-  Future<void> fetchBanners() async {
+  Future<void> fetchBanners({String? errorTitle, String? errorMessage}) async {
     try {
       /// Todo -- Show loader while loading categories
       isLoading.value = true;
@@ -34,7 +34,10 @@ class BannerController extends GetxController {
       // Assign Banners
       this.banners.assignAll(banners);
     } catch (e) {
-      TLoaders.errorSnackBar(title: 'Oh Snap!', message: e.toString());
+      TLoaders.errorSnackBar(
+        title: errorTitle ?? 'Oh Snap!',
+        message: errorMessage ?? e.toString(),
+      );
     } finally {
       /// Todo -- Remove Loader
       isLoading.value = false;

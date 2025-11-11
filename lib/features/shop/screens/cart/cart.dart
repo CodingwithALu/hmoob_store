@@ -7,26 +7,32 @@ import 'package:trip_store/features/shop/screens/checkout/checkout.dart';
 import 'package:trip_store/navigation_menu.dart';
 import 'package:trip_store/utils/constants/image_strings.dart';
 import 'package:trip_store/utils/loaders/animation_loader.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import '../../../../utils/constants/sizes.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+
     // implement build
     final controller = CartController.instance;
     return Scaffold(
       appBar: TAppBar(
-        title: Text('Cart', style: Theme.of(context).textTheme.headlineSmall),
+        title: Text(
+          localizations.cart,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
         showBackArrow: true,
       ),
       body: Obx(() {
         // Nothing Foud Widget
         final emptyWodget = TAnimationLoaderWidget(
-          text: 'Whoops! Cart is EMPTY',
+          text: localizations.cartEmpty,
           animation: TImages.cartAnimation,
           showAction: true,
-          actionText: 'Let\'s fill it',
+          actionText: localizations.cartFillIt,
           onActionPressed: () => Get.off(() => const NavigationMenu()),
         );
 
@@ -46,7 +52,9 @@ class CartScreen extends StatelessWidget {
               child: ElevatedButton(
                 onPressed: () => Get.to(() => CheckoutScreen()),
                 child: Obx(
-                  () => Text('Checkout \$${controller.totalCartPrice.value}'),
+                  () => Text(
+                    '${localizations.checkout} \$${controller.totalCartPrice.value}',
+                  ),
                 ),
               ),
             ),

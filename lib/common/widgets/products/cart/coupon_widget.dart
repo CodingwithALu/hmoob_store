@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/utils/helpers/helper_functions.dart';
 
 import '../../../../utils/constants/colors.dart';
@@ -11,6 +12,7 @@ class TCouponCode extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final dark = THelperFunctions.isDarkMode(context);
+    final localizations = AppLocalizations.of(context)!;
     return TRoundedContainer(
       padding: const EdgeInsets.only(
         top: TSizes.sm,
@@ -26,7 +28,7 @@ class TCouponCode extends StatelessWidget {
           Flexible(
             child: TextFormField(
               decoration: InputDecoration(
-                hintText: 'Have a promo code? Enter here',
+                hintText: localizations.promoCodeHint,
                 helperStyle: Theme.of(context).textTheme.bodySmall,
                 border: InputBorder.none,
                 focusedBorder: InputBorder.none,
@@ -47,7 +49,7 @@ class TCouponCode extends StatelessWidget {
                 backgroundColor: Colors.grey.withAlpha(128),
                 side: BorderSide(color: Colors.grey.withAlpha(128)),
               ),
-              child: const Text('Apply'),
+              child: Text(localizations.applyButton),
             ),
           ),
         ],

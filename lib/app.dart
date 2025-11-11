@@ -29,7 +29,7 @@ class App extends StatelessWidget {
       // i18n
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: const Locale('vi'),
+      locale: const Locale('en'),
     );
   }
 }

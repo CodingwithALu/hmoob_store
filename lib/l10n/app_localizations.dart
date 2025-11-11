@@ -917,7 +917,7 @@ abstract class AppLocalizations {
   /// **' Show more'**
   String get showMore;
 
-  /// Show less text for ReadMore widget
+  /// No description provided for @showLess.
   ///
   /// In en, this message translates to:
   /// **' Less'**
@@ -934,6 +934,288 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Quantity'**
   String get quantityLabel;
+
+  /// Cart screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Cart'**
+  String get cart;
+
+  /// Message when cart is empty
+  ///
+  /// In en, this message translates to:
+  /// **'Whoops! Cart is EMPTY'**
+  String get cartEmpty;
+
+  /// Action text to fill empty cart
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s fill it'**
+  String get cartFillIt;
+
+  /// Checkout button text
+  ///
+  /// In en, this message translates to:
+  /// **'Checkout'**
+  String get checkout;
+
+  /// Title for order review screen
+  ///
+  /// In en, this message translates to:
+  /// **'Order Review'**
+  String get orderReview;
+
+  /// Warning title for empty cart
+  ///
+  /// In en, this message translates to:
+  /// **'Empty Cart'**
+  String get emptyCart;
+
+  /// Warning message to add items before checkout
+  ///
+  /// In en, this message translates to:
+  /// **'Add items in the cart order to proceed'**
+  String get addItemsToCart;
+
+  /// Label for subtotal in billing section
+  ///
+  /// In en, this message translates to:
+  /// **'Subtotal'**
+  String get subtotal;
+
+  /// Label for shipping fee in billing section
+  ///
+  /// In en, this message translates to:
+  /// **'Shipping Fee'**
+  String get shippingFee;
+
+  /// Label for tax fee in billing section
+  ///
+  /// In en, this message translates to:
+  /// **'Tax Fee'**
+  String get taxFee;
+
+  /// Label for order total in billing section
+  ///
+  /// In en, this message translates to:
+  /// **'Order Total'**
+  String get orderTotal;
+
+  /// Label for payment method section
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Method'**
+  String get paymentMethod;
+
+  /// Button text to change payment method or address
+  ///
+  /// In en, this message translates to:
+  /// **'Change'**
+  String get change;
+
+  /// Label for shipping address section
+  ///
+  /// In en, this message translates to:
+  /// **'Shipping Address'**
+  String get shippingAddress;
+
+  /// Text when no address is selected
+  ///
+  /// In en, this message translates to:
+  /// **'Select Address'**
+  String get selectAddress;
+
+  /// Title for my orders screen
+  ///
+  /// In en, this message translates to:
+  /// **'My Order'**
+  String get myOrder;
+
+  /// Message when user has no orders
+  ///
+  /// In en, this message translates to:
+  /// **'Whoops! No Orders Yet!'**
+  String get noOrdersYet;
+
+  /// Action text to start shopping when no orders
+  ///
+  /// In en, this message translates to:
+  /// **'Let\'s fill it'**
+  String get orderFillIt;
+
+  /// Label for order in order list
+  ///
+  /// In en, this message translates to:
+  /// **'Order'**
+  String get order;
+
+  /// Label for shipping date in order list
+  ///
+  /// In en, this message translates to:
+  /// **'Shipping Date'**
+  String get shippingDate;
+
+  /// Title for payment method selection modal
+  ///
+  /// In en, this message translates to:
+  /// **'Select payment Method'**
+  String get selectPaymentMethod;
+
+  /// Message when product is added to wishlist
+  ///
+  /// In en, this message translates to:
+  /// **'Product has been added to the Wishlist.'**
+  String get productAddedToWishlist;
+
+  /// Message when product is removed from wishlist
+  ///
+  /// In en, this message translates to:
+  /// **'Product has been removed from the Wishlist.'**
+  String get productRemovedFromWishlist;
+
+  /// Sort option by product name
+  ///
+  /// In en, this message translates to:
+  /// **'Name'**
+  String get sortByName;
+
+  /// Sort option by higher price
+  ///
+  /// In en, this message translates to:
+  /// **'Higher Price'**
+  String get sortByHigherPrice;
+
+  /// Sort option by lower price
+  ///
+  /// In en, this message translates to:
+  /// **'Lower Price'**
+  String get sortByLowerPrice;
+
+  /// Sort option by newest products
+  ///
+  /// In en, this message translates to:
+  /// **'Newest'**
+  String get sortByNewest;
+
+  /// Sort option by popularity
+  ///
+  /// In en, this message translates to:
+  /// **'Popularity'**
+  String get sortByPopularity;
+
+  /// Error title when banner loading fails
+  ///
+  /// In en, this message translates to:
+  /// **'Oh Snap!'**
+  String get bannerErrorTitle;
+
+  /// Error message when banner loading fails
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load banners. Please try again.'**
+  String get bannerErrorMessage;
+
+  /// Message when no quantity is selected
+  ///
+  /// In en, this message translates to:
+  /// **'Select Quantity'**
+  String get selectQuantity;
+
+  /// Message when no variation is selected
+  ///
+  /// In en, this message translates to:
+  /// **'Select Variation'**
+  String get selectVariation;
+
+  /// Message when selected variation is out of stock
+  ///
+  /// In en, this message translates to:
+  /// **'Selected variation is out of stock.'**
+  String get outOfStockVariation;
+
+  /// Message when selected product is out of stock
+  ///
+  /// In en, this message translates to:
+  /// **'Selected product is out of stock.'**
+  String get outOfStockProduct;
+
+  /// Message when product is added to cart
+  ///
+  /// In en, this message translates to:
+  /// **'Your Product has been added to the Cart'**
+  String get productAddedToCart;
+
+  /// Dialog title for removing product from cart
+  ///
+  /// In en, this message translates to:
+  /// **'Remove Product'**
+  String get removeProduct;
+
+  /// Confirmation message for removing product from cart
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to remove this product?'**
+  String get removeProductConfirm;
+
+  /// Message when product is removed from cart
+  ///
+  /// In en, this message translates to:
+  /// **'Product removed from the Cart.'**
+  String get productRemovedFromCart;
+
+  /// Loading message when processing order
+  ///
+  /// In en, this message translates to:
+  /// **'Processing your order'**
+  String get processingOrder;
+
+  /// Success message for payment
+  ///
+  /// In en, this message translates to:
+  /// **'Payment Success!'**
+  String get paymentSuccess;
+
+  /// Message about shipping after successful payment
+  ///
+  /// In en, this message translates to:
+  /// **'Your item will be shipped soon!'**
+  String get orderShippingSoon;
+
+  /// Product stock status - in stock
+  ///
+  /// In en, this message translates to:
+  /// **'In stock'**
+  String get inStock;
+
+  /// Product stock status - out of stock
+  ///
+  /// In en, this message translates to:
+  /// **'Out of stock'**
+  String get outOfStock;
+
+  /// Error title for product loading
+  ///
+  /// In en, this message translates to:
+  /// **'Oh Snap'**
+  String get productsErrorTitle;
+
+  /// Error message when products fail to load
+  ///
+  /// In en, this message translates to:
+  /// **'Failed to load products. Please try again.'**
+  String get failedToLoadProducts;
+
+  /// Hint text for promo code input field
+  ///
+  /// In en, this message translates to:
+  /// **'Have a promo code? Enter here'**
+  String get promoCodeHint;
+
+  /// Apply button text for promo code
+  ///
+  /// In en, this message translates to:
+  /// **'Apply'**
+  String get applyButton;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

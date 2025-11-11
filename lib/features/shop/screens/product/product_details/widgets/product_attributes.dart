@@ -34,9 +34,11 @@ class TProductAttributes extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      TSectionHeading(
-                        title: localizations.variationSection,
-                        showActionButton: false,
+                      Expanded(
+                        child: TSectionHeading(
+                          title: localizations.variationSection,
+                          showActionButton: false,
+                        ),
                       ),
                       const SizedBox(width: TSizes.spaceBtwItems),
                       Column(
@@ -128,6 +130,9 @@ class TProductAttributes extends StatelessWidget {
                                           products,
                                           attribute.name ?? '',
                                           attributeValue,
+                                          inStockText: localizations.inStock,
+                                          outOfStockText:
+                                              localizations.outOfStock,
                                         );
                                       }
                                     }

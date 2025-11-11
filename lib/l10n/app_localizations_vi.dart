@@ -427,4 +427,145 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get quantityLabel => 'Số lượng';
+
+  @override
+  String get cart => 'Giỏ hàng';
+
+  @override
+  String get cartEmpty => 'Ôi! Giỏ hàng đang trống';
+
+  @override
+  String get cartFillIt => 'Hãy thêm sản phẩm vào';
+
+  @override
+  String get checkout => 'Thanh toán';
+
+  @override
+  String get orderReview => 'Xem lại đơn hàng';
+
+  @override
+  String get emptyCart => 'Giỏ hàng trống';
+
+  @override
+  String get addItemsToCart => 'Thêm sản phẩm vào giỏ hàng để tiếp tục';
+
+  @override
+  String get subtotal => 'Tạm tính';
+
+  @override
+  String get shippingFee => 'Phí vận chuyển';
+
+  @override
+  String get taxFee => 'Phí thuế';
+
+  @override
+  String get orderTotal => 'Tổng đơn hàng';
+
+  @override
+  String get paymentMethod => 'Phương thức thanh toán';
+
+  @override
+  String get change => 'Thay đổi';
+
+  @override
+  String get shippingAddress => 'Địa chỉ giao hàng';
+
+  @override
+  String get selectAddress => 'Chọn địa chỉ';
+
+  @override
+  String get myOrder => 'Đơn hàng của tôi';
+
+  @override
+  String get noOrdersYet => 'Ôi! Chưa có đơn hàng nào!';
+
+  @override
+  String get orderFillIt => 'Hãy mua sắm ngay';
+
+  @override
+  String get order => 'Đơn hàng';
+
+  @override
+  String get shippingDate => 'Ngày giao hàng';
+
+  @override
+  String get selectPaymentMethod => 'Chọn phương thức thanh toán';
+
+  @override
+  String get productAddedToWishlist => 'Sản phẩm đã được thêm vào danh sách yêu thích.';
+
+  @override
+  String get productRemovedFromWishlist => 'Sản phẩm đã được xóa khỏi danh sách yêu thích.';
+
+  @override
+  String get sortByName => 'Tên';
+
+  @override
+  String get sortByHigherPrice => 'Giá cao';
+
+  @override
+  String get sortByLowerPrice => 'Giá thấp';
+
+  @override
+  String get sortByNewest => 'Mới nhất';
+
+  @override
+  String get sortByPopularity => 'Phổ biến';
+
+  @override
+  String get bannerErrorTitle => 'Ôi không!';
+
+  @override
+  String get bannerErrorMessage => 'Không thể tải banner. Vui lòng thử lại.';
+
+  @override
+  String get selectQuantity => 'Chọn số lượng';
+
+  @override
+  String get selectVariation => 'Chọn biến thể';
+
+  @override
+  String get outOfStockVariation => 'Biến thể đã chọn đã hết hàng.';
+
+  @override
+  String get outOfStockProduct => 'Sản phẩm đã chọn đã hết hàng.';
+
+  @override
+  String get productAddedToCart => 'Sản phẩm đã được thêm vào giỏ hàng';
+
+  @override
+  String get removeProduct => 'Xóa sản phẩm';
+
+  @override
+  String get removeProductConfirm => 'Bạn có chắc chắn muốn xóa sản phẩm này?';
+
+  @override
+  String get productRemovedFromCart => 'Sản phẩm đã được xóa khỏi giỏ hàng.';
+
+  @override
+  String get processingOrder => 'Đang xử lý đơn hàng của bạn';
+
+  @override
+  String get paymentSuccess => 'Thanh toán thành công!';
+
+  @override
+  String get orderShippingSoon => 'Đơn hàng của bạn sẽ được giao sớm!';
+
+  @override
+  String get inStock => 'Còn hàng';
+
+  @override
+  String get outOfStock => 'Hết hàng';
+
+  @override
+  String get productsErrorTitle => 'Ôi không';
+
+  @override
+  String get failedToLoadProducts => 'Không thể tải sản phẩm. Vui lòng thử lại.';
+
+  @override
+  String get promoCodeHint => 'Có mã giảm giá? Nhập tại đây';
+
+  @override
+  String get applyButton => 'Áp dụng';
 }

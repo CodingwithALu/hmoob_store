@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:trip_store/common/widgets/appbar/appbar.dart';
 import 'package:trip_store/features/shop/screens/order/widgets/order_list.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 import 'package:trip_store/utils/constants/sizes.dart';
 
 class OrderScreen extends StatelessWidget {
@@ -8,11 +9,12 @@ class OrderScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     // implement build
     return Scaffold(
       appBar: TAppBar(
         title: Text(
-          'My Order',
+          localizations.myOrder,
           style: Theme.of(context).textTheme.headlineSmall,
         ),
         showBackArrow: true,

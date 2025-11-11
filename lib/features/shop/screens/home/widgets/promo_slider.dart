@@ -15,6 +15,15 @@ class TPromoSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     final controller = Get.put(BannerController());
     final local = AppLocalizations.of(context)!;
+
+    // Initialize with localized error messages
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      controller.fetchBanners(
+        errorTitle: local.bannerErrorTitle,
+        errorMessage: local.bannerErrorMessage,
+      );
+    });
+
     return Obx(() {
       // Loader
       if (controller.isLoading.value) {

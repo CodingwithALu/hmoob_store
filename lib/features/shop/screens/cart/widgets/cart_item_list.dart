@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 
 import '../../../../../common/widgets/products/cart/add_remove_button.dart';
 import '../../../../../common/widgets/products/cart/cart_item.dart';
@@ -13,6 +14,7 @@ class TCartItemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final controller = CartController.instance;
+    final localizations = AppLocalizations.of(context)!;
     return ListView.separated(
       shrinkWrap: true,
       separatorBuilder: (_, __) =>
@@ -39,7 +41,12 @@ class TCartItemList extends StatelessWidget {
                       TProductQuantityWithAddRemoveButton(
                         quantity: item.quantity,
                         add: () => controller.addOneToCart(item),
-                        remove: () => controller.removeOneFromCart(item),
+                        remove: () => controller.removeOneFromCart(
+                          item,
+                          dialogTitle: localizations.removeProduct,
+                          dialogMessage: localizations.removeProductConfirm,
+                          removedMessage: localizations.productRemovedFromCart,
+                        ),
                       ),
                     ],
                   ),

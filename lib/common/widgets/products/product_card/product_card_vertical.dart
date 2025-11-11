@@ -106,7 +106,7 @@ class TProductCardVertical extends StatelessWidget {
                     ),
                     const SizedBox(height: TSizes.spaceBtwItems / 2),
                     TBrandTitleWithVerifiedIcon(
-                      title: productModel.brand!.name,
+                      title: productModel.brand?.name ?? 'No Brand',
                     ),
                   ],
                 ),

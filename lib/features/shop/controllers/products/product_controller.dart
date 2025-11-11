@@ -18,7 +18,7 @@ class ProductController extends GetxController {
     //
   }
 
-  void fetchFeaturedProducts() async {
+  void fetchFeaturedProducts({String? errorTitle, String? errorMessage}) async {
     try {
       isLoading.value = true;
       // Show loader while loading Products
@@ -26,20 +26,29 @@ class ProductController extends GetxController {
       //Fetch Product;
       featureProducts.assignAll(products);
     } catch (e) {
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(
+        title: errorTitle ?? 'Oh Snap',
+        message: errorMessage ?? e.toString(),
+      );
     } finally {
       isLoading.value = false;
     }
   }
 
-  Future<List<ProductModel>> fetchAllFeaturedProducts() async {
+  Future<List<ProductModel>> fetchAllFeaturedProducts({
+    String? errorTitle,
+    String? errorMessage,
+  }) async {
     try {
       // Show loader while loading Products
       final products = await _productRepository.getAllFeaturedProducts();
       //Fetch Product;
       return products;
     } catch (e) {
-      TLoaders.errorSnackBar(title: 'Oh Snap', message: e.toString());
+      TLoaders.errorSnackBar(
+        title: errorTitle ?? 'Oh Snap',
+        message: errorMessage ?? e.toString(),
+      );
       return [];
     }
   }
@@ -87,7 +96,13 @@ class ProductController extends GetxController {
   }
 
   /// Check Product Stock Status
-  String getProductStockStatus(int stock) {
-    return stock > 0 ? 'In stock' : 'Out of stock';
+  String getProductStockStatus(
+    int stock, {
+    String? inStockText,
+    String? outOfStockText,
+  }) {
+    return stock > 0
+        ? (inStockText ?? 'In stock')
+        : (outOfStockText ?? 'Out of stock');
   }
 }

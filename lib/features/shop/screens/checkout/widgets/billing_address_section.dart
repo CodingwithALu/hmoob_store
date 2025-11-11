@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:trip_store/common/widgets/texts/section_heading.dart';
 import 'package:trip_store/features/personalization/controllers/address_controller.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
 
 import '../../../../../utils/constants/sizes.dart';
 
@@ -10,6 +11,7 @@ class TBillingAddressSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
     // implement build
     final controllor = AddressController.instance;
     return Obx(
@@ -17,8 +19,8 @@ class TBillingAddressSection extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TSectionHeading(
-            title: 'Shipping Address',
-            buttonTitle: 'Change',
+            title: localizations.shippingAddress,
+            buttonTitle: localizations.change,
             onPressed: () => controllor.selectNewAddressPopup(context),
           ),
           controllor.selectedAddress.value.id.isNotEmpty
@@ -62,7 +64,7 @@ class TBillingAddressSection extends StatelessWidget {
                   ],
                 )
               : Text(
-                  'Selec Address',
+                  localizations.selectAddress,
                   style: Theme.of(context).textTheme.bodyMedium,
                 ),
         ],

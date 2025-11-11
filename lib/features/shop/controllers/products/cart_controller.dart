@@ -18,17 +18,27 @@ class CartController extends GetxController {
     loadCartItems();
   }
   // Add items in the cart
-  void addToCart(ProductModel product) {
+  void addToCart(
+    ProductModel product, {
+    String? selectQuantityMessage,
+    String? selectVariationMessage,
+    String? outOfStockVariationMessage,
+    String? outOfStockProductMessage,
+    String? productAddedMessage,
+    String? errorTitle,
+  }) {
     // Quantity Check
     if (productQuantityInCart.value < 1) {
-      TLoaders.customToast(message: 'Select Quantity');
+      TLoaders.customToast(message: selectQuantityMessage ?? 'Select Quantity');
       return;
     }
 
     // Variation Selected?
     if (product.productType == ProductType.variable.toString() &&
         variationController.selectedVariation.value.id.isEmpty) {
-      TLoaders.customToast(message: 'Select Variation');
+      TLoaders.customToast(
+        message: selectVariationMessage ?? 'Select Variation',
+      );
       return;
     }
 
@@ -36,16 +46,19 @@ class CartController extends GetxController {
     if (product.productType == ProductType.variable.toString()) {
       if (variationController.selectedVariation.value.stock < 1) {
         TLoaders.warningSnackBar(
-          message: 'Selected variation is out of stock.',
-          title: 'Oh Snap!',
+          message:
+              outOfStockVariationMessage ??
+              'Selected variation is out of stock.',
+          title: errorTitle ?? 'Oh Snap!',
         );
         return;
       }
     } else {
       if (product.stock < 1) {
         TLoaders.warningSnackBar(
-          message: 'Selected product is out of stock.',
-          title: 'Oh Snap!',
+          message:
+              outOfStockProductMessage ?? 'Selected product is out of stock.',
+          title: errorTitle ?? 'Oh Snap!',
         );
         return;
       }
@@ -66,7 +79,9 @@ class CartController extends GetxController {
     }
 
     updateCart();
-    TLoaders.customToast(message: 'Your Product has been added to the Cart');
+    TLoaders.customToast(
+      message: productAddedMessage ?? 'Your Product has been added to the Cart',
+    );
   }
 
   void addOneToCart(CartItemModel item) {
@@ -83,7 +98,12 @@ class CartController extends GetxController {
     updateCart();
   }
 
-  void removeOneFromCart(CartItemModel item) {
+  void removeOneFromCart(
+    CartItemModel item, {
+    String? dialogTitle,
+    String? dialogMessage,
+    String? removedMessage,
+  }) {
     int index = cartItems.indexWhere(
       (cartItem) =>
           cartItem.productId == item.productId &&
@@ -94,7 +114,12 @@ class CartController extends GetxController {
         cartItems[index].quantity -= 1;
       } else {
         cartItems[index].quantity == 1
-            ? removeFromCartDialog(index)
+            ? removeFromCartDialog(
+                index,
+                dialogTitle: dialogTitle,
+                dialogMessage: dialogMessage,
+                removedMessage: removedMessage,
+              )
             : cartItems.removeAt(index);
       }
       updateCart();
@@ -187,15 +212,23 @@ class CartController extends GetxController {
     updateCart();
   }
 
-  void removeFromCartDialog(int index) {
+  void removeFromCartDialog(
+    int index, {
+    String? dialogTitle,
+    String? dialogMessage,
+    String? removedMessage,
+  }) {
     Get.defaultDialog(
-      title: 'Remove Product',
-      middleText: 'Are you sure you want to remove this product?',
+      title: dialogTitle ?? 'Remove Product',
+      middleText:
+          dialogMessage ?? 'Are you sure you want to remove this product?',
       onConfirm: () {
         // Remove the item from the cart
         cartItems.removeAt(index);
         updateCart();
-        TLoaders.customToast(message: 'Product removed from the Cart.');
+        TLoaders.customToast(
+          message: removedMessage ?? 'Product removed from the Cart.',
+        );
         Get.back();
       },
       onCancel: () =>

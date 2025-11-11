@@ -549,6 +549,7 @@
         "description": "Nút xem thêm cho widget ReadMore"
     },
     "showLess": " Thu gọn",
+    "@showLess": {},
     "addToCartButton": "Thêm vào giỏ hàng",
     "@addToCartButton": {
         "description": "Nút thêm sản phẩm vào giỏ hàng"
@@ -557,7 +558,192 @@
     "@quantityLabel": {
         "description": "Nhãn số lượng sản phẩm trong widget thêm vào giỏ hàng"
     },
-    "@showLess": {
-        "description": "Nút thu gọn cho widget ReadMore"
+    "cart": "Giỏ hàng",
+    "@cart": {
+        "description": "Tiêu đề màn hình giỏ hàng"
+    },
+    "cartEmpty": "Ôi! Giỏ hàng đang trống",
+    "@cartEmpty": {
+        "description": "Thông báo khi giỏ hàng trống"
+    },
+    "cartFillIt": "Hãy thêm sản phẩm vào",
+    "@cartFillIt": {
+        "description": "Text hành động để thêm sản phẩm vào giỏ hàng trống"
+    },
+    "checkout": "Thanh toán",
+    "@checkout": {
+        "description": "Text nút thanh toán"
+    },
+    "orderReview": "Xem lại đơn hàng",
+    "@orderReview": {
+        "description": "Tiêu đề màn hình xem lại đơn hàng"
+    },
+    "emptyCart": "Giỏ hàng trống",
+    "@emptyCart": {
+        "description": "Tiêu đề cảnh báo giỏ hàng trống"
+    },
+    "addItemsToCart": "Thêm sản phẩm vào giỏ hàng để tiếp tục",
+    "@addItemsToCart": {
+        "description": "Thông báo cảnh báo thêm sản phẩm trước khi thanh toán"
+    },
+    "subtotal": "Tạm tính",
+    "@subtotal": {
+        "description": "Nhãn tạm tính trong mục thanh toán"
+    },
+    "shippingFee": "Phí vận chuyển",
+    "@shippingFee": {
+        "description": "Nhãn phí vận chuyển trong mục thanh toán"
+    },
+    "taxFee": "Phí thuế",
+    "@taxFee": {
+        "description": "Nhãn phí thuế trong mục thanh toán"
+    },
+    "orderTotal": "Tổng đơn hàng",
+    "@orderTotal": {
+        "description": "Nhãn tổng đơn hàng trong mục thanh toán"
+    },
+    "paymentMethod": "Phương thức thanh toán",
+    "@paymentMethod": {
+        "description": "Nhãn phần phương thức thanh toán"
+    },
+    "change": "Thay đổi",
+    "@change": {
+        "description": "Nút thay đổi phương thức thanh toán hoặc địa chỉ"
+    },
+    "shippingAddress": "Địa chỉ giao hàng",
+    "@shippingAddress": {
+        "description": "Nhãn phần địa chỉ giao hàng"
+    },
+    "selectAddress": "Chọn địa chỉ",
+    "@selectAddress": {
+        "description": "Text khi chưa chọn địa chỉ"
+    },
+    "myOrder": "Đơn hàng của tôi",
+    "@myOrder": {
+        "description": "Tiêu đề màn hình đơn hàng của tôi"
+    },
+    "noOrdersYet": "Ôi! Chưa có đơn hàng nào!",
+    "@noOrdersYet": {
+        "description": "Thông báo khi người dùng chưa có đơn hàng"
+    },
+    "orderFillIt": "Hãy mua sắm ngay",
+    "@orderFillIt": {
+        "description": "Text hành động để bắt đầu mua sắm khi chưa có đơn hàng"
+    },
+    "order": "Đơn hàng",
+    "@order": {
+        "description": "Nhãn đơn hàng trong danh sách đơn hàng"
+    },
+    "shippingDate": "Ngày giao hàng",
+    "@shippingDate": {
+        "description": "Nhãn ngày giao hàng trong danh sách đơn hàng"
+    },
+    "selectPaymentMethod": "Chọn phương thức thanh toán",
+    "@selectPaymentMethod": {
+        "description": "Tiêu đề modal chọn phương thức thanh toán"
+    },
+    "productAddedToWishlist": "Sản phẩm đã được thêm vào danh sách yêu thích.",
+    "@productAddedToWishlist": {
+        "description": "Thông báo khi sản phẩm được thêm vào danh sách yêu thích"
+    },
+    "productRemovedFromWishlist": "Sản phẩm đã được xóa khỏi danh sách yêu thích.",
+    "@productRemovedFromWishlist": {
+        "description": "Thông báo khi sản phẩm được xóa khỏi danh sách yêu thích"
+    },
+    "sortByName": "Tên",
+    "@sortByName": {
+        "description": "Tùy chọn sắp xếp theo tên sản phẩm"
+    },
+    "sortByHigherPrice": "Giá cao",
+    "@sortByHigherPrice": {
+        "description": "Tùy chọn sắp xếp theo giá cao"
+    },
+    "sortByLowerPrice": "Giá thấp",
+    "@sortByLowerPrice": {
+        "description": "Tùy chọn sắp xếp theo giá thấp"
+    },
+    "sortByNewest": "Mới nhất",
+    "@sortByNewest": {
+        "description": "Tùy chọn sắp xếp theo sản phẩm mới nhất"
+    },
+    "sortByPopularity": "Phổ biến",
+    "@sortByPopularity": {
+        "description": "Tùy chọn sắp xếp theo độ phổ biến"
+    },
+    "bannerErrorTitle": "Ôi không!",
+    "@bannerErrorTitle": {
+        "description": "Tiêu đề lỗi khi tải banner thất bại"
+    },
+    "bannerErrorMessage": "Không thể tải banner. Vui lòng thử lại.",
+    "@bannerErrorMessage": {
+        "description": "Thông báo lỗi khi tải banner thất bại"
+    },
+    "selectQuantity": "Chọn số lượng",
+    "@selectQuantity": {
+        "description": "Thông báo khi chưa chọn số lượng"
+    },
+    "selectVariation": "Chọn biến thể",
+    "@selectVariation": {
+        "description": "Thông báo khi chưa chọn biến thể"
+    },
+    "outOfStockVariation": "Biến thể đã chọn đã hết hàng.",
+    "@outOfStockVariation": {
+        "description": "Thông báo khi biến thể đã chọn hết hàng"
+    },
+    "outOfStockProduct": "Sản phẩm đã chọn đã hết hàng.",
+    "@outOfStockProduct": {
+        "description": "Thông báo khi sản phẩm đã chọn hết hàng"
+    },
+    "productAddedToCart": "Sản phẩm đã được thêm vào giỏ hàng",
+    "@productAddedToCart": {
+        "description": "Thông báo khi sản phẩm được thêm vào giỏ hàng"
+    },
+    "removeProduct": "Xóa sản phẩm",
+    "@removeProduct": {
+        "description": "Tiêu đề hộp thoại xóa sản phẩm khỏi giỏ hàng"
+    },
+    "removeProductConfirm": "Bạn có chắc chắn muốn xóa sản phẩm này?",
+    "@removeProductConfirm": {
+        "description": "Thông báo xác nhận xóa sản phẩm khỏi giỏ hàng"
+    },
+    "productRemovedFromCart": "Sản phẩm đã được xóa khỏi giỏ hàng.",
+    "@productRemovedFromCart": {
+        "description": "Thông báo khi sản phẩm được xóa khỏi giỏ hàng"
+    },
+    "processingOrder": "Đang xử lý đơn hàng của bạn",
+    "@processingOrder": {
+        "description": "Thông báo loading khi xử lý đơn hàng"
+    },
+    "paymentSuccess": "Thanh toán thành công!",
+    "@paymentSuccess": {
+        "description": "Thông báo thành công cho thanh toán"
+    },
+    "orderShippingSoon": "Đơn hàng của bạn sẽ được giao sớm!",
+    "@orderShippingSoon": {
+        "description": "Thông báo về việc giao hàng sau khi thanh toán thành công"
+    },
+    "inStock": "Còn hàng",
+    "@inStock": {
+        "description": "Trạng thái tồn kho sản phẩm - còn hàng"
+    },
+    "outOfStock": "Hết hàng",
+    "@outOfStock": {
+        "description": "Trạng thái tồn kho sản phẩm - hết hàng"
+    },
+    "productsErrorTitle": "Ôi không",
+    "@productsErrorTitle": {
+        "description": "Tiêu đề lỗi khi tải sản phẩm"
+    },
+    "failedToLoadProducts": "Không thể tải sản phẩm. Vui lòng thử lại.",
+    "@failedToLoadProducts": {
+        "description": "Thông báo lỗi khi không thể tải sản phẩm"
+    },
+    "promoCodeHint": "Có mã giảm giá? Nhập tại đây",
+    "@promoCodeHint": {
+        "description": "Gợi ý cho trường nhập mã giảm giá"
+    },
+    "applyButton": "Áp dụng",
+    "@applyButton": {
+        "description": "Nút áp dụng mã giảm giá"
     }
 }
