@@ -1,0 +1,69 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:get/get.dart';
+import 'package:trip_store/data/repositories/products/product_repository.dart';
+import 'package:trip_store/features/shop/models/product_model.dart';
+import 'package:trip_store/utils/popups/loaders.dart';
+
+class AllProductController extends GetxController {
+  static AllProductController get instance => Get.find();
+
+  final repository = ProductRepository.instance;
+  final RxString selectedSortOption = 'Name'.obs;
+  final RxList<ProductModel> products = <ProductModel>[].obs;
+
+  Future<List<ProductModel>> fetchProductsByQuery(
+    Query? query, {
+    String? errorTitle,
+    String? errorMessage,
+  }) async {
+    try {
+      if (query == null) return [];
+      final products = await repository.fetchProductByQuery(query);
+      return products;
+    } catch (e) {
+      TLoaders.errorSnackBar(
+        title: errorTitle ?? 'Oh Snap',
+        message: errorMessage ?? e.toString(),
+      );
+      return [];
+    }
+  }
+
+  void sortProducts(String sortOption) {
+    selectedSortOption.value = sortOption;
+
+    switch (sortOption) {
+      case 'Name':
+        products.sort((a, b) => a.title.compareTo(b.title));
+        break;
+      case 'Higher Price':
+        products.sort((a, b) => b.price.compareTo(a.price));
+        break;
+      case 'Lower Price':
+        products.sort((a, b) => a.price.compareTo(b.price));
+        break;
+      case 'Newest':
+        products.sort((a, b) => a.date!.compareTo(b.date!));
+        break;
+      case 'Popularity':
+        products.sort((a, b) {
+          if (b.salePrices > 0) {
+            return b.salePrices.compareTo(a.salePrices);
+          } else if (a.salePrices > 0) {
+            return -1;
+          } else {
+            return 1;
+          }
+        });
+        break;
+      default:
+        // Default sorting option: Name
+        products.sort((a, b) => a.title.compareTo(b.title));
+    }
+  }
+
+  void assignProduct(List<ProductModel> products) {
+    this.products.assignAll(products);
+    sortProducts('Name');
+  }
+}

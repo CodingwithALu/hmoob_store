@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:trip_store/common/styles/spacing_style.dart';
+import 'package:trip_store/common/widgets/login_signup/from_divider.dart';
+import 'package:trip_store/common/widgets/login_signup/social_buttons.dart';
+import 'package:trip_store/features/authentication/screens/login/widgets/login_from.dart';
+import 'package:trip_store/features/authentication/screens/login/widgets/login_header.dart';
+import 'package:trip_store/utils/constants/sizes.dart';
+import 'package:trip_store/utils/constants/text_string.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
+
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    THelperFunctions.isDarkMode(context);
+    // implement build
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: TSpacingStyle.paddingWithAppBarHeight,
+          child: Column(
+            children: [
+              /// Header
+              const TLoginHeader(),
+
+              /// From
+              const TLoginFrom(),
+
+              /// Divider
+              TFromDivider(dividerText: TTexts.orSignInWith.capitalize!),
+              const SizedBox(height: TSizes.spaceBtwSections),
+
+              ///Footer
+              const TSocialButtons(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

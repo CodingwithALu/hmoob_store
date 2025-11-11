@@ -1,0 +1,14 @@
+flutter_native_splash:
+  color: "#FFFFFF"
+  color_dark: "#000000"
+  image: assets/logos/trip_store.jpg
+  image_dark: assets/logos/trip_store.jpg
+
+  android_12:
+    color: "#FFFFFF"
+    color_dark: "#000000"
+    image: assets/logos/trip_store.jpg
+    image_dark: assets/logos/trip_store.jpg
+
+
+  web: false

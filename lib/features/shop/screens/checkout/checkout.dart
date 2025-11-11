@@ -1,0 +1,119 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:trip_store/common/widgets/appbar/appbar.dart';
+import 'package:trip_store/common/widgets/custom_shapes/container/rounded_container.dart';
+import 'package:trip_store/features/shop/controllers/products/cart_controller.dart';
+import 'package:trip_store/features/shop/controllers/products/order_controller.dart';
+import 'package:trip_store/features/shop/screens/cart/widgets/cart_item_list.dart';
+import 'package:trip_store/features/shop/screens/checkout/widgets/billing_address_section.dart';
+import 'package:trip_store/features/shop/screens/checkout/widgets/billing_amount_section.dart';
+import 'package:trip_store/features/shop/screens/checkout/widgets/billing_payment_section.dart';
+import 'package:trip_store/l10n/app_localizations.dart';
+import 'package:trip_store/navigation_menu.dart';
+import 'package:trip_store/utils/constants/colors.dart';
+import 'package:trip_store/utils/constants/image_strings.dart';
+import 'package:trip_store/utils/helpers/helper_functions.dart';
+import 'package:trip_store/utils/helpers/pricing_calculator.dart';
+import 'package:trip_store/utils/loaders/animation_loader.dart';
+import 'package:trip_store/utils/popups/loaders.dart';
+
+import '../../../../common/widgets/products/cart/coupon_widget.dart';
+import '../../../../utils/constants/sizes.dart';
+
+class CheckoutScreen extends StatelessWidget {
+  const CheckoutScreen({super.key});
+  @override
+  Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context)!;
+    final dark = THelperFunctions.isDarkMode(context);
+    // implement build
+    final controller = CartController.instance;
+    final subTotal = controller.totalCartPrice.value;
+    final orderController = Get.put(OrderController());
+    final totalAmout = TPricingCalculator.calculateTotalPrice(subTotal, 'Us');
+    return Scaffold(
+      appBar: TAppBar(
+        showBackArrow: true,
+        title: Text(
+          localizations.orderReview,
+          style: Theme.of(context).textTheme.headlineSmall,
+        ),
+      ),
+      body: Obx(() {
+        final emptyWodget = TAnimationLoaderWidget(
+          text: localizations.cartEmpty,
+          animation: TImages.cartAnimation,
+          showAction: true,
+          actionText: localizations.cartFillIt,
+          onActionPressed: () => Get.off(() => const NavigationMenu()),
+        );
+        return controller.cartItems.isEmpty
+            ? emptyWodget
+            : SingleChildScrollView(
+                child: Padding(
+                  padding: EdgeInsets.all(TSizes.defaultSpace),
+                  child: Column(
+                    children: [
+                      /// Items in cart
+                      TCartItemList(showAddRemoveButtons: false),
+                      SizedBox(height: TSizes.spaceBtwSections),
+
+                      /// Coupon TextField
+                      TCouponCode(),
+                      const SizedBox(height: TSizes.spaceBtwSections),
+
+                      /// Billing Section
+                      TRoundedContainer(
+                        showBorder: true,
+                        padding: EdgeInsets.all(TSizes.md),
+                        backgroundColor: dark ? TColors.black : TColors.white,
+                        child: Column(
+                          children: [
+                            /// Pricing
+                            TBillingAmountSection(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
+
+                            /// Divider
+                            const Divider(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
+
+                            /// Payment Methods
+                            TBillingPaymentSection(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
+
+                            /// Address
+                            TBillingAddressSection(),
+                            const SizedBox(height: TSizes.spaceBtwItems),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              );
+      }),
+
+      ///Checkout Button
+      bottomNavigationBar: Padding(
+        padding: EdgeInsets.all(TSizes.defaultSpace),
+        child: ElevatedButton(
+          onPressed: subTotal > 0
+              ? () => orderController.processOrder(
+                  totalAmout,
+                  processingMessage: localizations.processingOrder,
+                  successTitle: localizations.paymentSuccess,
+                  successSubtitle: localizations.orderShippingSoon,
+                  errorTitle: localizations.bannerErrorTitle,
+                )
+              : () => TLoaders.warningSnackBar(
+                  title: localizations.emptyCart,
+                  message: localizations.addItemsToCart,
+                ),
+          child: Text(
+            '${localizations.checkout} \$${TPricingCalculator.calculateTotalPrice(subTotal, 'US')}',
+          ),
+        ),
+      ),
+    );
+  }
+}

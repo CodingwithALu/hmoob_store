@@ -1,4 +1,4 @@
-name: t_store
+name: trip_store
 description: "A new Flutter project."
 publish_to: 'none'
 
@@ -10,20 +10,75 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
-
+  # Utility Packages
+  http: ^1.4.0
+  intl: ^0.20.2
+  logger: ^2.5.0
+  shimmer: ^3.0.0
+  fl_chart: ^1.0.0
+  url_launcher: ^6.3.1
+  flutter_native_splash: ^2.4.6
+  smooth_page_indicator: ^1.2.1
+  connectivity_plus: ^6.1.4
+  lottie: ^3.3.1 # OR RIVE
+  # Icons
+  iconsax: ^0.0.8
   cupertino_icons: ^1.0.8
+
+  # State Management
+  get: ^4.7.2
+  get_storage: ^2.1.1
+
+  # Product Specific
+  readmore: ^3.0.0
+  carousel_slider: ^5.0.0
+  flutter_rating_bar: ^4.0.1
+  capped_progress_indicator: ^0.0.2
+
+  # Firebase
+  firebase_core: ^3.13.0
+  firebase_auth: ^5.5.3
+  cloud_firestore: ^5.6.7
+  firebase_storage: ^12.4.5
+  google_sign_in: ^6.3.0
+  # images_picker
+  image_picker: ^1.1.2
+  cached_network_image: ^3.4.1
+  flutter_localizations:
+    sdk: flutter
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
-
   flutter_lints: ^5.0.0
 
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/logos/trip_store.jpg
+  android: true
+  ios: true
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/logos/trip_store.jpg"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  web:
+    generate: true
+    image_path: "assets/logos/trip_store.jpg"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
+  windows:
+    generate: true
+    image_path: "assets/logos/trip_store.jpg"
+    icon_size: 48 # min:48, max:256, default: 48
+  macos:
+    generate: true
+    image_path: "assets/logos/trip_store.jpg"
 
 flutter:
+  generate: true
 
 
 
@@ -31,33 +86,42 @@ flutter:
   uses-material-design: true
 
 
+  #--------------- LOCAL ASSETS ------------------#
   assets:
     - assets/logos/
-    - assets/icons/
-    - assets/fonts/
-    - assets/images/
+    - assets/icons/brands/
+    - assets/images/content/
+    - assets/images/banners/
+    - assets/images/reviews/
+    - assets/images/products/
+    - assets/icons/categories/
+    - assets/images/animations/
+    - assets/icons/payment_methods/
+    - assets/images/on_boarding_images/
+
+  #--------------- LOCAL FONTS ------------------#
 
   fonts:
-    - family: Poppins
+    - family: Montserrat
       fonts:
-        - asset: assets/fonts/Poppins-Light.ttf
+        - asset: assets/fonts/Montserrat-Light.ttf
           weight: 300
-        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Montserrat-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Poppins-Italic.ttf
+        - asset: assets/fonts/Montserrat-Italic.ttf
           style: italic
-        - asset: assets/fonts/Poppins-Medium.ttf
+        - asset: assets/fonts/Montserrat-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Poppins-MediumItalic.ttf
+        - asset: assets/fonts/Montserrat-MediumItalic.ttf
           weight: 500
           style: italic
-        - asset: assets/fonts/Poppins-SemiBold.ttf
+        - asset: assets/fonts/Montserrat-SemiBold.ttf
           weight: 600
-        - asset: assets/fonts/Poppins-Bold.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
           weight: 700
-        - asset: assets/fonts/Poppins-Black.ttf
-        - asset: assets/fonts/Poppins-BlackItalic.ttf
-        - asset: assets/fonts/Poppins-BoldItalic.ttf
+        - asset: assets/fonts/Montserrat-Black.ttf
+        - asset: assets/fonts/Montserrat-BlackItalic.ttf
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf
           weight: 300
 
 
